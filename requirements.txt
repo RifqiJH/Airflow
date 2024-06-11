@@ -1,0 +1,3 @@
+scikit-learn
+apache-airflow-providers-microsoft-mssql[common.sql]
+pymssql

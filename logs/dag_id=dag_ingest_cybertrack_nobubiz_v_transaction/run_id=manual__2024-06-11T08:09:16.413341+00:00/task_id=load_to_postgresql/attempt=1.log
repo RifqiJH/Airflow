@@ -1,0 +1,2918 @@
+[2024-06-11T08:09:18.278+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-11T08:09:18.293+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_ingest_cybertrack_nobubiz_v_transaction.load_to_postgresql manual__2024-06-11T08:09:16.413341+00:00 [queued]>
+[2024-06-11T08:09:18.296+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_ingest_cybertrack_nobubiz_v_transaction.load_to_postgresql manual__2024-06-11T08:09:16.413341+00:00 [queued]>
+[2024-06-11T08:09:18.297+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-11T08:09:18.302+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_to_postgresql> on 2024-06-11 08:09:16.413341+00:00
+[2024-06-11T08:09:18.305+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=6105) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-06-11T08:09:18.306+0000] {standard_task_runner.py:63} INFO - Started process 6106 to run task
+[2024-06-11T08:09:18.305+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag_ingest_cybertrack_nobubiz_v_transaction', 'load_to_postgresql', 'manual__2024-06-11T08:09:16.413341+00:00', '--job-id', '113', '--raw', '--subdir', 'DAGS_FOLDER/dag_nobubiz.py', '--cfg-path', '/tmp/tmpzosunar6']
+[2024-06-11T08:09:18.306+0000] {standard_task_runner.py:91} INFO - Job 113: Subtask load_to_postgresql
+[2024-06-11T08:09:18.325+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_ingest_cybertrack_nobubiz_v_transaction.load_to_postgresql manual__2024-06-11T08:09:16.413341+00:00 [running]> on host 2e5c63130483
+[2024-06-11T08:09:18.359+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_ingest_cybertrack_nobubiz_v_transaction' AIRFLOW_CTX_TASK_ID='load_to_postgresql' AIRFLOW_CTX_EXECUTION_DATE='2024-06-11T08:09:16.413341+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-11T08:09:16.413341+00:00'
+[2024-06-11T08:09:18.360+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-11T08:09:18.375+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.379+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10455, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8FT1024SEU8FT', datetime.datetime(2024, 6, 10, 10, 12, 23, 373000), 'MPM', 7500, 'Nobu', '1', 'Approved', '99901000017070', '6195fc4fecab33f55f6502e0', '93600503', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.380+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.384+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.387+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10456, '936005030000045621', 'ID1019009848762', '11140000044423', 'b41e6961ec427e8346030ad78b7c7b9e', 'ae58d2a84180decfc38bcd01ec8df92d', '9ffdab11d1ab91ef2f00948e1a4afe90', '1', '1', '360', 'NULL', 'NULL', '1024SEU8FU1024SEU8FU', datetime.datetime(2024, 6, 10, 10, 26, 17, 227000), 'MPM', 25000, 'CIMB', '1', 'Approved', '9360002210008540876', '633329155b5f3547b4d65e2c', '93600022', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.388+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.391+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.394+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10457, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8FV1024SEU8FV', datetime.datetime(2024, 6, 10, 10, 32, 8, 693000), 'MPM', 13000, 'BNI', '1', 'Approved', '9360000911000763943', '624efa5e13dc0376c6322b23', '93600009', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.395+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.399+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.403+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10458, '936005030000082150', 'ID1021066889127', '03260000673918', '1e50d5446038f5eb1e3b42ecfaa4786a', '9d847fdaed7f2e1ebbac13367b5a4dae', 'e9f1e2315087c34e7243e2264e01901d', '1', '1', '360', 'NULL', 'NULL', '1024SEU8FW1024SEU8FW', datetime.datetime(2024, 6, 10, 10, 38, 2, 263000), 'MPM', 5000, 'Dana', '1', 'Approved', '9360091530772644881', '624ef92a20da80a2e21048a4', '93600915', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.404+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.407+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.410+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10459, '936005030000082150', 'ID1021066889127', '03260000673918', '1e50d5446038f5eb1e3b42ecfaa4786a', '9d847fdaed7f2e1ebbac13367b5a4dae', 'e9f1e2315087c34e7243e2264e01901d', '1', '1', '360', 'NULL', 'NULL', '1024SEU8FX1024SEU8FX', datetime.datetime(2024, 6, 10, 10, 38, 8, 870000), 'MPM', 5000, 'BRI', '1', 'Approved', '9360000210046912367', '624ef92a20da80a2e21048a4', '93600002', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.411+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.416+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.420+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10460, '936005030000085529', 'ID1021128470916', '11250000682346', '5a2f22b52b4194b85b616719b7b4b5a1', 'f5fc362741d9a14bc8f5cdd852976bd1', 'a15b2dd466400ddeda0ba1d823c0cce4', '1', '1', '360', 'NULL', 'NULL', '1024SEU8FY1024SEU8FY', datetime.datetime(2024, 6, 10, 10, 52, 51, 667000), 'MPM', 441000, 'Mandiri', '1', 'Approved', '9360000812098372243', '624ef920101dea9788fb843b', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.422+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.427+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.430+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10461, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8FZ1024SEU8FZ', datetime.datetime(2024, 6, 10, 11, 5, 8, 950000), 'MPM', 5000, 'OVO', '1', 'Approved', '9360091281905000205', '6195fc4fecab33f55f6502e0', '93600912', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.431+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.434+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.437+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10462, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8G01024SEU8G0', datetime.datetime(2024, 6, 10, 11, 19, 10, 623000), 'MPM', 14000, 'BCA', '1', 'Approved', '9360001410143786829', '624efa5e13dc0376c6322b23', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.438+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.441+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.444+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10463, '936005030000082352', 'ID1021067918586', '04080000674415', 'b714a2a7fe58067bfdf3d027a2f81691', '6eb6c60d54d4934a176e74ea5ef7bb3e', 'a6c85211ae7447c534d9bb99fce660f8', '1', '1', '360', 'NULL', 'NULL', '1024SEU8G11024SEU8G1', datetime.datetime(2024, 6, 10, 11, 33, 30, 590000), 'MPM', 305000, 'Shopeepay', '1', 'Approved', '9360091830087984108', '624efa66a9167d1eab9a8251', '93600918', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.445+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.448+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.450+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10464, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8G21024SEU8G2', datetime.datetime(2024, 6, 10, 11, 36, 41, 803000), 'MPM', 45000, 'BCA', '1', 'Approved', '9360001410144635785', '63332902ddddb8db38109af1', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.452+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.455+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.458+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10465, '936005030000056083', 'ID1020032769090', '04110000054904', '7184aa708d8d4fd010e037fd8817aa27', '343d34091bcd3bbf817ce6600224ec21', '5ea3b5df3fe384643b57b60f59c637a2', '1', '1', '360', 'NULL', 'NULL', '1024SEU8G31024SEU8G3', datetime.datetime(2024, 6, 10, 11, 38, 29, 640000), 'MPM', 370000, 'BCA', '1', 'Approved', '9360001410144727087', '633325f66ae519eda19ad4fc', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.459+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.462+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.465+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10466, '936005030000082352', 'ID1021067918586', '04080000674415', 'b714a2a7fe58067bfdf3d027a2f81691', '6eb6c60d54d4934a176e74ea5ef7bb3e', 'a6c85211ae7447c534d9bb99fce660f8', '1', '1', '360', 'NULL', 'NULL', '1024SEU8G41024SEU8G4', datetime.datetime(2024, 6, 10, 11, 44, 59, 790000), 'MPM', 21000, 'Shopeepay', '1', 'Approved', '9360091830087984108', '624efa66a9167d1eab9a8251', '93600918', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.466+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.469+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.471+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10467, '936005030000066825', 'ID1023263811466', '23060000000121', '2c1b99355c6f052ed4a9d904f28c24c7', '60b42cdbbc252d480035d57190ac0dd2', '80ff55a075277b089e1b665ad783f340', '1', '1', '360', 'NULL', 'NULL', '1024SEU8G51024SEU8G5', datetime.datetime(2024, 6, 10, 11, 47, 40, 640000), 'MPM', 19000, 'Shopeepay', '1', 'Approved', '9360091830355233059', '648a8391de508fd9c1ce246e', '93600918', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.472+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.476+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.478+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10468, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8G61024SEU8G6', datetime.datetime(2024, 6, 10, 11, 49, 40, 520000), 'MPM', 15000, 'BCA', '1', 'Approved', '9360001410145337886', '624efa5e13dc0376c6322b23', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.479+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.482+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.485+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10469, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8G71024SEU8G7', datetime.datetime(2024, 6, 10, 11, 52, 53, 667000), 'MPM', 16000, 'Mandiri', '1', 'Approved', '9360000812126868360', '624efa5e13dc0376c6322b23', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.486+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.489+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.492+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10470, '936005030000069322', 'ID1020042192044', '07200000479388', '245fd7a8aabed834f1a2132ba774ee75', '0d5d4c51a1ffe00fcc7e7be8af37e1d9', 'd495e4d9a9ca44517364511c1db5620e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8G81024SEU8G8', datetime.datetime(2024, 6, 10, 12, 0, 13, 427000), 'MPM', 25000, 'BCA', '1', 'Approved', '9360001410145967807', '624efbc3ec75798533f01407', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.493+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.496+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.498+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10471, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8G91024SEU8G9', datetime.datetime(2024, 6, 10, 12, 7, 29, 680000), 'MPM', 5000, 'OVO', '1', 'Approved', '9360091281210587005', '6195fc4fecab33f55f6502e0', '93600912', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.499+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.503+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.505+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10472, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GA1024SEU8GA', datetime.datetime(2024, 6, 10, 12, 9, 9, 717000), 'MPM', 7500, 'BCA', '1', 'Approved', '9360001410146555023', '6195fc4fecab33f55f6502e0', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.506+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.509+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.512+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10473, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GB1024SEU8GB', datetime.datetime(2024, 6, 10, 12, 9, 19, 357000), 'MPM', 3000, 'OVO', '1', 'Approved', '9360091281210587005', '6195fc4fecab33f55f6502e0', '93600912', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.513+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.517+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.519+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10474, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8GC1024SEU8GC', datetime.datetime(2024, 6, 10, 12, 11, 34, 403000), 'MPM', 25000, 'BCA', '1', 'Approved', '9360001410146720817', '622742edd2176890ba947828', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.520+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.523+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.525+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10475, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GD1024SEU8GD', datetime.datetime(2024, 6, 10, 12, 15, 13), 'MPM', 18000, 'BCA', '1', 'Approved', '9360001415868119288', '624efa5e13dc0376c6322b23', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.526+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.529+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.532+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10476, '936005030000085529', 'ID1021128470916', '11250000682346', '5a2f22b52b4194b85b616719b7b4b5a1', 'f5fc362741d9a14bc8f5cdd852976bd1', 'a15b2dd466400ddeda0ba1d823c0cce4', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GE1024SEU8GE', datetime.datetime(2024, 6, 10, 12, 16, 10, 977000), 'MPM', 23000, 'BCA', '1', 'Approved', '9360001410147045743', '624ef920101dea9788fb843b', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.533+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.536+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.538+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10477, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8GF1024SEU8GF', datetime.datetime(2024, 6, 10, 12, 26, 1, 317000), 'MPM', 43000, 'CIMB', '1', 'Approved', '9360002230000466896', '622742edd2176890ba947828', '93600022', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.539+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.542+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.545+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10478, '936005030000082352', 'ID1021067918586', '04080000674415', 'b714a2a7fe58067bfdf3d027a2f81691', '6eb6c60d54d4934a176e74ea5ef7bb3e', 'a6c85211ae7447c534d9bb99fce660f8', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GG1024SEU8GG', datetime.datetime(2024, 6, 10, 12, 31, 23, 837000), 'MPM', 11500, 'BCAD', '1', 'Approved', '9360050110077741309', '624efa66a9167d1eab9a8251', '93600501', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.546+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.549+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.551+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10479, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GH1024SEU8GH', datetime.datetime(2024, 6, 10, 12, 32, 15, 800000), 'MPM', 11000, 'OVO', '1', 'Approved', '9360091281398440403', '624efa5e13dc0376c6322b23', '93600912', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.553+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.556+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.558+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10480, '936005030000066825', 'ID1023263811466', '23060000000121', '2c1b99355c6f052ed4a9d904f28c24c7', '60b42cdbbc252d480035d57190ac0dd2', '80ff55a075277b089e1b665ad783f340', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GI1024SEU8GI', datetime.datetime(2024, 6, 10, 12, 37, 8, 767000), 'MPM', 19000, 'BCA', '1', 'Approved', '9360001410148513210', '648a8391de508fd9c1ce246e', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.559+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.562+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.565+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10481, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8GJ1024SEU8GJ', datetime.datetime(2024, 6, 10, 12, 43, 24, 373000), 'MPM', 38000, 'CIMB', '1', 'Approved', '9360002210005438157', '622742edd2176890ba947828', '93600022', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.566+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.569+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.571+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10482, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8GK1024SEU8GK', datetime.datetime(2024, 6, 10, 12, 44, 11, 200000), 'MPM', 25000, 'GOPAY', '1', 'Approved', '9360091430153324924', '622742edd2176890ba947828', '93600914', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.573+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.576+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.578+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10483, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GL1024SEU8GL', datetime.datetime(2024, 6, 10, 12, 45, 30, 7000), 'MPM', 20000, 'Mandiri', '1', 'Approved', '9360000812178390719', '624efa5e13dc0376c6322b23', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.579+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.583+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.585+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10484, '936005030000081197', 'ID1021063217231', '02180000671603', 'b8a7dd43bf5fc68c5980e235e1c2c9c2', '22d629ba7bab0a675c18ec77883495d9', '3107dfe3a307e93564a7dd7d003bc96a', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GM1024SEU8GM', datetime.datetime(2024, 6, 10, 12, 46, 19, 293000), 'MPM', 295930, 'SeaBank', '1', 'Approved', '9360053514833640472', '624ef931a9167d1eab9a6682', '93600535', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.586+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.589+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.592+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10485, '936005030000075955', 'ID1020047867590', '09160000658843', '78ffcb342f70b9f23dd7224d5048c923', '9fb098b1c87c25c4918886eba6e63853', 'a3cbb6678c48a4fe17c1bcff5fd8a62d', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GN1024SEU8GN', datetime.datetime(2024, 6, 10, 12, 46, 43, 650000), 'MPM', 25000, 'Mandiri', '1', 'Approved', '9360000812179991515', '624efd2013dc0376c6325dfb', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.593+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.596+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.598+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10486, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8GO1024SEU8GO', datetime.datetime(2024, 6, 10, 12, 47, 50, 887000), 'MPM', 50000, 'Mandiri', '1', 'Approved', '9360000822012114589', '622742edd2176890ba947828', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.599+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.602+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.605+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10487, '936005030000086071', 'ID1022149519970', '01250000683634', 'c2d683e7f5dd9593326ee7777b62a966', '719bbe0022247a494c64ae872d87a78f', '664f8641190be761326cd906b4750502', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GP1024SEU8GP', datetime.datetime(2024, 6, 10, 12, 49, 48, 590000), 'MPM', 80000, 'BRI', '1', 'Approved', '9360000210027258074', '624ef91dec75798533efd857', '93600002', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.606+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.609+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.612+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10488, '936005030000045621', 'ID1019009848762', '11140000044423', 'b41e6961ec427e8346030ad78b7c7b9e', 'ae58d2a84180decfc38bcd01ec8df92d', '9ffdab11d1ab91ef2f00948e1a4afe90', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GQ1024SEU8GQ', datetime.datetime(2024, 6, 10, 13, 1, 10, 417000), 'MPM', 40000, 'BCA', '1', 'Approved', '9360001410150109766', '633329155b5f3547b4d65e2c', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.613+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.616+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.619+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10489, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GR1024SEU8GR', datetime.datetime(2024, 6, 10, 13, 4, 38, 510000), 'MPM', 7000, 'BCA', '1', 'Approved', '9360001415868402924', '624efa5e13dc0376c6322b23', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.620+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.623+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.625+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10490, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GS1024SEU8GS', datetime.datetime(2024, 6, 10, 13, 6, 32, 177000), 'MPM', 18000, 'BCA', '1', 'Approved', '9360001410150437852', '624efa5e13dc0376c6322b23', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.626+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.630+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.632+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10491, '936005030000082150', 'ID1021066889127', '03260000673918', '1e50d5446038f5eb1e3b42ecfaa4786a', '9d847fdaed7f2e1ebbac13367b5a4dae', 'e9f1e2315087c34e7243e2264e01901d', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GT1024SEU8GT', datetime.datetime(2024, 6, 10, 13, 11, 59, 27000), 'MPM', 10000, 'GOPAY', '1', 'Approved', '9360091430055557902', '624ef92a20da80a2e21048a4', '93600914', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.633+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.636+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.639+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10492, '936005030000075955', 'ID1020047867590', '09160000658843', '78ffcb342f70b9f23dd7224d5048c923', '9fb098b1c87c25c4918886eba6e63853', 'a3cbb6678c48a4fe17c1bcff5fd8a62d', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GU1024SEU8GU', datetime.datetime(2024, 6, 10, 13, 13, 4, 563000), 'MPM', 20000, 'BCA', '1', 'Approved', '9360001410150832326', '624efd2013dc0376c6325dfb', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.640+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.643+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.646+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10493, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GV1024SEU8GV', datetime.datetime(2024, 6, 10, 13, 18, 29, 953000), 'MPM', 7000, 'Mandiri', '1', 'Approved', '9360000812010209903', '6195fc4fecab33f55f6502e0', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.647+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.650+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.653+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10494, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GW1024SEU8GW', datetime.datetime(2024, 6, 10, 13, 19, 25, 237000), 'MPM', 18500, 'Nobu', '1', 'Approved', '78914015532', '6195fc4fecab33f55f6502e0', '93600503', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.654+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.657+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.659+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10495, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8GX1024SEU8GX', datetime.datetime(2024, 6, 10, 13, 23, 52, 330000), 'MPM', 25000, 'BCA', '1', 'Approved', '9360001415868496124', '622742edd2176890ba947828', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.660+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.663+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.666+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10496, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8GY1024SEU8GY', datetime.datetime(2024, 6, 10, 13, 24, 14, 77000), 'MPM', 48000, 'CIMB', '1', 'Approved', '9360002210000244964', '622742edd2176890ba947828', '93600022', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.667+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.670+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.672+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10497, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8GZ1024SEU8GZ', datetime.datetime(2024, 6, 10, 13, 27, 36, 747000), 'MPM', 25000, 'Mandiri', '1', 'Approved', '9360000812137078553', '63332902ddddb8db38109af1', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.674+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.677+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.679+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10498, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8H01024SEU8H0', datetime.datetime(2024, 6, 10, 13, 29, 52, 267000), 'MPM', 18000, 'CIMB', '1', 'Approved', '9360002210000233397', '622742edd2176890ba947828', '93600022', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.680+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.683+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.686+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10499, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8H11024SEU8H1', datetime.datetime(2024, 6, 10, 13, 30, 55, 420000), 'MPM', 6000, 'BCA', '1', 'Approved', '9360001410151852000', '63332902ddddb8db38109af1', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.687+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.690+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.692+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10500, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8H21024SEU8H2', datetime.datetime(2024, 6, 10, 13, 34, 16, 957000), 'MPM', 28000, 'BCA', '1', 'Approved', '9360001410152031521', '622742edd2176890ba947828', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.693+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.696+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.699+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10501, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8H31024SEU8H3', datetime.datetime(2024, 6, 10, 13, 39, 42, 743000), 'MPM', 25000, 'BCA', '1', 'Approved', '9360001410152316260', '622742edd2176890ba947828', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.700+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.703+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.705+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10502, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8H41024SEU8H4', datetime.datetime(2024, 6, 10, 13, 42, 51, 287000), 'MPM', 117000, 'BCA', '1', 'Approved', '9360001410152477252', '63332902ddddb8db38109af1', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.706+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.709+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.712+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10503, '936005030000066825', 'ID1023263811466', '23060000000121', '2c1b99355c6f052ed4a9d904f28c24c7', '60b42cdbbc252d480035d57190ac0dd2', '80ff55a075277b089e1b665ad783f340', '1', '1', '360', 'NULL', 'NULL', '1024SEU8H51024SEU8H5', datetime.datetime(2024, 6, 10, 13, 43, 32, 360000), 'MPM', 11000, 'BCA', '1', 'Approved', '9360001410152512900', '648a8391de508fd9c1ce246e', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.713+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.716+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.719+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10504, '936005030000080265', 'ID1020057153964', '12140000669188', '13c5b5b7e82c0694fe87d19b49a432b4', 'a601824066afec8f20ab94dcbfeb9811', 'fb375d36f285b3f2fc12b9c8d981e22c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8H61024SEU8H6', datetime.datetime(2024, 6, 10, 13, 44, 29, 520000), 'MPM', 75000, 'Mandiri', '1', 'Approved', '9360000812102916142', '633318ce959922cc6726b2c4', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.720+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.723+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.725+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10505, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8H71024SEU8H7', datetime.datetime(2024, 6, 10, 13, 49, 6, 3000), 'MPM', 5000, 'Mandiri', '1', 'Approved', '9360000812010209903', '6195fc4fecab33f55f6502e0', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.726+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.730+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.733+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10506, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8H81024SEU8H8', datetime.datetime(2024, 6, 10, 13, 51, 54, 537000), 'MPM', 225000, 'BRI', '1', 'Approved', '9360000210061804541', '63332902ddddb8db38109af1', '93600002', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.734+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.737+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.740+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10507, '936005030000050490', 'ID1019013960678', '12180000049011', '39d7a999bdbd3ecf1abc6d786dcd6b74', 'd785c33f16ad5637924773451466bab4', '84ab2f83f4dea25ab22518a7dabfcb5b', '1', '1', '360', 'NULL', 'NULL', '1024SEU8H91024SEU8H9', datetime.datetime(2024, 6, 10, 13, 59, 37, 83000), 'MPM', 8000, 'BCA', '1', 'Approved', '9360001410153313936', '63331e19bb374953d8d16200', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.741+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.744+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.746+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10508, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HA1024SEU8HA', datetime.datetime(2024, 6, 10, 14, 0, 26, 387000), 'MPM', 11000, 'Nobu', '1', 'Approved', '12011177773', '6195fc4fecab33f55f6502e0', '93600503', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.747+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.750+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.753+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10509, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HB1024SEU8HB', datetime.datetime(2024, 6, 10, 14, 0, 51, 50000), 'MPM', 22000, 'Bank BJB', '1', 'Approved', '9360011010029617508', '63332902ddddb8db38109af1', '93600110', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.754+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.757+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.759+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10510, '936005030000075955', 'ID1020047867590', '09160000658843', '78ffcb342f70b9f23dd7224d5048c923', '9fb098b1c87c25c4918886eba6e63853', 'a3cbb6678c48a4fe17c1bcff5fd8a62d', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HC1024SEU8HC', datetime.datetime(2024, 6, 10, 14, 11, 23, 823000), 'MPM', 25000, 'BCA', '1', 'Approved', '9360001410153900740', '624efd2013dc0376c6325dfb', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.760+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.763+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.766+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10511, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HD1024SEU8HD', datetime.datetime(2024, 6, 10, 14, 13, 26, 343000), 'MPM', 20000, 'Dana', '1', 'Approved', '9360091531858271250', '63332902ddddb8db38109af1', '93600915', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.767+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.770+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.772+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10512, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8HE1024SEU8HE', datetime.datetime(2024, 6, 10, 14, 13, 46, 437000), 'MPM', 23000, 'Jenius', '1', 'Approved', '9360021311001103113', '622742edd2176890ba947828', '93600213', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.773+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.776+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.779+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10513, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HF1024SEU8HF', datetime.datetime(2024, 6, 10, 14, 19, 14, 253000), 'MPM', 7000, 'SeaBank', '1', 'Approved', '9360053517681814347', '6195fc4fecab33f55f6502e0', '93600535', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.780+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.783+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.785+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10514, '936005030000082352', 'ID1021067918586', '04080000674415', 'b714a2a7fe58067bfdf3d027a2f81691', '6eb6c60d54d4934a176e74ea5ef7bb3e', 'a6c85211ae7447c534d9bb99fce660f8', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HG1024SEU8HG', datetime.datetime(2024, 6, 10, 14, 29, 52, 333000), 'MPM', 7000, 'Dana', '1', 'Approved', '9360091535306855143', '624efa66a9167d1eab9a8251', '93600915', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.786+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.789+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.792+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10515, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HH1024SEU8HH', datetime.datetime(2024, 6, 10, 14, 36, 43, 480000), 'MPM', 15000, 'OVO', '1', 'Approved', '9360091288905137911', '624efa5e13dc0376c6322b23', '93600912', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.793+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.796+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.798+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10516, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HI1024SEU8HI', datetime.datetime(2024, 6, 10, 14, 53, 55, 980000), 'MPM', 20000, 'GOPAY', '1', 'Approved', '9360091430205871872', '63332902ddddb8db38109af1', '93600914', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.799+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.802+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.804+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10517, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HJ1024SEU8HJ', datetime.datetime(2024, 6, 10, 15, 0, 55, 10000), 'MPM', 11000, 'OVO', '1', 'Approved', '9360091285778400246', '6195fc4fecab33f55f6502e0', '93600912', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.805+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.809+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.811+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10518, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HK1024SEU8HK', datetime.datetime(2024, 6, 10, 15, 11, 1, 450000), 'MPM', 16000, 'Mandiri', '1', 'Approved', '9360000822008296408', '6195fc4fecab33f55f6502e0', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.812+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.815+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.817+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10519, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HL1024SEU8HL', datetime.datetime(2024, 6, 10, 15, 12, 17, 20000), 'MPM', 34000, 'Shopeepay', '1', 'Approved', '9360091820260049767', '63332902ddddb8db38109af1', '93600918', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.818+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.821+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.824+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10520, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HM1024SEU8HM', datetime.datetime(2024, 6, 10, 15, 21, 16, 147000), 'MPM', 7000, 'OVO', '1', 'Approved', '9360091287761423450', '6195fc4fecab33f55f6502e0', '93600912', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.825+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.828+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.830+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10521, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HN1024SEU8HN', datetime.datetime(2024, 6, 10, 15, 24, 22, 890000), 'MPM', 12000, 'BCA', '1', 'Approved', '9360001410157569228', '624efa5e13dc0376c6322b23', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.831+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.834+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.837+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10522, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HO1024SEU8HO', datetime.datetime(2024, 6, 10, 15, 28, 4, 427000), 'MPM', 40000, 'Dana', '1', 'Approved', '9360091532660943938', '63332902ddddb8db38109af1', '93600915', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.838+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.841+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.843+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10523, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HP1024SEU8HP', datetime.datetime(2024, 6, 10, 15, 36, 37, 587000), 'MPM', 7500, 'Nobu', '1', 'Approved', '99901000005304', '6195fc4fecab33f55f6502e0', '93600503', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.844+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.847+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.849+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10524, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HQ1024SEU8HQ', datetime.datetime(2024, 6, 10, 15, 39, 15, 973000), 'MPM', 13000, 'Dana', '1', 'Approved', '9360091530051886609', '624efa5e13dc0376c6322b23', '93600915', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.850+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.853+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.856+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10525, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HR1024SEU8HR', datetime.datetime(2024, 6, 10, 15, 39, 22, 220000), 'MPM', 12000, 'Bank JAGO', '1', 'Approved', '9360054210032210725', '624efa5e13dc0376c6322b23', '93600542', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.857+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.860+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.862+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10526, '936005030000083323', 'ID1021075053855', '06100000676903', '79974e9d99d4a9caa49586d3fe3ba5b9', '192b04bed430a61aa3691745003fda95', '96f89363dd5660e9388131fb68af856c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HS1024SEU8HS', datetime.datetime(2024, 6, 10, 15, 39, 42, 40000), 'MPM', 15000, 'BCA', '1', 'Approved', '9360001410158341304', '624efa5e13dc0376c6322b23', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.863+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.866+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.868+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10527, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HT1024SEU8HT', datetime.datetime(2024, 6, 10, 15, 57, 39, 930000), 'MPM', 11000, 'BCA', '1', 'Approved', '9360001410159264802', '6195fc4fecab33f55f6502e0', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.869+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.872+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.874+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10528, '936005030000086071', 'ID1022149519970', '01250000683634', 'c2d683e7f5dd9593326ee7777b62a966', '719bbe0022247a494c64ae872d87a78f', '664f8641190be761326cd906b4750502', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HU1024SEU8HU', datetime.datetime(2024, 6, 10, 15, 58, 30, 363000), 'MPM', 106000, 'BCA', '1', 'Approved', '9360001410159308542', '624ef91dec75798533efd857', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.875+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.878+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.881+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10529, '936005030000079805', 'ID1020053527153', '11130000667658', 'e90bcecc54ed183349833d23b4b2d7ff', 'c5a1dd038c93358b808221f0a145a2e1', 'c6cbd855c13ff5afff0c8588509cb93f', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HV1024SEU8HV', datetime.datetime(2024, 6, 10, 16, 4, 30, 110000), 'MPM', 45000, 'Nobu', '1', 'Approved', '10310030388', '6195fc4fecab33f55f6502e0', '93600503', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.882+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.885+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.887+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10530, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8HW1024SEU8HW', datetime.datetime(2024, 6, 10, 16, 18, 16, 633000), 'MPM', 50000, 'BCA', '1', 'Approved', '9360001410160341532', '622742edd2176890ba947828', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.888+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.891+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.893+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10531, '936005030000057483', 'ID1020034184298', '04220000056594', '50f2cfd996f2166906ea15971b7dd0f4', '4d6715175588a83a0485aa1d6bb4c84d', '2883ea724bda23b6c54c2461b36885ed', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HX1024SEU8HX', datetime.datetime(2024, 6, 10, 16, 21, 32, 597000), 'MPM', 350000, 'BRI', '1', 'Approved', '9360000210084030678', '633325ee0055e055fd03b57d', '93600002', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.894+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.897+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.900+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10532, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HY1024SEU8HY', datetime.datetime(2024, 6, 10, 16, 22, 17, 640000), 'MPM', 30000, 'Dana', '1', 'Approved', '9360091538822109441', '63332902ddddb8db38109af1', '93600915', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.901+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.904+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.906+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10533, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8HZ1024SEU8HZ', datetime.datetime(2024, 6, 10, 16, 23, 46, 930000), 'MPM', 7000, 'Dana', '1', 'Approved', '9360091531517693910', '63332902ddddb8db38109af1', '93600915', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.907+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.910+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.913+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10534, '936005030000066825', 'ID1023263811466', '23060000000121', '2c1b99355c6f052ed4a9d904f28c24c7', '60b42cdbbc252d480035d57190ac0dd2', '80ff55a075277b089e1b665ad783f340', '1', '1', '360', 'NULL', 'NULL', '1024SEU8I01024SEU8I0', datetime.datetime(2024, 6, 10, 16, 40, 27, 10000), 'MPM', 4000, 'BCA', '1', 'Approved', '9360001410161522445', '648a8391de508fd9c1ce246e', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.913+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.917+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.919+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10535, '936005030000066825', 'ID1023263811466', '23060000000121', '2c1b99355c6f052ed4a9d904f28c24c7', '60b42cdbbc252d480035d57190ac0dd2', '80ff55a075277b089e1b665ad783f340', '1', '1', '360', 'NULL', 'NULL', '1024SEU8I11024SEU8I1', datetime.datetime(2024, 6, 10, 16, 41, 3, 970000), 'MPM', 6000, 'BNI', '1', 'Approved', '9360000912002689508', '648a8391de508fd9c1ce246e', '93600009', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.920+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.923+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.926+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10536, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8I21024SEU8I2', datetime.datetime(2024, 6, 10, 16, 44, 54, 720000), 'MPM', 4000, 'BCA', '1', 'Approved', '9360001410161768592', '63332902ddddb8db38109af1', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.926+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.930+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.932+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10537, '936005030000057483', 'ID1020034184298', '04220000056594', '50f2cfd996f2166906ea15971b7dd0f4', '4d6715175588a83a0485aa1d6bb4c84d', '2883ea724bda23b6c54c2461b36885ed', '1', '1', '360', 'NULL', 'NULL', '1024SEU8I31024SEU8I3', datetime.datetime(2024, 6, 10, 16, 46, 41, 20000), 'MPM', 3000000, 'BCA', '1', 'Approved', '9360001410161866438', '633325ee0055e055fd03b57d', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.933+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.936+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.938+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10538, '936005030000083090', 'ID1021072307304', '05240000676326', 'af46f54e5f3cf29335d3806e3d22868b', '6fd5f5bfd1cf72d604e289637cb4aacd', '8231f1493fe220b9a17994ae87af9b97', '1', '1', '360', 'NULL', 'NULL', '1024SEU8I41024SEU8I4', datetime.datetime(2024, 6, 10, 16, 59, 9, 323000), 'MPM', 94000, 'BTN', '1', 'Approved', '936002000000351182', '624efe68101dea9788fbf5b4', '93600200', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.939+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.942+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.945+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10539, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8I51024SEU8I5', datetime.datetime(2024, 6, 10, 16, 59, 56, 353000), 'MPM', 40000, 'BRI', '1', 'Approved', '9360000210075801782', '63332902ddddb8db38109af1', '93600002', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.946+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.949+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.951+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10540, '936005030000085167', 'ID2021116381231', '10250000681306', '51cacd0467d4f30c28c8e445e62a197e', '33c2bc45066aa288a654aebde806e9d5', 'd3215a375c9a2375ffa1a6967106bca8', '2', '1', '360', 'NULL', 'NULL', '1024SEU8I61024SEU8I6', datetime.datetime(2024, 6, 10, 17, 5, 34, 280000), 'MPM', 15000, 'GOPAY', '1', 'Approved', '9360091430010026555', '622742edd2176890ba947828', '93600914', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.952+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.955+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.958+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10541, '936005030000075955', 'ID1020047867590', '09160000658843', '78ffcb342f70b9f23dd7224d5048c923', '9fb098b1c87c25c4918886eba6e63853', 'a3cbb6678c48a4fe17c1bcff5fd8a62d', '1', '1', '360', 'NULL', 'NULL', '1024SEU8I71024SEU8I7', datetime.datetime(2024, 6, 10, 18, 8, 9, 507000), 'MPM', 15000, 'Mandiri', '1', 'Approved', '9360000812277755507', '624efd2013dc0376c6325dfb', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.959+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.962+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.964+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10542, '936005030000075955', 'ID1020047867590', '09160000658843', '78ffcb342f70b9f23dd7224d5048c923', '9fb098b1c87c25c4918886eba6e63853', 'a3cbb6678c48a4fe17c1bcff5fd8a62d', '1', '1', '360', 'NULL', 'NULL', '1024SEU8I81024SEU8I8', datetime.datetime(2024, 6, 10, 18, 9, 49, 347000), 'MPM', 95000, 'OVO', '1', 'Approved', '9360091281249494135', '624efd2013dc0376c6325dfb', '93600912', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.965+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.968+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.970+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10543, '936005030000075955', 'ID1020047867590', '09160000658843', '78ffcb342f70b9f23dd7224d5048c923', '9fb098b1c87c25c4918886eba6e63853', 'a3cbb6678c48a4fe17c1bcff5fd8a62d', '1', '1', '360', 'NULL', 'NULL', '1024SEU8I91024SEU8I9', datetime.datetime(2024, 6, 10, 18, 34, 58, 893000), 'MPM', 35000, 'Mandiri', '1', 'Approved', '9360000812165987246', '624efd2013dc0376c6325dfb', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.971+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.974+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.977+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10544, '936005030000084451', 'ID1021091435748', '08240000679579', '51c73500935d04b2ec9eac5e9a2487cb', 'fcdb3ed7cb7f78fd69add49f9b35507a', '4d0608f2dda5847ad708dac461d2234c', '1', '1', '360', 'NULL', 'NULL', '1024SEU8IA1024SEU8IA', datetime.datetime(2024, 6, 10, 18, 38, 56, 580000), 'MPM', 155000, 'BCA', '1', 'Approved', '9360001410168665411', '624ef923101dea9788fb874d', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.978+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.981+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.983+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10545, '936005030000082352', 'ID1021067918586', '04080000674415', 'b714a2a7fe58067bfdf3d027a2f81691', '6eb6c60d54d4934a176e74ea5ef7bb3e', 'a6c85211ae7447c534d9bb99fce660f8', '1', '1', '360', 'NULL', 'NULL', '1024SEU8IB1024SEU8IB', datetime.datetime(2024, 6, 10, 18, 50, 22, 513000), 'MPM', 180000, 'BRI', '1', 'Approved', '9360000210078460446', '624efa66a9167d1eab9a8251', '93600002', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.984+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.987+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.990+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10546, '936005030000049198', 'ID1019012152459', '12090000047875', 'e26725a1f2324d5ffe5ad10e16053554', 'b6308ec3a32918c41810194679b67357', '55c3d8ecb66f4beb387ca57e329c907b', '1', '1', '360', 'NULL', 'NULL', '1024SEU8IC1024SEU8IC', datetime.datetime(2024, 6, 10, 18, 51, 20, 27000), 'MPM', 75000, 'BCA', '1', 'Approved', '9360001410169481073', '6333234f3aedee5c3a8dc4f9', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.990+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:18.994+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:18.996+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10547, '936005030000050286', 'ID1019013060248', '12160000048809', '2ceabd880f73a79ce082631dad97f56d', '9c61b84fd8190a08ce060c916ef4e865', 'f2e0d385c447c6a556c7f95ffee5007e', '1', '1', '360', 'NULL', 'NULL', '1024SEU8ID1024SEU8ID', datetime.datetime(2024, 6, 10, 19, 9, 6, 947000), 'MPM', 40000, 'BCA', '1', 'Approved', '9360001410170650401', '63332902ddddb8db38109af1', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:18.997+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:19.000+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:19.003+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10548, '936005030000058855', 'ID1020035077723', '04300000058138', 'e9963f1896712d4c60d7a756fa7cea55', '27ca4adaac6bd667578b952a51651090', 'd0b154debd85b8d2f91ddfdd647a3738', '1', '1', '360', 'NULL', 'NULL', '1024SEU8IE1024SEU8IE', datetime.datetime(2024, 6, 10, 19, 39, 28, 23000), 'MPM', 70000, 'Mandiri', '1', 'Approved', '9360000822013984790', '633325e7a20c2906ea327a1a', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:19.004+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:19.007+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:19.009+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10549, '936005030000075955', 'ID1020047867590', '09160000658843', '78ffcb342f70b9f23dd7224d5048c923', '9fb098b1c87c25c4918886eba6e63853', 'a3cbb6678c48a4fe17c1bcff5fd8a62d', '1', '1', '360', 'NULL', 'NULL', '1024SEU8IF1024SEU8IF', datetime.datetime(2024, 6, 10, 19, 43, 24, 23000), 'MPM', 145000, 'Danamon', '1', 'Approved', '9360001111400000752', '624efd2013dc0376c6325dfb', '93600011', '2024-06-11 15:09:17']
+[2024-06-11T08:09:19.010+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:19.013+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:19.016+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10550, '936005030000059941', 'ID1020035854279', '05110000059298', '484834443819a3454344cc41750ab87f', '3cd07dd051b59e2a21a7cf9b3eed5604', '2cd4b39150da94429a2026dd29fe76b0', '1', '1', '360', 'NULL', 'NULL', '1024SEU8IG1024SEU8IG', datetime.datetime(2024, 6, 10, 19, 48, 45, 637000), 'MPM', 113500, 'Mandiri', '1', 'Approved', '9360000812314706588', '63331de2db47b9bedd65f630', '93600008', '2024-06-11 15:09:17']
+[2024-06-11T08:09:19.017+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:19.020+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:19.023+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10551, '936005030000084463', 'ID1021091956321', '08250000679615', '1b0e7e1e759ec24f42c038eb0e9eca2b', 'b0a88e2c0011fbaeaa439fd39e208d1e', '172d89560212678eb96045a3cc09b987', '1', '1', '360', 'NULL', 'NULL', '1024SEU8IH1024SEU8IH', datetime.datetime(2024, 6, 10, 20, 7, 10, 23000), 'MPM', 2, 'Bank Neo Commerce', '1', 'Approved', '9360049059223493972', '624efa5513dc0376c63225c0', '93600490', '2024-06-11 15:09:17']
+[2024-06-11T08:09:19.024+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:19.027+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:19.029+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10552, '936005030000058855', 'ID1020035077723', '04300000058138', 'e9963f1896712d4c60d7a756fa7cea55', '27ca4adaac6bd667578b952a51651090', 'd0b154debd85b8d2f91ddfdd647a3738', '1', '1', '360', 'NULL', 'NULL', '1024SEU8II1024SEU8II', datetime.datetime(2024, 6, 10, 20, 13, 16, 560000), 'MPM', 200000, 'BCA', '1', 'Approved', '9360001410174874247', '633325e7a20c2906ea327a1a', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:19.030+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:19.034+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:19.036+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10553, '936005030000050490', 'ID1019013960678', '12180000049011', '39d7a999bdbd3ecf1abc6d786dcd6b74', 'd785c33f16ad5637924773451466bab4', '84ab2f83f4dea25ab22518a7dabfcb5b', '1', '1', '360', 'NULL', 'NULL', '1024SEU8IJ1024SEU8IJ', datetime.datetime(2024, 6, 10, 20, 30, 55, 333000), 'MPM', 12000, 'BCA', '1', 'Approved', '9360001410175960045', '63331e19bb374953d8d16200', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:19.037+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:19.040+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T08:09:19.042+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_nobubiz_v_transaction (
+        "Id",
+        "MPANID",
+        "NMID",
+        "MerchantID",
+        "MerchantName",
+        "MerchantPhone",
+        "MerchantEmail",
+        "MerchantType",
+        "MerchantStatus",
+        "MerchantCurrency",
+        "RegisterLatitude",
+        "RegisterLongitude",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionAmount",
+        "IssuerName",
+        "TransactionStatus",
+        "TransactionMessage",
+        "CPANID",
+        "StoreID",
+        "IssuerID",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [10554, '936005030000050490', 'ID1019013960678', '12180000049011', '39d7a999bdbd3ecf1abc6d786dcd6b74', 'd785c33f16ad5637924773451466bab4', '84ab2f83f4dea25ab22518a7dabfcb5b', '1', '1', '360', 'NULL', 'NULL', '1024SEU8IK1024SEU8IK', datetime.datetime(2024, 6, 10, 21, 36, 12, 670000), 'MPM', 12500, 'BCA', '1', 'Approved', '9360001410179235345', '63331e19bb374953d8d16200', '93600014', '2024-06-11 15:09:17']
+[2024-06-11T08:09:19.043+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T08:09:19.044+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-11T08:09:19.045+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-11T08:09:19.048+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_ingest_cybertrack_nobubiz_v_transaction, task_id=load_to_postgresql, run_id=manual__2024-06-11T08:09:16.413341+00:00, execution_date=20240611T080916, start_date=20240611T080918, end_date=20240611T080919
+[2024-06-11T08:09:19.062+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-11T08:09:19.072+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-11T08:09:19.073+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

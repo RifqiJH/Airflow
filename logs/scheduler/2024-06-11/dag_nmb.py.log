@@ -1,0 +1,348 @@
+[2024-06-11T08:26:17.588+0000] {processor.py:161} INFO - Started process (PID=6972) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:26:17.589+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:26:17.590+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:26:17.590+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:26:17.594+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:26:17.593+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag_nmb.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_nmb.py", line 41
+    insert_query = """
+                      ^
+IndentationError: unindent does not match any outer indentation level
+[2024-06-11T08:26:17.595+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:26:17.607+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.024 seconds
+[2024-06-11T08:26:48.078+0000] {processor.py:161} INFO - Started process (PID=7003) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:26:48.079+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:26:48.080+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:26:48.079+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:26:48.085+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:26:48.084+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag_nmb.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_nmb.py", line 41
+    insert_query = """
+                      ^
+IndentationError: unindent does not match any outer indentation level
+[2024-06-11T08:26:48.086+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:26:48.101+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.030 seconds
+[2024-06-11T08:27:18.578+0000] {processor.py:161} INFO - Started process (PID=7040) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:27:18.579+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:27:18.580+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:27:18.579+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:27:18.584+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:27:18.583+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag_nmb.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_nmb.py", line 41
+    insert_query = """
+                      ^
+IndentationError: unindent does not match any outer indentation level
+[2024-06-11T08:27:18.585+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:27:18.595+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.025 seconds
+[2024-06-11T08:30:39.695+0000] {processor.py:161} INFO - Started process (PID=7065) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:30:39.699+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:30:39.700+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:30:39.699+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:30:39.708+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:30:39.707+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag_nmb.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_nmb.py", line 41
+    insert_query = """
+                      ^
+IndentationError: unindent does not match any outer indentation level
+[2024-06-11T08:30:39.709+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:30:39.731+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.043 seconds
+[2024-06-11T08:31:10.239+0000] {processor.py:161} INFO - Started process (PID=7096) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:31:10.242+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:31:10.244+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:10.243+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:31:10.254+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:10.251+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/dag_nmb.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 991, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1129, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1059, in source_to_code
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/dag_nmb.py", line 41
+    insert_query = """
+                      ^
+IndentationError: unindent does not match any outer indentation level
+[2024-06-11T08:31:10.255+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:31:10.280+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.064 seconds
+[2024-06-11T08:31:32.857+0000] {processor.py:161} INFO - Started process (PID=7127) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:31:32.864+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:31:32.870+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:32.867+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:31:32.957+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:31:33.050+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:33.049+0000] {override.py:1829} INFO - Created Permission View: can delete on DAG:dag_ingest_cybertrack_nmb_v_merchant_transaction
+[2024-06-11T08:31:33.054+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:33.054+0000] {override.py:1829} INFO - Created Permission View: can edit on DAG:dag_ingest_cybertrack_nmb_v_merchant_transaction
+[2024-06-11T08:31:33.056+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:33.056+0000] {override.py:1829} INFO - Created Permission View: can read on DAG:dag_ingest_cybertrack_nmb_v_merchant_transaction
+[2024-06-11T08:31:33.057+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:33.057+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:31:33.063+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:33.063+0000] {dag.py:3118} INFO - Creating ORM DAG for dag_ingest_cybertrack_nmb_v_merchant_transaction
+[2024-06-11T08:31:33.070+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:33.070+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-09 17:00:00+00:00, run_after=2024-06-10 17:00:00+00:00
+[2024-06-11T08:31:33.078+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.251 seconds
+[2024-06-11T08:32:03.295+0000] {processor.py:161} INFO - Started process (PID=7162) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:32:03.298+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:32:03.299+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:03.298+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:32:03.341+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:32:03.369+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:03.369+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:32:03.382+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:03.382+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:32:03.390+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.105 seconds
+[2024-06-11T08:32:33.853+0000] {processor.py:161} INFO - Started process (PID=7193) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:32:33.855+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:32:33.856+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:33.855+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:32:33.888+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:32:33.923+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:33.923+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:32:33.944+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:33.943+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:32:33.956+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.109 seconds
+[2024-06-11T08:33:04.393+0000] {processor.py:161} INFO - Started process (PID=7224) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:33:04.394+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:33:04.395+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:04.395+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:33:04.449+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:33:04.471+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:04.471+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:33:04.488+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:04.488+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:33:04.497+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.114 seconds
+[2024-06-11T08:33:05.397+0000] {processor.py:161} INFO - Started process (PID=7229) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:33:05.398+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:33:05.399+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:05.398+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:33:05.422+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:33:05.452+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:05.451+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:33:05.468+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:05.468+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:33:05.478+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.086 seconds
+[2024-06-11T08:33:35.867+0000] {processor.py:161} INFO - Started process (PID=7264) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:33:35.870+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:33:35.872+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:35.871+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:33:35.935+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:33:35.957+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:35.957+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:33:35.972+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:35.972+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:33:35.981+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.123 seconds
+[2024-06-11T08:34:06.492+0000] {processor.py:161} INFO - Started process (PID=7295) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:34:06.495+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:34:06.497+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:06.496+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:34:06.544+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:34:06.573+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:06.573+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:34:06.591+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:06.590+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:34:06.601+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.121 seconds
+[2024-06-11T08:34:36.987+0000] {processor.py:161} INFO - Started process (PID=7326) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:34:36.991+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:34:36.992+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:36.992+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:34:37.043+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:34:37.063+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:37.063+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:34:37.077+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:37.077+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:34:37.085+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.113 seconds
+[2024-06-11T08:35:07.426+0000] {processor.py:161} INFO - Started process (PID=7357) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:35:07.429+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:35:07.431+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:07.430+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:35:07.489+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:35:07.509+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:07.509+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:35:07.524+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:07.524+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:35:07.533+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.124 seconds
+[2024-06-11T08:35:38.027+0000] {processor.py:161} INFO - Started process (PID=7388) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:35:38.029+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:35:38.031+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:38.030+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:35:38.077+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:35:38.100+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:38.099+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:35:38.114+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:38.114+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:35:38.123+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.110 seconds
+[2024-06-11T08:36:08.538+0000] {processor.py:161} INFO - Started process (PID=7419) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:36:08.541+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:36:08.543+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:08.542+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:36:08.590+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:36:08.629+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:08.628+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:36:08.646+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:08.646+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:36:08.656+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.138 seconds
+[2024-06-11T08:36:39.175+0000] {processor.py:161} INFO - Started process (PID=7450) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:36:39.178+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:36:39.180+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:39.179+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:36:39.243+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:36:39.269+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:39.269+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:36:39.283+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:39.283+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:36:39.292+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.129 seconds
+[2024-06-11T08:37:09.902+0000] {processor.py:161} INFO - Started process (PID=7481) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:37:09.904+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:37:09.905+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:09.905+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:37:09.957+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:37:09.995+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:09.995+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:37:10.013+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:10.013+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:37:10.021+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.136 seconds
+[2024-06-11T08:37:16.132+0000] {processor.py:161} INFO - Started process (PID=7492) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:37:16.134+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:37:16.136+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:16.135+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:37:16.187+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:37:16.236+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:16.236+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:37:16.251+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:16.251+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:37:16.261+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.144 seconds
+[2024-06-11T08:37:46.601+0000] {processor.py:161} INFO - Started process (PID=7529) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:37:46.604+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:37:46.606+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:46.605+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:37:46.662+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:37:46.708+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:46.708+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:37:46.729+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:46.729+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:37:46.740+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.151 seconds
+[2024-06-11T08:38:17.154+0000] {processor.py:161} INFO - Started process (PID=7560) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:38:17.156+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:38:17.158+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:17.157+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:38:17.207+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:38:17.234+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:17.233+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:38:17.263+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:17.263+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:38:17.271+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.137 seconds
+[2024-06-11T08:38:47.754+0000] {processor.py:161} INFO - Started process (PID=7591) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:38:47.756+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:38:47.758+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:47.757+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:38:47.804+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:38:47.836+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:47.836+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:38:47.850+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:47.850+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:38:47.862+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.133 seconds
+[2024-06-11T08:39:18.248+0000] {processor.py:161} INFO - Started process (PID=7622) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:39:18.249+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:39:18.251+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:18.250+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:39:18.291+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:39:18.319+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:18.319+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:39:18.331+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:18.331+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:39:18.339+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.101 seconds
+[2024-06-11T08:39:48.699+0000] {processor.py:161} INFO - Started process (PID=7653) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:39:48.700+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:39:48.701+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:48.701+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:39:48.729+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:39:48.743+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:48.743+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:39:48.755+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:48.754+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:39:48.762+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.068 seconds
+[2024-06-11T08:40:19.161+0000] {processor.py:161} INFO - Started process (PID=7684) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:40:19.164+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:40:19.165+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:19.165+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:40:19.223+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:40:19.249+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:19.248+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:40:19.266+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:19.266+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:40:19.277+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.131 seconds
+[2024-06-11T08:40:49.680+0000] {processor.py:161} INFO - Started process (PID=7715) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:40:49.681+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:40:49.682+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:49.681+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:40:49.719+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:40:49.739+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:49.739+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:40:49.753+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:49.753+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:40:49.762+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.089 seconds
+[2024-06-11T08:41:20.147+0000] {processor.py:161} INFO - Started process (PID=7746) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:41:20.149+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:41:20.151+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:20.150+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:41:20.196+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:41:20.222+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:20.221+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:41:20.236+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:20.236+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:41:20.245+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.106 seconds
+[2024-06-11T08:41:50.616+0000] {processor.py:161} INFO - Started process (PID=7777) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:41:50.618+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:41:50.620+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:50.619+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:41:50.664+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:41:50.682+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:50.682+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:41:50.694+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:50.694+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:41:50.702+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.097 seconds
+[2024-06-11T08:42:21.090+0000] {processor.py:161} INFO - Started process (PID=7808) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:42:21.092+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:42:21.094+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:21.093+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:42:21.138+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:42:21.172+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:21.172+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:42:21.185+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:21.185+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:42:21.193+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.116 seconds
+[2024-06-11T08:42:51.563+0000] {processor.py:161} INFO - Started process (PID=7839) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:42:51.565+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:42:51.566+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:51.566+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:42:51.613+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:42:51.657+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:51.657+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:42:51.673+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:51.673+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:42:51.683+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.143 seconds
+[2024-06-11T08:43:22.061+0000] {processor.py:161} INFO - Started process (PID=7870) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:43:22.064+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:43:22.068+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:22.066+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:43:22.121+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:43:22.162+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:22.161+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:43:22.177+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:22.177+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:43:22.185+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.150 seconds
+[2024-06-11T08:43:52.564+0000] {processor.py:161} INFO - Started process (PID=7901) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:43:52.566+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:43:52.567+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:52.567+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:43:52.617+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:43:52.658+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:52.658+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:43:52.673+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:52.673+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:43:52.682+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.132 seconds
+[2024-06-11T08:44:23.186+0000] {processor.py:161} INFO - Started process (PID=7932) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:44:23.188+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:44:23.190+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:23.189+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:44:23.262+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:44:23.286+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:23.286+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:44:23.301+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:23.301+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:44:23.310+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.137 seconds
+[2024-06-11T08:44:53.779+0000] {processor.py:161} INFO - Started process (PID=7963) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:44:53.781+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:44:53.782+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:53.782+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:44:53.849+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:44:53.873+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:53.872+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:44:53.887+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:53.887+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:44:53.896+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.132 seconds
+[2024-06-11T08:45:24.292+0000] {processor.py:161} INFO - Started process (PID=7994) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:45:24.293+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:45:24.295+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:24.294+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:45:24.358+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:45:24.377+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:24.377+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:45:24.391+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:24.391+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:45:24.399+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.118 seconds
+[2024-06-11T08:45:54.828+0000] {processor.py:161} INFO - Started process (PID=8025) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:45:54.829+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:45:54.831+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:54.830+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:45:54.867+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:45:54.883+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:54.883+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:45:54.895+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:54.895+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:45:54.904+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.086 seconds
+[2024-06-11T08:46:25.334+0000] {processor.py:161} INFO - Started process (PID=8056) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:46:25.336+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:46:25.337+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:25.336+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:46:25.404+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:46:25.426+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:25.426+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:46:25.441+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:25.441+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:46:25.450+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.126 seconds
+[2024-06-11T08:46:55.864+0000] {processor.py:161} INFO - Started process (PID=8086) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:46:55.865+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:46:55.866+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:55.866+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:46:55.916+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:46:55.937+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:55.937+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:46:55.952+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:55.952+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:46:55.962+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.105 seconds
+[2024-06-11T08:47:26.365+0000] {processor.py:161} INFO - Started process (PID=8117) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:47:26.366+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:47:26.368+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:26.367+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:47:26.409+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:47:26.427+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:26.427+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:47:26.441+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:26.441+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:47:26.450+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.096 seconds
+[2024-06-11T08:47:56.958+0000] {processor.py:161} INFO - Started process (PID=8148) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:47:56.960+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:47:56.962+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:56.961+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:47:57.025+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:47:57.045+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:57.045+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:47:57.058+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:57.058+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:47:57.067+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.119 seconds
+[2024-06-11T08:48:27.550+0000] {processor.py:161} INFO - Started process (PID=8179) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:48:27.552+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:48:27.554+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:27.553+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:48:27.596+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:48:27.640+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:27.640+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:48:27.656+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:27.655+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:48:27.666+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.139 seconds
+[2024-06-11T08:48:58.065+0000] {processor.py:161} INFO - Started process (PID=8210) to work on /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:48:58.067+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nmb.py for tasks to queue
+[2024-06-11T08:48:58.069+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:58.068+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:48:58.110+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nmb_v_merchant_transaction' retrieved from /opt/airflow/dags/dag_nmb.py
+[2024-06-11T08:48:58.125+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:58.125+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:48:58.138+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:58.138+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nmb_v_merchant_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:48:58.146+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nmb.py took 0.091 seconds

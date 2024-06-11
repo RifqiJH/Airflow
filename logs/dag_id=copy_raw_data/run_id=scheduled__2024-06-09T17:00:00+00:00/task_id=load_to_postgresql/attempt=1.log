@@ -1,0 +1,2418 @@
+[2024-06-11T07:16:14.501+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-11T07:16:14.515+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: copy_raw_data.load_to_postgresql scheduled__2024-06-09T17:00:00+00:00 [queued]>
+[2024-06-11T07:16:14.525+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: copy_raw_data.load_to_postgresql scheduled__2024-06-09T17:00:00+00:00 [queued]>
+[2024-06-11T07:16:14.525+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-11T07:16:14.537+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_to_postgresql> on 2024-06-09 17:00:00+00:00
+[2024-06-11T07:16:14.542+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=4449) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-06-11T07:16:14.542+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'copy_raw_data', 'load_to_postgresql', 'scheduled__2024-06-09T17:00:00+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/copy_file_transfer.py', '--cfg-path', '/tmp/tmpz_1wau0z']
+[2024-06-11T07:16:14.545+0000] {standard_task_runner.py:63} INFO - Started process 4450 to run task
+[2024-06-11T07:16:14.545+0000] {standard_task_runner.py:91} INFO - Job 82: Subtask load_to_postgresql
+[2024-06-11T07:16:14.589+0000] {task_command.py:426} INFO - Running <TaskInstance: copy_raw_data.load_to_postgresql scheduled__2024-06-09T17:00:00+00:00 [running]> on host 2e5c63130483
+[2024-06-11T07:16:14.657+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='copy_raw_data' AIRFLOW_CTX_TASK_ID='load_to_postgresql' AIRFLOW_CTX_EXECUTION_DATE='2024-06-09T17:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-09T17:00:00+00:00'
+[2024-06-11T07:16:14.658+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-11T07:16:14.676+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.681+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023441, 'TB2024061078062253', datetime.datetime(2024, 6, 10, 22, 48, 38, 970000), 'TRF_BIFAST', 107500, 'Success', '619e5479cbe178e81b36ddc98b3018be', '5c9516baef42d316a891a276633e491d', 'SAVING', '693817191564', 'OKTAVIANUS DWI FIGO NAINGGOLAN', 'OCBC', 'TRF_BIFAST', '240603140111000', 'edd46da3a52880334c0f2795f5e5344f', '9ea5955fd9a9bb7621e5398b0459c9d5', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.683+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.688+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.692+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023442, 'TB2024061078062259', datetime.datetime(2024, 6, 10, 22, 50, 37, 487000), 'TRF_BIFAST', 180738, 'Success', '1a991cb46102ab4ad4af9d6b4bb3e365', '21fcbc96cf587472f07588cb7df40b72', 'DIGITAL_SAVING', '1430378691', 'NUNUNG SULISTYOWATI', 'BANK BCA', 'TRF_BIFAST', '200220181257000', '0f9b955077bf51c8b2ca4a7565923264', '73d98f7be9b85210ad9d224f6041661f', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.693+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.698+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.702+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023443, 'TO2024061078062262', datetime.datetime(2024, 6, 10, 22, 50, 49, 113000), 'TRF_NOBU', 18000, 'Success', 'ad8786f3961e7224285369cb2d2e9da2', 'c91e2bdd052a2623d41ac4b50902bcd4', 'PAYROLL', '12030001189', 'BERLIAN CAHAYA INDAH', 'BANK NOBU', 'TRF_NOBU', '230707110253000', 'd91074b7780c8a9cfdfeb17f6c0318c0', '1f16c02c8605b6c6872a019c69b6e1cd', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.704+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.709+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.719+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023444, 'TO2024061078062267', datetime.datetime(2024, 6, 10, 22, 52, 2, 877000), 'TRF_NOBU', 120000, 'Success', '8951c41475701df7be3a67bcf864e1c3', '3ff728d826042023fcaf3895adba77bc', 'PAYROLL', '99901000005113', 'ADELIA DIAS PERMATA', 'NOBU', 'TRF_NOBU', '230504133105000', '3fdc65440b3e57b95eae397640b8f0b6', '61e012d805fff945aa04614cb08f8524', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.722+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.729+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.739+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023445, 'TB2024061078062292', datetime.datetime(2024, 6, 10, 22, 53, 45, 13000), 'TRF_BIFAST', 130000, 'Success', 'fd2e5364be05bd11dc86613e5fe1299f', '5f67ab2173c67542fc672e4afc4d4462', 'DIGITAL_SAVING', '0570658298', 'MITA APRIANI', 'BANK BCA', 'TRF_BIFAST', '200127125608000', '1b8f51eb54d1d7dcb3ae1e6ffbde9947', 'de4e0149d6876d4d2171f805ffa72ee8', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.741+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.750+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.755+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023446, 'TB2024061078062289', datetime.datetime(2024, 6, 10, 22, 53, 52, 433000), 'TRF_BIFAST', 2700000, 'Success', '6edb4122022ec11602a7261f70b73b2d', '837342ae3dbbf97a937503f4f1facc4e', 'SAVING', '012901076422503', 'HONGKI LINARDO', 'BANK BRI', 'TRF_BIFAST', '220713104454000', '2a66f8336b15f412b829b5de6f7c583f', '0c67009e4a47143f05177317c721882e', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.756+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.762+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.768+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023447, 'TB2024061078062302', datetime.datetime(2024, 6, 10, 22, 54, 16, 783000), 'TRF_BIFAST', 905000, 'Success', '983a5cba12fa7adcb8aecbac9d11f92e', '0639f83c0656d34d74403d48b95b69b9', 'PAYROLL', '0828053509', 'INDRIANI MANULLANG', 'BANK BNI', 'TRF_BIFAST', '220406120056000', '40c680eb5bfe7e8467889694389af19b', 'cc1e5d3ce30b696c104b003295ce2df8', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.771+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.776+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.780+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023448, 'TB2024061078062314', datetime.datetime(2024, 6, 10, 22, 54, 48, 947000), 'TRF_BIFAST', 500000, 'Success', '6c13c4dd48260f88267d33f084e3ac06', '54b16683549911147e71d2258304cf3b', 'PAYROLL', '473541699', 'AGUSTINA ARIS WIDARYANTI', 'BANK BNI', 'TRF_BIFAST', '211025103653000', 'e94905b49867de1e978925ac0b24b41c', '96d063b2ae5a50517f4e224953499e8a', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.782+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.787+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.791+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023449, 'TB2024061078062324', datetime.datetime(2024, 6, 10, 22, 55, 11, 543000), 'TRF_BIFAST', 600000, 'Success', '3e3910a994f84214b554ced382dbf680', '0d44cca4d6e9f7d98aaf0f79cf31c1e5', 'PAYROLL', '018901034630504', 'ESTER RESKI VALENTIN', 'BANK BRI', 'TRF_BIFAST', '210504115903000', '8db3b13518679e608d4d5da3fe71b5f6', '872ffee7bab42b0d21f6c2d70cf7bc9b', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.793+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.797+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.800+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023450, 'TB2024061078062339', datetime.datetime(2024, 6, 10, 22, 55, 47, 137000), 'TRF_BIFAST', 1000000, 'Success', 'bee812f77f444775f8edecae4e853f7d', 'b5fb95ad8090f7ba36f88c73bc573c90', 'SAVING', '5220397833', 'EDI SUCIPTO', 'BANK BCA', 'TRF_BIFAST', '230109123026000', 'f0787cff470a2455324c160f0d2cdb4d', '2c0badc8013d7f88fce78d2fb3599b47', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.802+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.806+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.809+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023451, 'TB2024061078062334', datetime.datetime(2024, 6, 10, 22, 55, 48, 293000), 'TRF_BIFAST', 507500, 'Success', '01033122f5c3334854cea54ca82624e9', '73bf543a036889b59ee5398c82847e16', 'PAYROLL', '0241140031', 'HOLIFAH', 'BANK BCA', 'TRF_BIFAST', '210921135912000', '3fcfacbd7dd523d1a3251751c3ac1a6a', '5478c00304be015007cf4f1b806d4e98', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.810+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.814+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.818+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023452, 'TO2024061078062340', datetime.datetime(2024, 6, 10, 22, 55, 48, 940000), 'TRF_NOBU', 300000, 'Success', '0c6eb604a3aec9be7ef0c39e2f518606', '0ea483e4d9aafd4323c4acb6aa0fcd9c', 'PAYROLL', '72211000436', 'ERMA YULIANTI', 'BANK NOBU', 'TRF_NOBU', '211021150642000', 'ddf9fd6b2404f6b25eb74aab4d3af6b5', '343ddc786ef734df1e23c52554aac5d4', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.819+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.822+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.824+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023453, 'TO2024061078062354', datetime.datetime(2024, 6, 10, 22, 56, 16, 957000), 'TRF_NOBU', 100000, 'Success', 'bee812f77f444775f8edecae4e853f7d', 'b5fb95ad8090f7ba36f88c73bc573c90', 'SAVING', '99901000021200', 'EDI SUCIPTO', 'NOBU', 'TRF_NOBU', '230109123026000', 'f0787cff470a2455324c160f0d2cdb4d', '2c0badc8013d7f88fce78d2fb3599b47', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.825+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.829+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.832+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023454, 'TO2024061078062373', datetime.datetime(2024, 6, 10, 22, 57, 13, 497000), 'TRF_NOBU', 40000, 'Success', 'b7c8ca3ae175637ec4d02d18f9d909fe', 'c7273b26d90bae790329462f2c8c6dfc', 'PAYROLL', '81811006220', 'MEGA ANDRIA PRATIWI', 'BANK NOBU', 'TRF_NOBU', '220407095338000', 'de2c1bb505d8b14f659ad04edc900871', 'c2aba2747621e9e2e8ad51b14106a7cc', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.833+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.837+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.839+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023455, 'TO2024061078062372', datetime.datetime(2024, 6, 10, 22, 57, 16, 357000), 'TRF_NOBU', 17000, 'Success', 'd21c48436b8bb7f5a0755a0b995646b9', '8acd0e21aad74cd5ea3e2991f9aa1610', 'PAYROLL', '30211427642', 'SRIE WAHYUNI', 'BANK NOBU', 'TRF_NOBU', '211201151135000', '3ef6e3db0c5176326ec4e03fb1ecb13a', '074e1a9b0c3d3801c2e80aeda26bb40f', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.840+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.844+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.846+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023456, 'TB2024061078062380', datetime.datetime(2024, 6, 10, 22, 57, 39, 383000), 'TRF_BIFAST', 3000000, 'Success', '6b435eab3667a1644dc5e99fd2beb2cd', '4cf57d3a0525373a278d651316d6ecc0', 'PAYROLL', '0006201300009641', 'YAYASAN HANG TUAH', 'BANK BTN', 'TRF_BIFAST', '130801150524000', '2d10aa3415fdfd209c915da8c3a677a7', '86d4d4105653ffe283ea5357649d5816', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.848+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.852+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.854+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023457, 'TO2024061078062414', datetime.datetime(2024, 6, 10, 22, 59, 23, 890000), 'TRF_NOBU', 74500, 'Success', 'c0b8e99aa6f98bf3227a1b4cd21967c3', 'f955ac3868eaf40dd26d60a9eab713fc', 'SAVING', '11710420038', 'MEYSKE PUTIRULAN', 'BANK NOBU', 'TRF_NOBU', '230530134301000', '9eef76c7ebd036a9419f26f5630d2770', '7e0e6f78c52c17e51a6a4e23f1d174bc', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.855+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.859+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.862+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023458, 'TB2024061078062458', datetime.datetime(2024, 6, 10, 23, 1, 36, 980000), 'TRF_BIFAST', 28458, 'Success', '1316304d67dc2f3b25a58304f2800c21', 'a83eea67d6f2ea67c6450475e9f28ace', 'PAYROLL', '126089643784137', 'JXXXXXXXXXXXW - PT AIRPAY INTERNATIONAL INDONE', 'BANK BCA', 'TRF_BIFAST', '160630104946000', '89d75a8e00a1a5af0fc115b937082918', '04b9956030c51d1b31bc7b038e0cbe1c', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.863+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.867+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.869+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023459, 'TB2024061078062462', datetime.datetime(2024, 6, 10, 23, 1, 41, 593000), 'TRF_BIFAST', 200000, 'Success', '34008bd036dc45e0c3fe1c4a758a7c28', 'a3c706a84e5432120a8df520b048a877', 'PAYROLL', '1640513647', 'MARIHOT SARAGIH', 'BANK BCA', 'TRF_BIFAST', '220513151401000', '081d8f3392edc8c817a0aebede0bc599', 'b9167f25a254f449d6cecddc932bb2a7', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.870+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.873+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.876+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023460, 'TB2024061078062483', datetime.datetime(2024, 6, 10, 23, 3, 8, 10000), 'TRF_BIFAST', 50000, 'Success', '2df56a594fa9b9c72d74ed1c72a9f0dc', '035fad8f3b31baa657f5f86a2b1bc2f9', 'SAVING', '2090456451', 'OLIVIA CINDIE TIRTAJAYA', 'BANK BCA', 'TRF_BIFAST', '201109150503000', '5f32e2f5f7e55f572f356a60905ab5f0', 'bc86a9cd14cd21f4d7f9eb32117502ee', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.877+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.889+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.897+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023461, 'TB2024061078062487', datetime.datetime(2024, 6, 10, 23, 3, 13, 740000), 'TRF_BIFAST', 400000, 'Success', '1fa68d37c23c7a684145ec7357da8be3', '4a08c83b28a67bb95cd062ce2716a3f6', 'PAYROLL', '4350448131', 'I MADE YAWARA SUMI PUTRA', 'BANK BCA', 'TRF_BIFAST', '201222101021000', '43fd98b429efd920ca9ffcf72790aa09', '1930a5765c4b47f8eb17b9a5b2b9c3d4', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.900+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.905+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.909+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023462, 'TB2024061078062491', datetime.datetime(2024, 6, 10, 23, 3, 18, 367000), 'TRF_BIFAST', 135000, 'Success', '53f573278f60b7214e5b8b212f3e9b2e', '6dcc5a4ccbc6ee9ff9aa3b65c04a94a3', 'PAYROLL', '8830988361', 'SITI SUHARYATI', 'BANK BCA', 'TRF_BIFAST', '190415100645000', '632b60e0e60421163a51aaa251ce6b8a', '3f9b696a1368c38fa3e7ba6ff52c56bc', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.910+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.915+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.918+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023463, 'TB2024061078062492', datetime.datetime(2024, 6, 10, 23, 4, 0, 57000), 'TRF_BIFAST', 150000000, 'Success', '7aa570d62b62f3c7b8b4842e3b69c5e6', '05a605a88d159240fa9032b1548d06f8', 'DIGITAL_SAVING', '901588464342', 'FELISIA MEIRANI VINCEN', 'BANK SEABANK INDONESIA', 'TRF_BIFAST', '231130173752000', 'cf288ee5273a8bba5cf210a1a81161ea', '74430d0170e33abeb1c4f3a4462c94b6', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.920+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.923+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.926+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023464, 'TB2024061078062505', datetime.datetime(2024, 6, 10, 23, 4, 8, 793000), 'TRF_BIFAST', 250000, 'Success', '55ac96b4b12e861e7ecf56936407b2ca', '32fff3b46b7895362c0aa5d41042fba0', 'DIGITAL_SAVING', '901158017510', 'SYAVIRA MUVIDA', 'BANK SEABANK INDONESIA', 'TRF_BIFAST', '240206105516000', '65a3a4f08637391bc53de2d5f1698199', '5705d6711663c0d79a973ec7dd7bf743', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.927+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.930+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.933+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023465, 'TO2024061078062522', datetime.datetime(2024, 6, 10, 23, 4, 49, 547000), 'TRF_NOBU', 7000000, 'Success', '44f520cb2b1ba874fd2989237334eff4', '13c4bdc24220ec8693832452452e316e', 'PAYROLL', '99901000022080', 'MOLINA SURYANA', 'NOBU', 'TRF_NOBU', '240508123431000', 'c521005b0d7e2e4408f4ed41e96068a7', '2b5ba0e2f67d1fce30b2f0c64664e08a', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.935+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.938+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.941+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023466, 'TB2024061078062532', datetime.datetime(2024, 6, 10, 23, 5, 39, 303000), 'TRF_BIFAST', 510000, 'Success', '4b0eb17d2e17464d48b797a9bbc45f22', '2b332650849ceba82876aaf7337ca85e', 'DIGITAL_SAVING', '1500029875521', 'IRFAN DJABLI', 'BANK MANDIRI', 'TRF_BIFAST', '230801082924000', '6cc561c8d5423933d1a879c91abbb03b', '6aa8af330cc4dbf97099818d85615657', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.942+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.945+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.948+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023467, 'TB2024061078062548', datetime.datetime(2024, 6, 10, 23, 6, 31, 793000), 'TRF_BIFAST', 25000, 'Success', '746507c81ce625ae3e25e869407c31b8', '4ea0277fdc5347b34f51cacd803df278', 'SAVING', '5221893132', 'JIHAD KHOERUDIN', 'BANK BCA', 'TRF_BIFAST', '210812103213000', 'd2d1e8ebd0b96c6b8086fa166f8f9f5c', 'cc35511b81a8a4bd2fef8e86626322fc', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.949+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.952+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.955+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023468, 'TO2024061078062566', datetime.datetime(2024, 6, 10, 23, 7, 12, 720000), 'TRF_NOBU', 8000000, 'Success', '2fc0b64f79d572be1d74d5ff4dec36d5', 'ab47d030c8f672aaa58f486e1741dd9d', 'SAVING', '99901000004783', 'MERRY', 'BANK NOBU', 'TRF_NOBU', '200918165530000', '6d2460edf5027d5c63d439e88d9a94c9', '8772a2fb66e595409e439a84b3fab3da', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.956+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.959+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.962+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023469, 'TB2024061078062567', datetime.datetime(2024, 6, 10, 23, 7, 20, 543000), 'TRF_BIFAST', 200000, 'Success', '1214169b352d167b9e10ef19b5918ece', '9263ff21b54b5d96202bc343857c4f71', 'PAYROLL', '4990100256180', 'AGUS SARIFUDIN', 'BANK CIMB NIAGA', 'TRF_BIFAST', '210927100737000', 'ffb80ec3771c71a960a3bd58b9cd05ce', 'd36022b01134e1d0b9541d03b4f354c2', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.963+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.969+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.971+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023470, 'TR2024061078062589', datetime.datetime(2024, 6, 10, 23, 8, 34, 567000), 'TRF_ONLINE', 4000000, 'Success', '08778cb1217cedc0250df0ef765f468a', 'd8d9927d07f5a29c21f400c6f5b01955', 'SAVING', '332301029547533', 'EKI KRISTIAWAN', 'BANK BRI', 'TRF_ONLINE', '220714155722000', 'bd3219fefa275d7d51a25c15b2478e76', 'f72ecd464fff15c2cd387e46be780228', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.972+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.975+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.978+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023471, 'TO2024061078062592', datetime.datetime(2024, 6, 10, 23, 8, 39, 20000), 'TRF_NOBU', 300000, 'Success', '1dfe7449c4a41ac9bc87555ca5d32c3f', '821316fb30570541559f140f45197dcf', 'SAVING', '10114000321', 'SONDY RAHMAN.N', 'BANK NOBU', 'TRF_NOBU', '140423132215000', 'ae012b8050a2c2170c6d00eb2e03e29d', '10a3633a0518b43b0dbf1f8f0d83ed96', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.979+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.982+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.985+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023472, 'TO2024061078062598', datetime.datetime(2024, 6, 10, 23, 9, 2, 563000), 'TRF_NOBU', 100000, 'Success', '313df0e1a8da0654e7e91bbfd195ddb5', '6a77a76e432ef9ee49d44a2261fc5909', 'PAYROLL', '10810188349', 'SUHALDIANSYAH', 'BANK NOBU', 'TRF_NOBU', '221005123035000', '7ce48c53deb47f33dfc26ed4034964fd', 'fb2ff19ea12845e8a9b22ac1e925fcf8', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.985+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.989+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.991+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023473, 'TB2024061078062600', datetime.datetime(2024, 6, 10, 23, 9, 2, 823000), 'TRF_BIFAST', 10000, 'Success', 'ff8a732dcf0ce5a41fe0a4ab62fa2080', 'c3e4ca9cd58110e5329cc73cbe179abb', 'DIGITAL_SAVING', '0002001500567928', 'MAULIDA ARMITHANIA', 'BANK BTN', 'TRF_BIFAST', '231229142904000', 'a443c079cf4ae5c37cc93b8ccce1e84b', '028e44e8ec884d4b08192dd16f6d7fef', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.992+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:14.995+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:14.997+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023474, 'TB2024061078062596', datetime.datetime(2024, 6, 10, 23, 9, 7, 213000), 'TRF_BIFAST', 415000, 'Success', 'c0a4a2e50e883455cca951c8541228a7', 'd05be6f646606ba5fe8f9338cbb437c6', 'PAYROLL', '901710428529', 'WILHEM HOT MARURAT SAMPETUA NAINGGOLAN', 'BANK SEABANK INDONESIA', 'TRF_BIFAST', '190423155307000', '60e4e34638695bde2cb1cc2e12fefddb', '63655cca25d3d35968fb1b2ded5303f6', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:14.998+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.002+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.004+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023475, 'TB2024061078062608', datetime.datetime(2024, 6, 10, 23, 9, 42, 180000), 'TRF_BIFAST', 200000, 'Success', '967625b149c50469be287a08015b0817', '151467ce00f9c840ef3a2ebd36611ed5', 'SAVING', '228001015898503', 'FOLORES WARUWU', 'BANK BRI', 'TRF_BIFAST', '160712102449000', '166e09a8eabf24dce0ab5b9c08a3c117', '312391a7bad402974b0177a2b96df3ff', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.005+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.008+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.011+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023476, 'TO2024061078062620', datetime.datetime(2024, 6, 10, 23, 10, 1, 560000), 'TRF_NOBU', 100000, 'Success', 'dafa8455759ef03950c54e7254b87f47', 'c3e4ca9cd58110e5329cc73cbe179abb', 'PAYROLL', '99901000009504', 'ANIS AGUSTIN', 'NOBU', 'TRF_NOBU', '231229142904000', 'a443c079cf4ae5c37cc93b8ccce1e84b', '028e44e8ec884d4b08192dd16f6d7fef', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.012+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.015+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.018+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023477, 'TB2024061078062622', datetime.datetime(2024, 6, 10, 23, 10, 9, 860000), 'TRF_BIFAST', 10000, 'Success', 'f2ae2bded3553e8becfd3f34693dc8cd', '094eadf333790c0bc3c1f7dc08fa25ac', 'SAVING', '7151351755', 'IKA FEBRIANTI', 'BANK BCA', 'TRF_BIFAST', '231201111729000', 'd91507b1ab335c8fb528462bc75bf8f7', '0703094c8f2e2e82ed17e2dc163ec135', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.019+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.022+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.025+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023478, 'TB2024061078062627', datetime.datetime(2024, 6, 10, 23, 10, 25, 203000), 'TRF_BIFAST', 25000, 'Success', 'e44a76491d3d2676a466d1e2b10ad6dd', '9bd7cf8fcada009b51d3663855d86da8', 'SAVING', '6565255553', 'DIMAS IRAWAN', 'BANK BCA', 'TRF_BIFAST', '240429134651000', '687eeec35bf1fb4385716b0432506cac', '965a76b55479e9dbe10cb60e575ce024', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.026+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.029+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.032+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023479, 'TB2024061078062636', datetime.datetime(2024, 6, 10, 23, 11, 0, 397000), 'TRF_BIFAST', 100000, 'Success', '72bcda2adca5ec1543adf3f3a6cec5f6', '563c1797ea45476239fd2db2c47d1219', 'PAYROLL', '0866366017', 'VALERIA VELDA VALMAI VANIA LAYUK RUNTUNG', 'BANK BNI', 'TRF_BIFAST', '210201085852000', '0e34c8b28caba233226f493b25d4af6b', 'ef27e4bbb696faa120e9d7e15f53d009', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.033+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.036+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.038+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023480, 'TO2024061078062647', datetime.datetime(2024, 6, 10, 23, 11, 35, 773000), 'TRF_NOBU', 80000, 'Success', '58f97a7f147f0ff9fcc6e93b4f15f10e', 'e605b7867260b0bc7dcabb0fbc3f0421', 'PAYROLL', '11011961108', 'HERIANTI SALINO', 'BANK NOBU', 'TRF_NOBU', '150908095713000', 'e885e967047d3f26a9fc12493d5b8b59', '68fcebb1ec471d6dc70e8f9e752a40b8', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.039+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.042+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.045+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023481, 'TB2024061078062644', datetime.datetime(2024, 6, 10, 23, 11, 52), 'TRF_BIFAST', 500000, 'Success', '77cbb39c539fa7cff434e17521303bc4', '0ce61ef9f14e4f4a554b9f1e6d04f544', 'SAVING', '3360060755', 'YUNITA MEIDIANA', 'BANK BCA', 'TRF_BIFAST', '240605134121000', 'aa64cf70128c76cae8e3f6f7349652a6', 'da2e87cbb5647df45d59bab11aea5b66', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.046+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.050+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.053+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023482, 'TB2024061078062685', datetime.datetime(2024, 6, 10, 23, 13, 50, 67000), 'TRF_BIFAST', 4000000, 'Success', '725fce1f77b49b792959468fac96de55', 'fcdced5de9ff157e5ad7993390f9db52', 'DIGITAL_SAVING', '526901017726533', 'ROWITA ELIESLINA GIR', 'BANK BRI', 'TRF_BIFAST', '240116130258000', '19d7a15436392e761411e6b77aaab86f', '6e0f004ae0a642d709b324ac449240ba', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.054+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.057+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.060+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023483, 'TB2024061078062693', datetime.datetime(2024, 6, 10, 23, 14, 21, 843000), 'TRF_BIFAST', 2000000, 'Success', '26a0c842726066664465ca0a9d7d6d0d', '30c3984adf3db0d3ca96023c16e0209a', 'SAVING', '901017394968', 'HERY FICKY PRASETYA PUTRA', 'BANK SEABANK INDONESIA', 'TRF_BIFAST', '220315133819000', '86ed2e447d6879c99ff2118644960305', '7fccdb9f8fb48c25601fbf8d38672431', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.061+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.064+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.067+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023484, 'TB2024061078062702', datetime.datetime(2024, 6, 10, 23, 15, 16, 30000), 'TRF_BIFAST', 250000, 'Success', 'fc3241add68fa3e201a4dfa05301f5ef', '796fe6fc929b7706f63eb4d8e8472ecd', 'PAYROLL', '410901022361537', 'CHIKA ANISANDRA', 'BANK BRI', 'TRF_BIFAST', '230303102735000', '0861669e4dca22fd8ceda2d905c828dd', 'b1b04e120763ae1fd4002c5e9dd3bd23', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.068+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.072+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.074+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023485, 'TB2024061078062704', datetime.datetime(2024, 6, 10, 23, 15, 20, 910000), 'TRF_BIFAST', 170000, 'Success', 'df1fac21ae1502118dfd958f120957da', 'f6cb935cb7d9b55eafe6fa6ad888bf62', 'PAYROLL', '7015365633', 'CICI ASTRIANI', 'BANK BCA', 'TRF_BIFAST', '190311145931000', '8596185f4286ef73e579d7751ce322ae', '6953b7724ce7b533c8f9db05228889e4', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.075+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.078+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.081+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023486, 'TB2024061078062721', datetime.datetime(2024, 6, 10, 23, 17, 16, 853000), 'TRF_BIFAST', 54000, 'Success', '878460c34ed33e4a600fb42b057b18c8', 'a846ea500d6f5fd574914d0e2b34dfbd', 'PAYROLL', '1490379831', 'DEVITA ANIS AZHARI', 'BANK BCA', 'TRF_BIFAST', '211208130739000', '90ae148b196e95ddd801a26c916a5871', '6338148181a77fa537be99ac87fb4038', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.082+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.085+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.088+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023487, 'TO2024061078062725', datetime.datetime(2024, 6, 10, 23, 17, 38, 313000), 'TRF_NOBU', 50000, 'Success', 'c7ffc612f487f955edb3a282bb70abd2', 'b2ab177ef2bcbe007b57ae948b514b0b', 'PAYROLL', '99901000020751', 'FEBBY RIZAL SINTA', 'NOBU', 'TRF_NOBU', '211201105146000', '13d928b5ef67053f98650103598e32bf', '875f8da7e2527c1bd2276c54be617fa9', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.089+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.092+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.094+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023488, 'TB2024061078062728', datetime.datetime(2024, 6, 10, 23, 18, 27, 377000), 'TRF_BIFAST', 850000, 'Success', '72039442ab7324c09264fcea157cad32', '302d299fdc465ec2413460a32b859565', 'PAYROLL', '791401023860532', 'ABDUL JALIL', 'BANK BRI', 'TRF_BIFAST', '240529130916000', '3de0f2a0c2df7891d3b6bf725a3c2555', 'de0018bc2d750a53c99e03c678764334', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.095+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.099+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.104+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023489, 'TO2024061078062738', datetime.datetime(2024, 6, 10, 23, 19, 19, 760000), 'TRF_NOBU', 300000, 'Success', '744bd33bcc106a8cfd09d3461c0a41c2', 'a2effa514afdc391a0d4ed9f295d467e', 'PAYROLL', '99901000014081', 'DEBORA BR NAIBAHO', 'NOBU', 'TRF_NOBU', '240227163923000', '6668a12d8553a800053202a654a59346', 'fae0151e0a795cfe00b787b1c5926717', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.105+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.108+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.111+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023490, 'TB2024061078062745', datetime.datetime(2024, 6, 10, 23, 20, 11, 183000), 'TRF_BIFAST', 40000, 'Success', '9b52ba91b8ae179be494f6af24141de2', 'b2ab177ef2bcbe007b57ae948b514b0b', 'DIGITAL_SAVING', '8335462846', 'SUMIHAR HARIANJA', 'BANK BCA', 'TRF_BIFAST', '211201105146000', '13d928b5ef67053f98650103598e32bf', '875f8da7e2527c1bd2276c54be617fa9', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.112+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.115+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.117+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023491, 'TB2024061078062750', datetime.datetime(2024, 6, 10, 23, 20, 26, 53000), 'TRF_BIFAST', 340000, 'Success', 'cd480904766f7cc7a4b547e00ebdc56e', 'a2effa514afdc391a0d4ed9f295d467e', 'DIGITAL_SAVING', '382801026835539', 'DEBORA BR NAIBAHO', 'BANK BRI', 'TRF_BIFAST', '240227163923000', '6668a12d8553a800053202a654a59346', 'fae0151e0a795cfe00b787b1c5926717', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.118+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.121+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.123+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023492, 'TB2024061078062753', datetime.datetime(2024, 6, 10, 23, 20, 43, 280000), 'TRF_BIFAST', 46000, 'Success', 'fc5b6ef17f7014674713686ce8757577', '3e1f61b1095200dfd434038a316a8a98', 'PAYROLL', '103980411912', 'JALILUDIN', 'BANK JAGO', 'TRF_BIFAST', '221216134652000', 'eef93941491e68a4478fffb782a0f304', 'f2840139bcb1ee538d6d606ef2c81633', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.124+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.127+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.130+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023493, 'TB2024061078062756', datetime.datetime(2024, 6, 10, 23, 21, 3, 187000), 'TRF_BIFAST', 100000, 'Success', '3dca35fd9372f9491f3a54ea1cb9ef10', '650b38c2e0e90159b1573eb6492c19e8', 'PAYROLL', '8840594620', 'MASLAELATUL MUNAWAROH', 'BANK BCA', 'TRF_BIFAST', '191218183130000', '0f7e6fab72d0e7e3c6606ad04801fdfb', 'aec6891155d7bb2399165d15d6ade4b3', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.131+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.134+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.136+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023494, 'TO2024061078062770', datetime.datetime(2024, 6, 10, 23, 21, 57, 580000), 'TRF_NOBU', 985000, 'Success', '44f520cb2b1ba874fd2989237334eff4', '13c4bdc24220ec8693832452452e316e', 'PAYROLL', '99901000022080', 'MOLINA SURYANA', 'NOBU', 'TRF_NOBU', '240508123431000', 'c521005b0d7e2e4408f4ed41e96068a7', '2b5ba0e2f67d1fce30b2f0c64664e08a', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.137+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.142+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.145+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023495, 'TB2024061078062774', datetime.datetime(2024, 6, 10, 23, 22, 17, 310000), 'TRF_BIFAST', 84500, 'Success', '98f59763995d8a8c2517dc78690ae083', '00036cd53e3e5c596498e979624bd8bf', 'DIGITAL_SAVING', '003817096119', 'ZICHMOSS', 'BCA DIGITAL', 'TRF_BIFAST', '240419131858000', 'a4226020f4d5f4d8b97a03a35d2c45af', '6d6edf765d924d582eb3403d438c4d26', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.146+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.150+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.153+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023496, 'TB2024061078062779', datetime.datetime(2024, 6, 10, 23, 22, 47, 613000), 'TRF_BIFAST', 5325000, 'Success', '372ce8a0087b88424507c209b6676538', '96f46a9d6f74895bd0b7937675b91f9a', 'PAYROLL', '0850534909', 'WIDYA PUSPITA SARI', 'BANK BNI', 'TRF_BIFAST', '240220100927000', 'ac1c61a4e3176f44e46a93dec5f3851f', '077bfdffe7aecd4ad4635bf0d3b3b14d', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.154+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.158+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.160+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023497, 'TB2024061078062788', datetime.datetime(2024, 6, 10, 23, 23, 33, 367000), 'TRF_BIFAST', 30000, 'Success', 'e609b3e87b950ce03231fc86a2b7a3d9', '5e57fc5d1e8f500a9a8383cd1b2a8d4d', 'PAYROLL', '8195436939', 'RAHMA SARI', 'BANK BCA', 'TRF_BIFAST', '231201143916000', 'a73fb78096191ff1fee612e8640ada3a', '140499f56e2a86305622efadb0aac443', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.162+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.165+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.167+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023498, 'TB2024061078062793', datetime.datetime(2024, 6, 10, 23, 25, 30, 730000), 'TRF_BIFAST', 150000, 'Success', '281cd57bb7a6f8a67df761d8e8736182', '3a6ba475338e05a7960bd7652b0d0a22', 'DIGITAL_SAVING', '1082467054', 'HAERUL UMAM', 'BANK BCA', 'TRF_BIFAST', '191125100644000', '99667045440e54b4a914c135afc392f7', 'f8a9c938f5b9e42bd1fe2387bbd80dd1', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.169+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.172+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.174+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023499, 'TB2024061078062799', datetime.datetime(2024, 6, 10, 23, 25, 59, 40000), 'TRF_BIFAST', 180000, 'Success', '967625b149c50469be287a08015b0817', '151467ce00f9c840ef3a2ebd36611ed5', 'SAVING', '5543004456', 'BONTOR MAROLOP SINAGA', 'BANK PANIN', 'TRF_BIFAST', '160712102449000', '166e09a8eabf24dce0ab5b9c08a3c117', '312391a7bad402974b0177a2b96df3ff', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.175+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.178+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.181+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023500, 'TB2024061078062800', datetime.datetime(2024, 6, 10, 23, 26, 1, 257000), 'TRF_BIFAST', 1000000, 'Success', 'e893468ea23cc6d8761f647ba265bc4c', '5b98eeb0005c2fcdad1e41a282e6c37d', 'DIGITAL_SAVING', '355801037076539', 'SUTRISNO', 'BANK BRI', 'TRF_BIFAST', '240405153052000', '1d5c9fdd743e8bf59bfba0450b8dbe36', '3db5d9560caf3f18fbe1ff8797fc1480', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.182+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.185+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.187+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023501, 'TB2024061078062804', datetime.datetime(2024, 6, 10, 23, 26, 15, 380000), 'TRF_BIFAST', 10000, 'Success', 'e609b3e87b950ce03231fc86a2b7a3d9', '5e57fc5d1e8f500a9a8383cd1b2a8d4d', 'PAYROLL', '7985435421', 'LISA ELSAFIRA', 'BANK BCA', 'TRF_BIFAST', '231201143916000', 'a73fb78096191ff1fee612e8640ada3a', '140499f56e2a86305622efadb0aac443', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.188+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.191+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.194+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023502, 'TB2024061078062807', datetime.datetime(2024, 6, 10, 23, 26, 50, 93000), 'TRF_BIFAST', 400000, 'Success', '443b0f5b650ab3d2a48c1dd2ba794f0a', 'c35e7004eb31337fa26eaa3be77bf346', 'PAYROLL', '7615640689', 'MUHAMMAD ALIEFIE SUHERMA', 'BANK BCA', 'TRF_BIFAST', '231009103931000', 'e4aa34eae5805ddacfb1fe7673b72046', 'b68abcea33cf7c9926da0025f8f1b090', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.195+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.198+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.200+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023503, 'TB2024061078062811', datetime.datetime(2024, 6, 10, 23, 28, 0, 70000), 'TRF_BIFAST', 300000, 'Success', '0d2847f0e248cec9f1d10d0b72b5dacb', 'cd709aa07af83dc452fba5c3e7d64d65', 'SAVING', '706910322100', 'DADEN', 'BANK CIMB NIAGA', 'TRF_BIFAST', '220718131042000', '0ba2ff4597e05d1d14d1c09602487b5a', '5cc67a3b3ed9d0055d2ac032aeec6534', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.201+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.204+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.207+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023504, 'TB2024061078062819', datetime.datetime(2024, 6, 10, 23, 28, 56, 173000), 'TRF_BIFAST', 147500, 'Success', '05a89bf009f2bb0e6d1116058dd5f440', '8cd466a8442f1acc6792a72fd6b990c2', 'DIGITAL_SAVING', '8295778888', 'PUSPITA RINI HENDROJUWON', 'BANK BCA', 'TRF_BIFAST', '231109142323000', '95557e60eb3dbe013ca7c8ab0e773bad', 'fe015e2ed982c0d41d21159689418510', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.208+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.211+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.214+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023505, 'TB2024061078062818', datetime.datetime(2024, 6, 10, 23, 29, 2, 510000), 'TRF_BIFAST', 200000, 'Success', '56c9bfc928cd86e35c17857dbd4ceb33', 'a6b65169ea0a9c53f51c176fd6c1ca2d', 'DIGITAL_SAVING', '003817096119', 'ZICHMOSS', 'BCA DIGITAL', 'TRF_BIFAST', '220914081132000', '39ddc5eb07c645987ed7f4c822c228d6', 'cfc3eca1acb8003009b0e4b814b8fc07', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.215+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.218+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.221+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023506, 'TB2024061078062824', datetime.datetime(2024, 6, 10, 23, 29, 27, 30000), 'TRF_BIFAST', 133500, 'Success', '2ebd8fc56247d6f035c55ee06e517fbf', '0893ca810f0bf722efbdecff26dd0308', 'PAYROLL', '563401047449536', 'CHASTITY DELANIA DAE', 'BANK BRI', 'TRF_BIFAST', '191111110904000', '5ae71b43e93998851f6ef060677d3ffd', '5fb0ec129a6cdeb94018e0456c27ef03', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.222+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.226+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.228+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023507, 'TB2024061078062814', datetime.datetime(2024, 6, 10, 23, 30, 4, 890000), 'TRF_BIFAST', 100000, 'Success', '5e474954db0a4061e8e62d882780daac', 'b92d6efa342834119643af0e46c828da', 'SAVING', '6630593121', 'ACHMAD EFENDI', 'BANK BCA', 'TRF_BIFAST', '240530142312000', 'ee3157942f441df7320f05135aae688e', '7b2c1772572ac82d8c24c4a0ead4f268', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.229+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.232+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.234+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023508, 'TO2024061078062835', datetime.datetime(2024, 6, 10, 23, 31, 44, 447000), 'TRF_NOBU', 132752, 'Success', '95a4129bbb67ed21da3834ebaf250912', 'ac56c062c52e5526017d04d6ff8e8748', 'PAYROLL', '99901000004452', 'DIVA PUTI TASYAFIRA', 'BANK NOBU', 'TRF_NOBU', '230228094946000', '572f43091580df1ba36f31b4ce3bff5a', 'a8ceb5cd1b08d64e9d7240d1a9691c60', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.236+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.239+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.241+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023509, 'TB2024061078062840', datetime.datetime(2024, 6, 10, 23, 31, 56, 520000), 'TRF_BIFAST', 300000, 'Success', '5c0e2dbc9911e1835901c2957b9632df', 'dd34fb6adb6ba9cea18c09f911bd2d73', 'PAYROLL', '022501003703508', 'PATIMA JD ABDUL RAHM', 'BANK BRI', 'TRF_BIFAST', '170110180224000', '5d234a7a7dbaef26034dfd06261621dc', '8ecff68bb43759faedb6d720580d0a3f', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.242+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.245+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.248+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023510, 'TB2024061078062893', datetime.datetime(2024, 6, 10, 23, 41, 8, 487000), 'TRF_BIFAST', 100000, 'Success', '7eade96377b76b6708bc89925131de2b', '71101c44849d7614b2563138d40f3077', 'PAYROLL', '1479603257', 'NOPAL KURNIAWAN', 'BANK BNI', 'TRF_BIFAST', '240313111106000', 'cbd3415858f4a72cbe75c127d35cfdde', 'f6e8175d241174e59f1e8e9bdd7a83de', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.249+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.252+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.254+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023511, 'TB2024061078062898', datetime.datetime(2024, 6, 10, 23, 41, 42, 260000), 'TRF_BIFAST', 11800000, 'Success', 'c7f3c7f428073d408388350cc6e974aa', 'f1eb7dcf3d9daac049da94f9fb4494ff', 'SAVING', '726101002376507', 'SYAIRI NOOR RAHMAN', 'BANK BRI', 'TRF_BIFAST', '221216132123000', '70e5bf08302dd728929c1a4b621f87ea', 'eed6ffe9b9178b4bcc749fe87873a1ec', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.255+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.258+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.261+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023512, 'TB2024061078062908', datetime.datetime(2024, 6, 10, 23, 42, 2, 220000), 'TRF_BIFAST', 243000, 'Success', '904f47dce704b37ea698ad6c7b438ef1', '62ee9a78b90a7ca98766a6d02b80f303', 'PAYROLL', '7613003705', 'NOVI HANDAYANI DJAJA', 'BANK BCA', 'TRF_BIFAST', '140523152906000', '5f2c488cf5cc250c6eb73c4c7c251162', '4c591f53cfa9986ff0d8d9836ce37db9', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.262+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.265+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.267+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023513, 'TO2024061078062911', datetime.datetime(2024, 6, 10, 23, 42, 18, 450000), 'TRF_NOBU', 75000, 'Success', '4509426ea3d00525ba660f9129c83aa2', '660855748867f1d49049bfc5c3901b6e', 'PAYROLL', '10511951173', 'LELI RUSMIYANTI', 'BANK NOBU', 'TRF_NOBU', '210728181145000', 'acea970c2d8383cada21b44148b7154d', 'feb4f85ddb5b22aaccc479b1e65f0f00', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.268+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.271+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.274+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023514, 'TB2024061078062914', datetime.datetime(2024, 6, 10, 23, 42, 35, 590000), 'TRF_BIFAST', 254000, 'Success', '674d449cf77ad6816b3e811a544dabc1', 'd4434f3b7d224d4697dba4c5fb149cb6', 'SAVING', '6955122147', 'ADITYA JUNIOR GULO', 'BANK BCA', 'TRF_BIFAST', '220425115142000', 'aa5ed7bf20fc3eb86674270e8b740a5f', '8c9e84994ee0211efe430e79729903b1', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.275+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.278+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.280+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023515, 'TR2024061078062918', datetime.datetime(2024, 6, 10, 23, 42, 58, 190000), 'TRF_ONLINE', 4500000, 'Success', '006c24b0669cd3fc21eb7bc83e1864a6', '5bc5fb6360a37ba7391830a6e91f8a0a', 'SAVING', '6281228480905', 'MUXXXXXX AGXX SIXXX', 'BANK CIMB NIAGA', 'TRF_ONLINE', '240305073209000', '51b69b55991bb42482f7226326dcf983', '0abf109dd36dde61014633abb791038f', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.281+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.285+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.287+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023516, 'TB2024061078062925', datetime.datetime(2024, 6, 10, 23, 43, 33, 830000), 'TRF_BIFAST', 500000, 'Success', '468f141059788b903a2de459cb909974', 'fe3493936fd124b745ef44bfe36b5c32', 'DIGITAL_SAVING', '8020781140', 'RIZKI DAMAYANTI', 'BANK BCA', 'TRF_BIFAST', '230911092736000', 'b0fcb1d54fce5186111ee4ab9f7a2398', '173772e316c81d5002da8a204ffe08dc', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.288+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.291+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.294+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023517, 'TB2024061078062929', datetime.datetime(2024, 6, 10, 23, 43, 50, 977000), 'TRF_BIFAST', 300000, 'Success', '8cfe624c9d08d370fa35603eb89a4cd0', 'c4122df81e1cf23711ae67a9cbc5180a', 'PAYROLL', '114501020878509', 'LENCERIA LORENCA GIR', 'BANK BRI', 'TRF_BIFAST', '191210110025000', 'f2f8f0750b324c6c74b565fd8a6646ba', 'e1930e5990d7705bb6466e10d713e114', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.295+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.298+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.300+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023518, 'TB2024061078062934', datetime.datetime(2024, 6, 10, 23, 44, 20, 943000), 'TRF_BIFAST', 1000000, 'Success', '8a31510d091f5069a7bcb26cf5241f93', '3fe2a009121a9aa7be2b1e83d9095184', 'PAYROLL', '5875459543', 'ADITYA NURANGGIEN HIMPRA', 'BANK BCA', 'TRF_BIFAST', '231204142601000', 'f1394fd87a333915287a41a4382889f8', '300bb84624ee4facd84a364ddf7c2d3b', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.301+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.305+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.307+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023519, 'TB2024061078062938', datetime.datetime(2024, 6, 10, 23, 44, 33, 437000), 'TRF_BIFAST', 170000, 'Success', '2ccf706cbb8600a0acaf738e774824c7', '9ee3332eef2c6711b95cff407044b404', 'DIGITAL_SAVING', '795401011120532', 'NANDANG KURNIA', 'BANK BRI', 'TRF_BIFAST', '230622141022000', 'f2250522611c95333c8c9234f3e1c729', '2a8c33565333beef396e79f697570de8', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.308+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.311+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.313+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023520, 'TB2024061078062941', datetime.datetime(2024, 6, 10, 23, 44, 46, 183000), 'TRF_BIFAST', 170000, 'Success', '11c718a06a0fd7f6dd247aa18aa5ab91', '726a1052930b084ea405ce082e1e08de', 'PAYROLL', '705699743800', 'DIANA HUTAHAEAN', 'BANK CIMB NIAGA', 'TRF_BIFAST', '171212093942000', '02b0bbc0c74418b77253cfbad477072f', '36c00b195648400a4fbd317ce1f8d856', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.315+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.318+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.320+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023521, 'TB2024061078062944', datetime.datetime(2024, 6, 10, 23, 45, 4, 767000), 'TRF_BIFAST', 50000, 'Success', '0fbd06fcb459c4b02cba8e8660cd40a6', 'ce28fb2961ea694ece14ede4fce5f622', 'DIGITAL_SAVING', '0882431701', 'ANGELITA MAUDY KAIRUPAN', 'BANK BCA', 'TRF_BIFAST', '220614114939000', '16e76972c8500292a3c6a3dfc5e390f1', '2e9b2b18d2b04dc2df9f8cd4c8dc5221', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.321+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.324+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.327+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023522, 'TB2024061078062969', datetime.datetime(2024, 6, 10, 23, 46, 29, 410000), 'TRF_BIFAST', 200000, 'Success', 'd600e9e7789a62d415f4b4d37a7e338d', 'bff3d936a4c6e3971af686cdcf1e6de6', 'PAYROLL', '1140012545342', 'AJI PUTRA', 'BANK MANDIRI', 'TRF_BIFAST', '220411131904000', '1f18befcf1d2ded7e9903562a5e717c6', 'b400adc2cdba949fd0d31ffcf6e598f6', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.328+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.331+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.333+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023523, 'TB2024061078062973', datetime.datetime(2024, 6, 10, 23, 47, 7, 487000), 'TRF_BIFAST', 1500000, 'Success', '006c24b0669cd3fc21eb7bc83e1864a6', '5bc5fb6360a37ba7391830a6e91f8a0a', 'SAVING', '81770025531', 'FERDY JULIANTO', 'ALLO BANK INDONESIA', 'TRF_BIFAST', '240305073209000', '51b69b55991bb42482f7226326dcf983', '0abf109dd36dde61014633abb791038f', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.334+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.337+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.339+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023524, 'TB2024061078062976', datetime.datetime(2024, 6, 10, 23, 47, 29, 67000), 'TRF_BIFAST', 2826500, 'Success', 'f7964dd17c636f1010f703895783e19d', '565e0a3b4925603f5fabf97ca4af3fb4', 'PAYROLL', '8430605993', 'AMANDA NATASYA', 'BANK BCA', 'TRF_BIFAST', '230705090838000', '184dca8222ca07174ec040d30d5fd62a', '6bf0b2c0e60b3268ffaa56437f555557', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.340+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.343+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.346+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023525, 'TO2024061078062986', datetime.datetime(2024, 6, 10, 23, 47, 33, 767000), 'TRF_NOBU', 50000, 'Success', '25f22970f001900897d353920c417391', 'ee9715d577da28a85e9397621175aff3', 'PAYROLL', '99901000013862', 'ANDREW', 'NOBU', 'TRF_NOBU', '111215091600000', 'c5344c09ff60903a6e639ebedcbaded7', '71a522c1aec588335d0ceae9701c284d', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.347+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.350+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.352+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023526, 'TB2024061078062984', datetime.datetime(2024, 6, 10, 23, 47, 35, 667000), 'TRF_BIFAST', 50000, 'Success', 'd600e9e7789a62d415f4b4d37a7e338d', 'bff3d936a4c6e3971af686cdcf1e6de6', 'PAYROLL', '171501001746538', 'RIKA APRIYANI', 'BANK BRI', 'TRF_BIFAST', '220411131904000', '1f18befcf1d2ded7e9903562a5e717c6', 'b400adc2cdba949fd0d31ffcf6e598f6', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.353+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.356+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.359+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023527, 'TB2024061078063013', datetime.datetime(2024, 6, 10, 23, 49, 0, 803000), 'TRF_BIFAST', 500000, 'Success', 'ed6ccdcf87f8c9fade125e4504e3553a', 'c4da7c1b968ade828de0a68e914710e8', 'PAYROLL', '7235432048', 'REGI SURIZKO', 'BANK BCA', 'TRF_BIFAST', '170622125628000', 'f57d2b1ab87b43e869df21d8266fd11f', '3a2868d530ae424a0cae30e0d92e5aa7', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.360+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.363+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.365+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023528, 'TO2024061078063023', datetime.datetime(2024, 6, 10, 23, 49, 25, 230000), 'TRF_NOBU', 100000, 'Success', '03c2a2f12fbc48458f0f84c6a15efc5a', '417f947c78f9c1096a83e6640f7db935', 'DIGITAL_SAVING', '50111250569', 'ANIK HERAWAN', 'NOBU', 'TRF_NOBU', '230313103348000', 'd726ace05efe5567ee0dd0df4c0384a1', 'abd88442a0d89c92a82fbba3b4434ff2', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.366+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.369+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.371+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023529, 'TB2024061078063038', datetime.datetime(2024, 6, 10, 23, 50, 13, 683000), 'TRF_BIFAST', 4000000, 'Success', '9d07bd87ca0597c4ff72cd331f3f9503', 'ee9715d577da28a85e9397621175aff3', 'DIGITAL_SAVING', '90230441139', 'ANDREW', 'BANK BTPN', 'TRF_BIFAST', '111215091600000', 'c5344c09ff60903a6e639ebedcbaded7', '71a522c1aec588335d0ceae9701c284d', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.372+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.375+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.378+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023530, 'TB2024061078063035', datetime.datetime(2024, 6, 10, 23, 50, 29, 477000), 'TRF_BIFAST', 3356000, 'Success', '562cb3a94c3f6468809d8cd5e2710489', '6bdf5f5ab8b5c187e65f12a0080703af', 'PAYROLL', '19016808400', 'YASMIN FAUZI ALLIYAH', 'BANK KEB HANA', 'TRF_BIFAST', '240215163222000', 'd12345cd1bc51cf5fd4949e7d4e6c08e', '4b2598c8cc56f0442459f94fbadcb65e', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.379+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.382+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.384+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023531, 'TO2024061078063050', datetime.datetime(2024, 6, 10, 23, 50, 43, 43000), 'TRF_NOBU', 350000, 'Success', '2162dd75110c6c5fae2d6a6e74aff1ea', 'b11ff19a5b3afc35b169d6854278ebf7', 'PAYROLL', '99901000002813', 'ANDI NUR SETIAWAN', 'BANK NOBU', 'TRF_NOBU', '220307135955000', '88ea4fd2054c2db7bf49ce50fcdf58aa', 'd2d7fc320723f0d281261c4260b9c9d2', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.385+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.388+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.390+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023532, 'TB2024061078063049', datetime.datetime(2024, 6, 10, 23, 50, 45, 650000), 'TRF_BIFAST', 200000, 'Success', 'ad0fe851feae60821e645de6297125f2', '5df76d73aca2bc6ff0655cc1903a25bc', 'SAVING', '4080164501', 'ERICK LAUREN', 'BANK BCA', 'TRF_BIFAST', '240405143626000', '4a578489fa55594f7c0cf19d2e441d37', 'dbb14dc08eaa382c9562a0b26a2e8050', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.391+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.395+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.397+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023533, 'TB2024061078063077', datetime.datetime(2024, 6, 10, 23, 52, 44, 137000), 'TRF_BIFAST', 10000000, 'Success', '4093110527f7d6f1589185556c6b18db', 'f54add17dba83cbcc2403a824f6b8108', 'DIGITAL_SAVING', '1840006349086', 'SYIHABUL UMAM', 'BANK MANDIRI', 'TRF_BIFAST', '230811224003000', '05ba531ae4cd959cc467f7dcc97dc6b8', 'd874f90c59b2352af7a54e0f6568faeb', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.398+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.401+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.403+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023534, 'TB2024061078063088', datetime.datetime(2024, 6, 10, 23, 53, 43, 217000), 'TRF_BIFAST', 600000, 'Success', '593b1a02ff6e95e659bfe061bf32205e', '6cea80f7a33ed785df2a8b07cdbb8c20', 'DIGITAL_SAVING', '1080021778684', 'ABDUL RAHMAN', 'BANK MANDIRI', 'TRF_BIFAST', '240331204753000', 'dc40efd860bf100c50aad02aa26d7289', '2a59981b60896f28e65d5bf8117dcb3e', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.404+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.408+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.410+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023535, 'TB2024061078063115', datetime.datetime(2024, 6, 10, 23, 55, 31, 620000), 'TRF_BIFAST', 100000, 'Success', 'cd8051cc1306dab20981d565d4d26183', '6b7ef13ea63a5f33a8f06c2532b81024', 'PAYROLL', '1590005184568', 'MEGAWATI', 'BANK MANDIRI', 'TRF_BIFAST', '161116113108000', '93b2174ef7c4e049a3a2113b259c27c7', 'f1a6bf687e123e3bcd4469d8e8b912a3', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.411+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.414+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.418+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023536, 'TB2024061078063121', datetime.datetime(2024, 6, 10, 23, 55, 50, 263000), 'TRF_BIFAST', 240000, 'Success', '64a2d0a661e0c135e7b2730deeb236a4', '4c70fc2c535accc4634576fe83fe6491', 'PAYROLL', '003597299183', 'TRI SEPTI DINATA', 'BANK DANAMON', 'TRF_BIFAST', '180625141316000', 'b02048920c67a70839b62d1e2b5e6080', '99f432931d444614eb3a4e49e5f78c55', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.421+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.426+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.429+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023537, 'TB2024061078063134', datetime.datetime(2024, 6, 10, 23, 56, 52, 17000), 'TRF_BIFAST', 200000, 'Success', '12a8fb48300fcde02953c37cdcd3995a', 'd16eb3e8f4cc5bcf79a86e1476f441da', 'SAVING', '6080552899', 'OJAK SIMANULLANG', 'BANK BCA', 'TRF_BIFAST', '230328102336000', 'be3e848bf4216527a84bb0184985b819', '0de0496aef3c193dea1de4d1dc297341', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.430+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.433+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.435+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023538, 'TB2024061078063154', datetime.datetime(2024, 6, 10, 23, 58, 11, 473000), 'TRF_BIFAST', 1000000, 'Success', '006c24b0669cd3fc21eb7bc83e1864a6', '5bc5fb6360a37ba7391830a6e91f8a0a', 'SAVING', '81770025531', 'FERDY JULIANTO', 'ALLO BANK INDONESIA', 'TRF_BIFAST', '240305073209000', '51b69b55991bb42482f7226326dcf983', '0abf109dd36dde61014633abb791038f', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.436+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.439+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.441+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023539, 'TB2024061078063156', datetime.datetime(2024, 6, 10, 23, 58, 14, 990000), 'TRF_BIFAST', 20000, 'Success', 'c7347701cae772447a9c0b24bd009226', 'bfd1c2b808bc9228ccd6e219397e427b', 'SAVING', '7630478621', 'WAHYU ALDY SUKARNO PUTRO', 'BANK BCA', 'TRF_BIFAST', '191024140056000', 'fc6a1a1ec37a9f0570b1a5440486819b', 'ee0a0042ce9eef43524fcb8c42ebbc89', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.442+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.445+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:16:15.447+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_transfer (
+        "Id", 
+        "TransactionID", 
+        "TransactionDatetime", 
+        "TransactionType", 
+        "TransactionAmount", 
+        "TransactionStatus", 
+        "SourceAccountId", 
+        "SourceAccountName", 
+        "SourceAccountType", 
+        "DestinationAccountId", 
+        "DestinationAccountName", 
+        "DestinationAccountBank", 
+        "TransactionCategory", 
+        "AccountCIFNo", 
+        "AccountPhoneNo", 
+        "AccountEmail", 
+        "SourceAccountStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [1023540, 'TB2024061078063173', datetime.datetime(2024, 6, 10, 23, 59, 13, 720000), 'TRF_BIFAST', 430000, 'Success', '4a9cf1c7b189cdf237fb037a026afbd2', 'e9d77b8d26ab764cd78c19c3da12b854', 'DIGITAL_SAVING', '82214141989', 'MISWAN', 'ALLO BANK INDONESIA', 'TRF_BIFAST', '240229170217000', '6d63dc021bade3370d3b992501fd59d5', '18c99012c7797bfefba71e2569a7a4b3', 'ACTIVE', '2024-06-11 07:16:13']
+[2024-06-11T07:16:15.448+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:16:15.449+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-11T07:16:15.449+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-11T07:16:15.453+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=copy_raw_data, task_id=load_to_postgresql, run_id=scheduled__2024-06-09T17:00:00+00:00, execution_date=20240609T170000, start_date=20240611T071614, end_date=20240611T071615
+[2024-06-11T07:16:15.466+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-11T07:16:15.476+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-11T07:16:15.477+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

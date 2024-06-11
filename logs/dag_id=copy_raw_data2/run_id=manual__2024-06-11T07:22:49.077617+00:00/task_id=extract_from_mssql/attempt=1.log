@@ -1,0 +1,20 @@
+[2024-06-11T07:22:49.667+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-11T07:22:49.686+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: copy_raw_data2.extract_from_mssql manual__2024-06-11T07:22:49.077617+00:00 [queued]>
+[2024-06-11T07:22:49.690+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: copy_raw_data2.extract_from_mssql manual__2024-06-11T07:22:49.077617+00:00 [queued]>
+[2024-06-11T07:22:49.691+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-11T07:22:49.698+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_from_mssql> on 2024-06-11 07:22:49.077617+00:00
+[2024-06-11T07:22:49.703+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=4665) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-06-11T07:22:49.704+0000] {standard_task_runner.py:63} INFO - Started process 4666 to run task
+[2024-06-11T07:22:49.703+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'copy_raw_data2', 'extract_from_mssql', 'manual__2024-06-11T07:22:49.077617+00:00', '--job-id', '86', '--raw', '--subdir', 'DAGS_FOLDER/copy_file_transfer.py', '--cfg-path', '/tmp/tmpyq3n17np']
+[2024-06-11T07:22:49.705+0000] {standard_task_runner.py:91} INFO - Job 86: Subtask extract_from_mssql
+[2024-06-11T07:22:49.731+0000] {task_command.py:426} INFO - Running <TaskInstance: copy_raw_data2.extract_from_mssql manual__2024-06-11T07:22:49.077617+00:00 [running]> on host 2e5c63130483
+[2024-06-11T07:22:49.776+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='copy_raw_data2' AIRFLOW_CTX_TASK_ID='extract_from_mssql' AIRFLOW_CTX_EXECUTION_DATE='2024-06-11T07:22:49.077617+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-11T07:22:49.077617+00:00'
+[2024-06-11T07:22:49.778+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-11T07:22:49.790+0000] {base.py:84} INFO - Using connection ID 'sql_server_conn' for task execution.
+[2024-06-11T07:22:49.841+0000] {sql.py:470} INFO - Running statement: SELECT * FROM raw_data.cybertrack_superapps_v_transfer;, parameters: None
+[2024-06-11T07:22:49.859+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-11T07:22:49.861+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-11T07:22:49.865+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=copy_raw_data2, task_id=extract_from_mssql, run_id=manual__2024-06-11T07:22:49.077617+00:00, execution_date=20240611T072249, start_date=20240611T072249, end_date=20240611T072249
+[2024-06-11T07:22:49.887+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-11T07:22:49.899+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-11T07:22:49.899+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

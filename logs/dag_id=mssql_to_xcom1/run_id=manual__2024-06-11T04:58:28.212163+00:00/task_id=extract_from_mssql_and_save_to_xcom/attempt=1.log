@@ -1,0 +1,20 @@
+[2024-06-11T04:58:28.621+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-11T04:58:28.635+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mssql_to_xcom1.extract_from_mssql_and_save_to_xcom manual__2024-06-11T04:58:28.212163+00:00 [queued]>
+[2024-06-11T04:58:28.640+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mssql_to_xcom1.extract_from_mssql_and_save_to_xcom manual__2024-06-11T04:58:28.212163+00:00 [queued]>
+[2024-06-11T04:58:28.640+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-11T04:58:28.649+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_from_mssql_and_save_to_xcom> on 2024-06-11 04:58:28.212163+00:00
+[2024-06-11T04:58:28.654+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mssql_to_xcom1', 'extract_from_mssql_and_save_to_xcom', 'manual__2024-06-11T04:58:28.212163+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/copy_file_transfer.py', '--cfg-path', '/tmp/tmp3vhj1op6']
+[2024-06-11T04:58:28.655+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1424) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-06-11T04:58:28.655+0000] {standard_task_runner.py:91} INFO - Job 32: Subtask extract_from_mssql_and_save_to_xcom
+[2024-06-11T04:58:28.655+0000] {standard_task_runner.py:63} INFO - Started process 1425 to run task
+[2024-06-11T04:58:28.678+0000] {task_command.py:426} INFO - Running <TaskInstance: mssql_to_xcom1.extract_from_mssql_and_save_to_xcom manual__2024-06-11T04:58:28.212163+00:00 [running]> on host 2e5c63130483
+[2024-06-11T04:58:28.730+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mssql_to_xcom1' AIRFLOW_CTX_TASK_ID='extract_from_mssql_and_save_to_xcom' AIRFLOW_CTX_EXECUTION_DATE='2024-06-11T04:58:28.212163+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-11T04:58:28.212163+00:00'
+[2024-06-11T04:58:28.731+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-11T04:58:28.742+0000] {base.py:84} INFO - Using connection ID 'sql_server_conn' for task execution.
+[2024-06-11T04:58:28.756+0000] {sql.py:470} INFO - Running statement: SELECT * FROM raw_data.cybertrack_superapps_v_transfer;, parameters: None
+[2024-06-11T04:58:28.767+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-11T04:58:28.767+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-11T04:58:28.772+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=mssql_to_xcom1, task_id=extract_from_mssql_and_save_to_xcom, run_id=manual__2024-06-11T04:58:28.212163+00:00, execution_date=20240611T045828, start_date=20240611T045828, end_date=20240611T045828
+[2024-06-11T04:58:28.797+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-11T04:58:28.806+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-11T04:58:28.806+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

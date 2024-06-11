@@ -1,0 +1,44 @@
+[2024-06-10T09:30:01.432+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-10T09:30:01.451+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: sql_to_postgres_dag.move_data_sql_to_postgres manual__2024-06-10T09:30:00.936116+00:00 [queued]>
+[2024-06-10T09:30:01.455+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: sql_to_postgres_dag.move_data_sql_to_postgres manual__2024-06-10T09:30:00.936116+00:00 [queued]>
+[2024-06-10T09:30:01.456+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2024-06-10T09:30:01.462+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): move_data_sql_to_postgres> on 2024-06-10 09:30:00.936116+00:00
+[2024-06-10T09:30:01.467+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'sql_to_postgres_dag', 'move_data_sql_to_postgres', 'manual__2024-06-10T09:30:00.936116+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/dag_testconnection.py', '--cfg-path', '/tmp/tmpvpsh87dy']
+[2024-06-10T09:30:01.469+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1195) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-06-10T09:30:01.470+0000] {standard_task_runner.py:91} INFO - Job 18: Subtask move_data_sql_to_postgres
+[2024-06-10T09:30:01.470+0000] {standard_task_runner.py:63} INFO - Started process 1196 to run task
+[2024-06-10T09:30:01.493+0000] {task_command.py:426} INFO - Running <TaskInstance: sql_to_postgres_dag.move_data_sql_to_postgres manual__2024-06-10T09:30:00.936116+00:00 [running]> on host 5f414d64f7b6
+[2024-06-10T09:30:01.541+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='sql_to_postgres_dag' AIRFLOW_CTX_TASK_ID='move_data_sql_to_postgres' AIRFLOW_CTX_EXECUTION_DATE='2024-06-10T09:30:00.936116+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-10T09:30:00.936116+00:00'
+[2024-06-10T09:30:01.541+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-10T09:30:01.554+0000] {base.py:84} INFO - Using connection ID 'sql_server_conn' for task execution.
+[2024-06-10T09:30:01.555+0000] {odbc.py:119} WARNING - You have supplied 'driver' via connection extra but it will not be used. In order to use 'driver' from extra you must set *** config setting `allow_driver_in_extra = True` in section `providers.odbc`. Alternatively you may specify driver via 'driver' parameter of the hook constructor or via 'hook_params' dictionary with key 'driver' if using SQL operators.
+[2024-06-10T09:30:01.558+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-10T09:30:01.558+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 400, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/dag_testconnection.py", line 10, in move_data_sql_to_postgres
+    connection = sql_server_hook.get_conn()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/providers/odbc/hooks/odbc.py", line 200, in get_conn
+    conn = connect(self.odbc_connection_string, **self.connect_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.InterfaceError: ('IM002', '[IM002] [unixODBC][Driver Manager]Data source name not found and no default driver specified (0) (SQLDriverConnect)')
+[2024-06-10T09:30:01.564+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=sql_to_postgres_dag, task_id=move_data_sql_to_postgres, run_id=manual__2024-06-10T09:30:00.936116+00:00, execution_date=20240610T093000, start_date=20240610T093001, end_date=20240610T093001
+[2024-06-10T09:30:01.570+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 18 for task move_data_sql_to_postgres (('IM002', '[IM002] [unixODBC][Driver Manager]Data source name not found and no default driver specified (0) (SQLDriverConnect)'); 1196)
+[2024-06-10T09:30:01.573+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-06-10T09:30:01.582+0000] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-06-10T09:30:01.583+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,2618 @@
+[2024-06-11T07:56:05.973+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-11T07:56:05.987+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_ingest_cybertrack_superapps_v_customer_qris.load_to_postgresql manual__2024-06-11T07:56:04.686531+00:00 [queued]>
+[2024-06-11T07:56:05.991+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_ingest_cybertrack_superapps_v_customer_qris.load_to_postgresql manual__2024-06-11T07:56:04.686531+00:00 [queued]>
+[2024-06-11T07:56:05.991+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-11T07:56:05.996+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): load_to_postgresql> on 2024-06-11 07:56:04.686531+00:00
+[2024-06-11T07:56:05.999+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=5602) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-06-11T07:56:06.000+0000] {standard_task_runner.py:63} INFO - Started process 5603 to run task
+[2024-06-11T07:56:05.999+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag_ingest_cybertrack_superapps_v_customer_qris', 'load_to_postgresql', 'manual__2024-06-11T07:56:04.686531+00:00', '--job-id', '105', '--raw', '--subdir', 'DAGS_FOLDER/dag_qris.py', '--cfg-path', '/tmp/tmpn07ycq5l']
+[2024-06-11T07:56:06.001+0000] {standard_task_runner.py:91} INFO - Job 105: Subtask load_to_postgresql
+[2024-06-11T07:56:06.019+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_ingest_cybertrack_superapps_v_customer_qris.load_to_postgresql manual__2024-06-11T07:56:04.686531+00:00 [running]> on host 2e5c63130483
+[2024-06-11T07:56:06.056+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_ingest_cybertrack_superapps_v_customer_qris' AIRFLOW_CTX_TASK_ID='load_to_postgresql' AIRFLOW_CTX_EXECUTION_DATE='2024-06-11T07:56:04.686531+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-11T07:56:04.686531+00:00'
+[2024-06-11T07:56:06.056+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-11T07:56:06.071+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.074+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783554, '814b0a88fae4a41cb44a7a39cc79e5c3', '1b015885ae8c38cde668aea38d4cd868', 'SAVING', 'ACTIVE', '360', 'QR2024061078061734', datetime.datetime(2024, 6, 10, 21, 58, 21, 940000), 'QRIS', 'Nobu Savings ****4751', 50000, 'Nobu ePay', '936000110000246512', 'e7bdb97da6c05fd6d7c0be51baa5c8f5', 'BEKASI', '240610193626000', 'db6252bb58401e5c400c696fcf5a3f54', '8f0923fc26c84885ab9c26edc716860f', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.076+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.079+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.081+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783555, 'dedde809a9cacc4763c5097624928012', 'ccf4557e55de3e228a9c7008a3f922dd', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061743', datetime.datetime(2024, 6, 10, 21, 58, 50, 577000), 'QRIS', 'Nobu Payroll ****1274', 211365, 'Nobu ePay', '936000143000279212', '18b398db2f7772173dde349f31e6a25f', 'PEKANBARU', '211206114532000', '01b8b374bb3bda83b97c0fbae997c939', '7cde32a7a87120357a3a0089a8003f3c', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.082+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.086+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.089+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783556, '9c6c8ad1385d622aeefd4bd05238846e', 'cb1ab8d9d3bc210740223e6ba2004fa6', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061747', datetime.datetime(2024, 6, 10, 21, 59, 7, 937000), 'QRIS', 'Nobu Payroll ****0555', 20700, 'Nobu ePay', '936000220000002843', '9ab697264716e60cd61ae1b3e963fe6c', 'TANGERANG', '240118120806000', 'c11ca3b33c8cf6b1bb4da9c9d1aba7ab', '3c8e6870214d197e376afa41bf84be09', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.090+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.093+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.096+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783557, 'fdbaf42b63ba95c9b3422a288d86d6a5', '65bd531fabd6c3a56b8e61a011eb6936', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061767', datetime.datetime(2024, 6, 10, 22, 0, 38, 250000), 'QRIS', 'Nobu Payroll ****6776', 12000, 'Nobu ePay', '936009120000543247', '24436a27440c79875fba5caae932709d', 'Medan', '220307113559000', 'a85d7fee7dd8e7ecf09534d59e3fb0b3', '792c3f10d0aff8cf9f4e504ede027f0f', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.097+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.100+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.102+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783558, 'ca73aef4cd4eccd566f4e10683887709', '290cbbb6e38897c05efd5f8a18e19be1', 'SAVING', 'ACTIVE', '360', 'QR2024061078061772', datetime.datetime(2024, 6, 10, 22, 0, 56, 303000), 'QRIS', 'Nobu Savings ****1192', 310106, 'Nobu ePay', '936000110000246512', 'e7bdb97da6c05fd6d7c0be51baa5c8f5', 'BEKASI', '200825142804000', '6b0841a7be58e77e4b19fa5e4a391461', 'c59354258554b3f0f864fc0078bd7641', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.103+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.106+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.109+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783559, 'b8ebf19de42f0ea56e1ec9d810343325', '7d3e2df2aaec5402e6b9ff5c5d589ec7', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061773', datetime.datetime(2024, 6, 10, 22, 0, 56, 813000), 'QRIS', 'Nobu Payroll ****3011', 17250, 'Nobu ePay', '936005038900007213', '982d8da813e14d7e894062ee65003af0', '109', '240313131616000', '22975726d9c62f3211cb346fe8469fc0', '2600e1787ea49a42320717cf751ea663', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.110+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.113+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.115+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783560, 'a9ffece0712a2715a0cc7535f8c1c218', '72f4eab499ba37d6a21e27b767e2092d', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061780', datetime.datetime(2024, 6, 10, 22, 2, 23, 877000), 'QRIS', 'Nobu Payroll ****1441', 30000, 'Nobu ePay', '936000131600563938', 'e897bd1eb793fe3cb80089ddcd4256cd', 'TANGERANG', '220331165319000', '18634d8a82699aa6fefece10fcbe3f93', '631d0c55578894234295c63e2d9def8b', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.116+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.119+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.122+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783561, '36a493a19df20e2c691bf3f02aa15b4c', '70ce9152f0b95985c342a20d10fc6c05', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061788', datetime.datetime(2024, 6, 10, 22, 2, 49, 87000), 'QRIS', 'Nobu Payroll ****6655', 20990, 'Nobu ePay', '936000143000133834', '071823353c72f696ac6411ce9ed5f337', 'SLEMAN', '161128154509000', '6423a4d001c80b5c3df1bd4a8ae69e7b', 'fcd1cf71aa4af031b1fe255fcd7f1037', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.123+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.126+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.130+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783562, 'dbc9d30a1d112fea8e3f50ba0cef5e32', '2debecc8db48e6937326d364b045072e', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061799', datetime.datetime(2024, 6, 10, 22, 3, 36, 843000), 'QRIS', 'Nobu Payroll ****1714', 593500, 'Nobu ePay', '936005030000059841', '40f9790325f2a35124f565f545be281d', 'MEDAN', '231023154728000', '1802b313499649ac6cdd63c7706dafca', '234ef21fd1df4288c9805832d4c34f27', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.131+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.134+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.137+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783563, '4d7fa474e385ddb43fb6c099b6decbde', '6b8492ae16e32b30182d1f5f47ea93a8', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061806', datetime.datetime(2024, 6, 10, 22, 3, 45, 317000), 'QRIS', 'Nobu Payroll ****0461', 10150, 'Nobu ePay', '936005038900007213', 'ab373ee0e689365d183d3ad29ab07c6e', '68', '231009095133000', '9a0d9c32dcac7b93d80c9227a978f998', 'e2234e5cc835d90bdec52f34b76106e6', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.138+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.141+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.144+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783564, 'c9f6064c227fcd0b56c956d831f9fdf8', 'f80632405f6f541b1efb8f715132c692', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061825', datetime.datetime(2024, 6, 10, 22, 6, 12, 293000), 'QRIS', 'Nobu Payroll ****1984', 60500, 'Nobu ePay', '936000220000171578', 'cf06dd00ec110506b60e7c45443feaf6', 'JAKARTA', '130627120537000', 'd74f5e97e96741f22a70e0bb93fe2e82', 'ac416e3c2c12dfb51540d73b938240fa', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.145+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.148+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.151+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783565, 'a9ffece0712a2715a0cc7535f8c1c218', '72f4eab499ba37d6a21e27b767e2092d', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061848', datetime.datetime(2024, 6, 10, 22, 8, 13, 690000), 'QRIS', 'Nobu Payroll ****1441', 10000, 'Nobu ePay', '936009143704481081', '030688830bc7ee32901dc1cf5e7c489d', 'TANGERANG', '220331165319000', '18634d8a82699aa6fefece10fcbe3f93', '631d0c55578894234295c63e2d9def8b', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.152+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.155+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.157+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783566, 'baf05f000e5d57cf9f1dffe9e65a5b44', '0a9adbd1c6eaf20b40497a4e5bde050c', 'SAVING', 'ACTIVE', '360', 'QR2024061078061856', datetime.datetime(2024, 6, 10, 22, 8, 43, 397000), 'QRIS', 'Nobu Savings ****8985', 1000, 'Nobu ePay', '936000080120455920', 'fc9492f683d1e295a94b3c51dc7343b7', 'Tangerang (Kota', '240502122605000', '9a51ee583ed92b609b7bee117006e12a', '9e65c6e7da9a55d6f2fb88b6f60d0285', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.158+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.162+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.165+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783567, 'bdf66e99aaa89e8d68ac0ef968f1890d', '3772eb039c42a3000481f97806204356', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061859', datetime.datetime(2024, 6, 10, 22, 8, 49, 847000), 'QRIS', 'Nobu Payroll ****0403', 34485, 'Nobu ePay', '936009150591798836', 'd897b214788121737cb89225557b67e0', 'Kota Palangka R', '230621142255000', '1b669565a2208ce8529c1ae292e2cb28', 'a73153f48cad664f23c8729960356328', 'Failed', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.166+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.169+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.172+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783568, '20b573669fed6d68d9192bdfcc998ac5', '8b9a31df4aa8a17b7c69987fa9ae3f43', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061853', datetime.datetime(2024, 6, 10, 22, 9, 8, 257000), 'QRIS', 'Nobu Payroll ****1948', 50800, 'Nobu ePay', '936005038900007213', '982d8da813e14d7e894062ee65003af0', '109', '170110101429000', 'c462ca9f8ead4a2de0187228ad59a5ff', '13434df28e92042b55c72d95d1531269', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.172+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.175+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.178+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783569, 'e05f19b1d00ce412402f9c1109aaa6ba', '16da4b42331d8b4edb3369f89a1d47df', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061874', datetime.datetime(2024, 6, 10, 22, 10, 37, 657000), 'QRIS', 'Nobu Payroll ****0223', 17500, 'Nobu ePay', '936008350000029659', '69e10589df1558f69f147e285fda84b1', 'Manado', '230530075005000', '119130f8f357fdf64c77f457a9f7b69e', '65c09e7bfd5d28ccf365399ac20c2711', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.179+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.182+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.184+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783570, '5650830f27e0046e31b01e12470c07a3', '7ae25038dfcd7575267fca63f0a77e6f', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061886', datetime.datetime(2024, 6, 10, 22, 11, 51, 957000), 'QRIS', 'Nobu Payroll ****8922', 23000, 'Nobu ePay', '936000020013317400', '580158740e24e4e299ebdc75f207560f', 'JAKARTA SELATAN', '220323105034000', 'a4c403b82c4a0ea1ed277066db2d3bea', 'ecc5a74683d684f05b6d9e7ec929341d', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.185+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.188+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.191+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783571, 'd289fb4cf56319d0600dc5e27c1b56f4', 'dd1b6ce0850f07b94458a03032e54b15', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061919', datetime.datetime(2024, 6, 10, 22, 14, 48, 513000), 'QRIS', 'Nobu Payroll ****4357', 29000, 'Nobu ePay', '936000131600284813', 'd04bbd47d75d27b21d65bd56c11b1b72', 'TANGSEL', '200828132037000', 'e18173c7a509583480417023ef3b8463', 'a11328d1fa3b7c04ae22c3e97526cf43', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.192+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.195+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.197+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783572, 'ab052bc93c556c39b5082e3974080ce6', 'b4c63bea7de62866dabc98d88600ac9f', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061923', datetime.datetime(2024, 6, 10, 22, 15, 11, 497000), 'QRIS', 'Nobu Payroll ****5797', 34000, 'Nobu ePay', '936000091503809923', '740caa179797fb089943eb438dd0d06d', 'LUBUK LINGGAU', '230712101320000', '2b6484094d15f72b0734610ec720f2bf', '2c0e525a11e0fe838c50cde1c2916e4f', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.198+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.201+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.204+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783573, '0f53b55065e335d9e22f0063df19a9cf', '3284ab055187060954f42a1bf7a1b403', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061931', datetime.datetime(2024, 6, 10, 22, 16, 14, 20000), 'QRIS', 'Nobu Payroll ****2923', 15000, 'Nobu ePay', '936000080157836776', '86c3f2c96ffae6f5f1cca13aed343d3d', 'Makassar (Kota)', '230711102541000', 'dabdc70bf0c5fd2b9477b9a7d22f18e6', '7db28667d3167a5723e53528b0b40b43', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.205+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.208+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.210+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783574, '0f53b55065e335d9e22f0063df19a9cf', '3284ab055187060954f42a1bf7a1b403', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061957', datetime.datetime(2024, 6, 10, 22, 18, 25, 967000), 'QRIS', 'Nobu Payroll ****2923', 9000, 'Nobu ePay', '936000080157836776', '86c3f2c96ffae6f5f1cca13aed343d3d', 'Makassar (Kota)', '230711102541000', 'dabdc70bf0c5fd2b9477b9a7d22f18e6', '7db28667d3167a5723e53528b0b40b43', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.211+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.214+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.217+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783575, '49e762d6a171f3cb380a9992f4ce30e9', '138728dd5d7b3afd87fcc975e7c86e67', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061963', datetime.datetime(2024, 6, 10, 22, 18, 36, 630000), 'QRIS', 'Nobu Payroll ****3608', 500000, 'Nobu ePay', '936009120001740655', '5c1689d355bfea99dbadebf94ad4af09', 'Jakarta Barat', '190207094903000', '11a40daac1c01326187ee3c3cefa849c', '3dc32d3f3bdf757d4ba41704d0690741', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.218+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.221+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.223+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783576, '18519755d0821bfe84b2a551c91c36a0', '764bf3965dfb28746abbfc415c73c59a', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078061979', datetime.datetime(2024, 6, 10, 22, 20, 3, 927000), 'QRIS', 'Nobu Payroll ****4164', 77000, 'Nobu ePay', '936000080040410325', 'a5a28649c72744de00ba960cb42da3e9', 'Surabaya (Kot', '150803112556000', 'c07694824b28a4593890642f0571b6c6', '2e43cc5227b98a38ff3f6025cd4991e2', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.224+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.227+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.230+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783577, '593f8a7809e1e90a5078d13253a9e7ac', '210906466b839bcc6628f91dcfbd4981', 'SAVING', 'ACTIVE', '360', 'QR2024061078061981', datetime.datetime(2024, 6, 10, 22, 20, 11, 333000), 'QRIS', 'Nobu Savings ****1867', 286000, 'Nobu ePay', '936000143002103198', '33b056a744ff9565ceb87f6a6b778f35', 'BEKASI', '151015095301000', '71cbb480c7efc32445333f1ee4e98322', 'cef1af82f620eb9bd65b02e5ace264b6', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.231+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.234+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.236+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783578, 'b018bf590749ccab4fb14fadf048e069', 'd30c313115a48b5a52c05dd5f8204f90', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062010', datetime.datetime(2024, 6, 10, 22, 21, 59, 960000), 'QRIS', 'Nobu Payroll ****2090', 18000, 'Nobu ePay', '936009120000306167', 'cfbd9e7da116b6ee5a9845f2c28b1383', 'Purwakarta', '230707094520000', '5d3e3dff61fc8761a5697e5e5630fa35', 'b085d3afb598760d6708f821735d14d6', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.237+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.241+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.245+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783579, '84a4b1d326d90196818e55d3dac8e626', '908c886f0d94f50b3edee600a816a2f7', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062015', datetime.datetime(2024, 6, 10, 22, 22, 29, 873000), 'QRIS', 'Nobu Payroll ****2188', 50429, 'Nobu ePay', '936008140100054292', '779da2b58b077993be88370882897197', 'TANGSEL', '211105131740000', 'b002c4642f73af8a1ea23163d81e527d', '34e9f88bf17566a8f86dd46079b64111', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.247+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.250+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.252+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783580, 'e23e8f5e3590a1a87aa9dc6411e93b51', 'fdbd5209a38e7ffd1c1b6e32108844dc', 'SAVING', 'ACTIVE', '360', 'QR2024061078062018', datetime.datetime(2024, 6, 10, 22, 22, 47, 463000), 'QRIS', 'Nobu Savings ****6950', 450440, 'Nobu ePay', '936005030000084111', '0fca33ebdb50622013f767a5f403cdb0', 'TANGERANG', '230926102550000', 'a80744c786b151f9123a6f3b4fc1d3de', '2b81a4840cc4481fe8459df1148c04aa', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.253+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.256+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.259+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783581, '26aeab543294d86b149ec7b73ee36c5f', '87ae47f862e18c3e421330e92720943a', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062038', datetime.datetime(2024, 6, 10, 22, 24, 31, 523000), 'QRIS', 'Nobu Payroll ****4871', 30000, 'Nobu ePay', '936005030000090314', '6c61602e991971db0411d5994a52bd25', 'LIMA PULUH KOTA', '231006095839000', '75e782f69d6da77f58a48ccc2fb11ad7', '9ca1ae8383b49ef8d1ba1e81e28251d8', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.260+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.263+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.265+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783582, 'd06e1143872baf8af087e2da8169593c', 'edbcf486be30d55abb3593ff3366506b', 'DIGITAL_SAVING', 'ACTIVE', 'IDR', 'QR2024061078062044', datetime.datetime(2024, 6, 10, 22, 24, 55, 143000), 'QRIS', 'Nobu Daily Savings ****4048', 10000, 'Nobu ePay', '936005030000087065', '036038149a76fdb5c6324571fd5eaabb', 'JAKARTA BARAT', '240326202109000', '02de42994290782adc28ab6451a8842d', 'b44accb012932faf3ce44f78f7433c75', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.266+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.269+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.272+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783583, '89584ce40ab2f6965a9377561023740e', '14c5c082d973ebdaec2f86d4aeb0677d', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062060', datetime.datetime(2024, 6, 10, 22, 26, 58, 73000), 'QRIS', 'Nobu Payroll ****0311', 90000, 'Nobu ePay', '936005030000090314', '95b18c0846a7dc4f43711b99b55c9975', 'SEMARANG', '240315165348000', '598265f6697e7688666d46968c140c08', 'ae51221d4768faf02fceffcea9e16b64', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.273+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.276+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.278+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783584, 'a8159ca1af77601293718056a7ef2acc', '4584d2f4f15ea7c192354ff2df57ad24', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062063', datetime.datetime(2024, 6, 10, 22, 27, 32, 927000), 'QRIS', 'Nobu Payroll ****5439', 15000, 'Nobu ePay', '936000080151926720', '4a10076c726081e9d62bee81fee484c6', 'Bogor (Kota)', '230328103649000', '8725b44182fab80eee9fd75823d2b34a', 'a006da7ddeee5ac799476fbfc68f2d17', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.279+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.282+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.284+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783585, '3df607683aa92cf9fd805bf11c63ca74', '5a9a8b1848e9aded4fd282acdaa94e12', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062075', datetime.datetime(2024, 6, 10, 22, 28, 30, 250000), 'QRIS', 'Nobu Payroll ****0887', 23000, 'Nobu ePay', '936000020041135089', '8dc4eca9a3308173361d427e69207556', 'KENDARI', '231204134609000', '4194a64dedb788069f2263374f28e9a6', '3af1f2661e1dacc5124e9986d0753ade', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.285+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.288+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.291+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783586, '3d669036d8fed6408c55feb851516d0a', 'fefec8466f40114da82149266108553c', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062093', datetime.datetime(2024, 6, 10, 22, 30, 1, 380000), 'QRIS', 'Nobu Payroll ****8297', 28000, 'Nobu ePay', '936000020041161900', '5d0aa332d4ea3e182707aa9c5bd0f7d8', 'SLEMAN', '210223143330000', 'd707dc5592c634e58222b70b80aabc84', 'cbcf53908cfe2108082a87a008ff957c', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.292+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.295+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.297+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783587, '28b2bc06fb9894b17dc7cdeffc162f13', 'b37434e53609b4647ed0a7c6ff1a6ceb', 'SAVING', 'ACTIVE', '360', 'QR2024061078062106', datetime.datetime(2024, 6, 10, 22, 31, 29, 807000), 'QRIS', 'Nobu Savings ****3111', 50000, 'Nobu ePay', '936008170240207098', '11b1096b652e6b50897921c8b3043af6', 'BOGOR', '240213101453000', 'c7b1f06061308d6a24da0b3317aef8ee', '6bcf1b9e936c8f6bbf9b421cc5e3a129', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.298+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.301+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.304+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783588, 'b7645eba4756f48a4dea9835bb37b9b0', '8d7d6160d617c2ac4d9044d82b4eb62b', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062126', datetime.datetime(2024, 6, 10, 22, 33, 47, 197000), 'QRIS', 'Nobu Payroll ****0312', 16000, 'Nobu ePay', '936009143422953088', 'c9d1c2a3125d846e82b2ec6174e93079', 'JAKARTA BARAT', '240424093808000', 'fc04268d2c731d1d52dafefbb9da1c23', 'e5a6effc92570bffa8a7047c636c2d38', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.306+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.310+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.313+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783589, '34fa133ac404d7f58bbb0c89fbcc65be', '64c6f5b73ceb47c13c7e9f6533f2cbed', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062130', datetime.datetime(2024, 6, 10, 22, 34, 9, 510000), 'QRIS', 'Nobu Payroll ****4256', 14000, 'Nobu ePay', '936009120000441216', 'a95112f86ebdf712ea3beabfe7c31750', 'Semarang', '240306161651000', '044c17fdc4c4c3cd5e0f29749014ec1c', '3686dae6e80f18d469460ab5a8d8910d', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.314+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.318+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.321+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783590, '8d85ac9515db18000df4f9468efe9bc9', '72f12ed080d5c488396c0e92b244f3b9', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062133', datetime.datetime(2024, 6, 10, 22, 34, 22, 30000), 'QRIS', 'Nobu Payroll ****1937', 30000, 'Nobu ePay', '936000143000314170', '334069e76c776dccb78cf7b3ffaf7140', 'KEDIRI', '240212143034000', 'b2ce6b64458b3ceef459a9b0dbc14524', '237d66ea4c578b2c4eaf6f3e9ebffb1e', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.322+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.325+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.328+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783591, '7cff56986fa2f2e0b32daef4de13835a', 'c0e13b4bf1bbe55ecf126f3504e4ba06', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062140', datetime.datetime(2024, 6, 10, 22, 35, 13, 727000), 'QRIS', 'Nobu Payroll ****1197', 15000, 'Nobu ePay', '936005030000090774', '13b0225866207ac820eff8c6a872042a', 'SUMBAWA BARAT', '211124093959000', '82bb5221c69f4e22029a78d7a9eec069', '080b44f8adaf75c3cef91ede60087435', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.329+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.334+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.336+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783592, 'aefc9c0b694a592d8bad8545c0d6076e', 'fe183f73cbf6de3cace06e9877f45ac4', 'DIGITAL_SAVING', 'ACTIVE', 'IDR', 'QR2024061078062151', datetime.datetime(2024, 6, 10, 22, 36, 36, 360000), 'QRIS', 'Nobu Daily Savings ****3433', 25000, 'Nobu ePay', '936008980224223774', '08d3ec314c791914ca618dd57787260a', 'KOTA MADIUN', '210125144550000', '16e62d4c914912fe58afb3bf3beb81eb', '0c1192cbaad87639d2126439661f280d', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.337+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.340+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.343+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783593, 'bcb29e1a9fd6e422a0e6ba7a2fa208ff', '5934cf19ec7222e80ea6d97912e3dde7', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062160', datetime.datetime(2024, 6, 10, 22, 38, 14, 783000), 'QRIS', 'Nobu Payroll ****3651', 23000, 'Nobu ePay', '936000080140867250', '8fdbea25d4a335fbb2a1d20e43608270', 'Tangerang (Kota', '240307133033000', '18680e0b997987f3a982be3fbf26336a', 'bf8f6b1224d20e0538ee40664eb3dc7b', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.344+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.347+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.350+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783594, 'ad9cee9d9a4d4b3f2ceac789004c358a', '96bedbacd96e371ee7774945b5d7af60', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062166', datetime.datetime(2024, 6, 10, 22, 39, 44, 717000), 'QRIS', 'Nobu Payroll ****2029', 35000, 'Nobu ePay', '936005030000090314', 'dd3ddb828c12f9ea2015f40505b3c2de', 'BENGKULU', '230227125042000', '6ca5adc41727e1ec493a72d164f0a98c', '91d7452a174af41270a0992a9281c574', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.352+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.355+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.360+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783595, '037dcee319f6554a595aba82b787b018', 'ec307d0ec2c85bf33c41bc2e7eb432bd', 'DIGITAL_SAVING', 'ACTIVE', 'IDR', 'QR2024061078062168', datetime.datetime(2024, 6, 10, 22, 40, 7, 930000), 'QRIS', 'Nobu Daily Savings ****8047', 100000, 'Nobu ePay', '936008170240206436', '93d8f7c2c0acc5f1c5a4f44da20cb175', 'MEDAN', '200323125010000', '53c01b74a9f717152eb46d0bd1bf3e8d', 'cc01dac52fe615cf87e1cf4bd70f0f53', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.361+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.364+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.366+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783596, '4a7a8b594f0d15b50705a771a308fbf6', '73992d5e294672836e31c1954fc351ed', 'SAVING', 'ACTIVE', '360', 'QR2024061078062173', datetime.datetime(2024, 6, 10, 22, 40, 50, 987000), 'QRIS', 'Nobu Savings ****5799', 104804, 'Nobu ePay', '936009163004835341', '5d0da5e25d2ea52f056499ecbeb79ff7', 'CIAMIS', '180201110138000', '8a8a0edd8ab699277e40374e85241878', '66476008a9bb45d9636be1e19e3dba9e', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.367+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.371+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.373+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783597, '8206789e25d5c6d46091ac78f035468f', '107302d02c0e1b3899d78d7f82c04429', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062184', datetime.datetime(2024, 6, 10, 22, 41, 19, 847000), 'QRIS', 'Nobu Payroll ****1173', 300500, 'Nobu ePay', '936009180021431455', '800eb76bcb219015242ed2c6a2f8a317', 'KOTA JAKARTA BA', '210726120845000', '3d735dfea3ed6a9a1d4ab9f365b2b049', 'b6c8fce346551ded6e49a75c82f03303', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.374+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.378+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.384+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783598, 'f106c6c8e112e101ed301a51c4a0b03e', '29b5dc4c241f318bd970f7f1fdc2b540', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062212', datetime.datetime(2024, 6, 10, 22, 43, 15, 287000), 'QRIS', 'Nobu Payroll ****3017', 10000, 'Nobu ePay', '936008170240165454', '4706988b371a41b67947cc0239fd343e', 'JAKARTA PUSAT', '231113112945000', '587f707503e37922e6697bd309360cc1', '4abe2c5ff20311b20f75dd68517f5d76', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.386+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.390+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.393+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783599, '6d3907fc40fe70da6327466be1708fd1', '40a59ad05f3dcc28a229588f0bc6399c', 'SAVING', 'ACTIVE', '360', 'QR2024061078062211', datetime.datetime(2024, 6, 10, 22, 43, 17, 540000), 'QRIS', 'Nobu Savings ****3850', 456459, 'Nobu ePay', '936000020110722317', 'b23959a9b13d578a4c3b91081cbfd925', 'JAKARTA PUSAT', '190717104258000', 'e0fce8671039e4514ac119bdd01566e7', '7b69aea93e5b387ccc2f4ee3ed532658', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.394+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.398+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.401+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783600, '8206789e25d5c6d46091ac78f035468f', '107302d02c0e1b3899d78d7f82c04429', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062213', datetime.datetime(2024, 6, 10, 22, 43, 24, 647000), 'QRIS', 'Nobu Payroll ****1173', 44000, 'Nobu ePay', '936009180021431455', '800eb76bcb219015242ed2c6a2f8a317', 'KOTA JAKARTA BA', '210726120845000', '3d735dfea3ed6a9a1d4ab9f365b2b049', 'b6c8fce346551ded6e49a75c82f03303', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.402+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.407+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.410+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783601, 'e23e8f5e3590a1a87aa9dc6411e93b51', 'fdbd5209a38e7ffd1c1b6e32108844dc', 'SAVING', 'ACTIVE', '360', 'QR2024061078062229', datetime.datetime(2024, 6, 10, 22, 45, 33, 680000), 'QRIS', 'Nobu Savings ****6950', 300960, 'Nobu ePay', '936000370000035709', '1d99c81d611922c5edb7128b2fd3ff7d', 'BADUNG', '230926102550000', 'a80744c786b151f9123a6f3b4fc1d3de', '2b81a4840cc4481fe8459df1148c04aa', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.413+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.418+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.421+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783602, '519ee94a6e7a6db40b003500c9e5d0b5', '690a4a95c3998398e260b79dc5680562', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062238', datetime.datetime(2024, 6, 10, 22, 46, 26, 633000), 'QRIS', 'Nobu Payroll ****2622', 105000, 'Nobu ePay', '936008153000123469', '2e8dc02e9870b537b02720770d6c8402', 'BOGOR', '150108131240000', 'becca954a75e599ffc37112aab57b8eb', '868bb90d7540ff11351a782c334856fe', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.422+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.426+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.428+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783603, '579c989476ad19f09aba314d19984a96', '4122562c93a6eaecbabb079f395f4dbd', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062243', datetime.datetime(2024, 6, 10, 22, 47, 40, 383000), 'QRIS', 'Nobu Payroll ****1401', 93000, 'Nobu ePay', '936009143321545117', '40abe13fec24ee563473a94b4361fa7b', 'JAKARTA SELATAN', '210302163402000', '07a7821046917181a8b28438151b244e', '43bfad1cdfe375f0494ac6ecb1162f73', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.431+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.436+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.440+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783604, 'b2f1d8da0301cd0198ef56841bf56e10', '0447148bd1c0f9185e71bd73e9d3a9c2', 'DIGITAL_SAVING', 'ACTIVE', '360', 'QR2024061078062244', datetime.datetime(2024, 6, 10, 22, 47, 41, 933000), 'QRIS', 'Nobu Daily Savings ****0847', 140000, 'Nobu ePay', '936005030000090774', 'd6453fe8b50e86b9af9385cdba637acb', 'JAKARTA UTARA', '240302125022000', 'f2c8a50ae24ed3752a2a6cbacc743c84', '0bc7e9af710a0a4d3692fedd265333a3', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.441+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.446+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.448+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783605, '89584ce40ab2f6965a9377561023740e', '14c5c082d973ebdaec2f86d4aeb0677d', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062248', datetime.datetime(2024, 6, 10, 22, 48, 10, 627000), 'QRIS', 'Nobu Payroll ****0311', 156400, 'Nobu ePay', '936008350000024423', '5a9e8fde769e4bcb8bb00b8bb6c58c0d', 'Pontianak', '240315165348000', '598265f6697e7688666d46968c140c08', 'ae51221d4768faf02fceffcea9e16b64', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.449+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.454+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.456+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783606, 'd9ab5743d80cb300f97a64ed2836f6e8', '66862e742678fb81dbe9bd2a92534416', 'SAVING', 'ACTIVE', '360', 'QR2024061078062252', datetime.datetime(2024, 6, 10, 22, 48, 37, 20000), 'QRIS', 'Nobu Savings ****9421', 20141, 'Nobu ePay', '936009143114853000', '7affd753e394030c1317a666a25fff19', 'JAKARTA SELATAN', '220726134514000', '341473e1b8ddc968d19b5a965bd707d9', '697dbf7749ec5446ce71dc3a88537f11', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.457+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.461+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.463+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783607, '2476852de375e1d7425ad27b62fc8078', 'cd466f08e3890ebe177549eceb7d8ccf', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062254', datetime.datetime(2024, 6, 10, 22, 49, 1, 603000), 'QRIS', 'Nobu Payroll ****0838', 77000, 'Nobu ePay', '936000143000808087', '371bcc89f046d5882a12d34cea7fba67', 'TANGERANG', '180306134841000', '241d9259b45aa8869c8238997903efff', '78274402e79aaeadf8e0c385684dd919', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.464+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.468+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.471+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783608, 'ac6093370d0f291355752302b8006186', 'e32bb99f366680215cc725e5c31656b9', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062255', datetime.datetime(2024, 6, 10, 22, 49, 47, 80000), 'QRIS', 'Nobu Payroll ****0522', 25462, 'Nobu ePay', '936000110000202966', '673ede4f2436e6520957f988ffe90ce9', 'SLEMAN', '240503153654000', '194cad682ec4f53574f251bbc68bbbaf', '0064003bddd44cc309fdf5a2e4f97a4a', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.472+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.477+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.480+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783609, '5e8af46fc39892fc3c1859a5dab6a4fe', '3517daecb44ebbb3e2ade1e2e6a55fce', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062260', datetime.datetime(2024, 6, 10, 22, 50, 42, 657000), 'QRIS', 'Nobu Payroll ****2309', 228390, 'Nobu ePay', '936009150435734933', 'e9d9bb5bf04829fc471effa63b4948b0', 'Kab. Bogor', '170911092535000', 'd2faede354a623522bea20729e95eccd', 'bc3ec6a356270e4fddb0f8f6e8273424', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.481+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.484+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.487+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783610, '84a4b1d326d90196818e55d3dac8e626', '908c886f0d94f50b3edee600a816a2f7', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062265', datetime.datetime(2024, 6, 10, 22, 51, 28, 477000), 'QRIS', 'Nobu Payroll ****2188', 50429, 'Nobu ePay', '936008140100054297', '38a5c130d8148807c0a395f264ce88e3', 'JAKARTA SELATAN', '211105131740000', 'b002c4642f73af8a1ea23163d81e527d', '34e9f88bf17566a8f86dd46079b64111', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.488+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.491+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.494+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783611, '2bff73df2aa24338206ec26f1fe64fe5', 'bd0f8cc934a1ba2cd25e28c5427ea84b', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062319', datetime.datetime(2024, 6, 10, 22, 54, 58, 10000), 'QRIS', 'Nobu Payroll ****4647', 20000, 'Nobu ePay', '936005030000090508', '3d0957c8872829a9332196ca48f41c65', 'JAKARTA SELATAN', '210416124616000', '4b8534c3b77475c4ab3449fcb90909bf', '7268965f29fa8de4e621644409950e97', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.495+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.498+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.500+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783612, '03bd84fb8cf47f97b9dcee8559236a9c', 'a39fd3580abab03597c819916cf72f1a', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062338', datetime.datetime(2024, 6, 10, 22, 55, 49, 730000), 'QRIS', 'Nobu Payroll ****0317', 50000, 'Nobu ePay', '936005030000089802', 'acc506016003a82d21170951a1c818f2', 'DEPOK', '120704132628000', 'c648f7107201cc0842123e04cb31147c', '97a69289559f1e18b709d674171b692a', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.501+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.504+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.507+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783613, '037dcee319f6554a595aba82b787b018', 'ec307d0ec2c85bf33c41bc2e7eb432bd', 'DIGITAL_SAVING', 'ACTIVE', 'IDR', 'QR2024061078062355', datetime.datetime(2024, 6, 10, 22, 56, 26, 560000), 'QRIS', 'Nobu Daily Savings ****8047', 100000, 'Nobu ePay', '936008170240206436', '93d8f7c2c0acc5f1c5a4f44da20cb175', 'MEDAN', '200323125010000', '53c01b74a9f717152eb46d0bd1bf3e8d', 'cc01dac52fe615cf87e1cf4bd70f0f53', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.508+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.511+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.514+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783614, '173fd286e02d5e81ccca69e2826a1617', '36929cfed882a115bd12b8b775ef3a1c', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062389', datetime.datetime(2024, 6, 10, 22, 58, 9, 150000), 'QRIS', 'Nobu Payroll ****6451', 17000, 'Nobu ePay', '936000020040102500', 'a1184d83e0597039db448cac4ff92717', 'TANGERANG', '220408113351000', '6a0c413f34397cdd27a529b5f0bf5105', 'b642385b61af641a1b1657cd5e47fe5e', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.515+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.518+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.520+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783615, 'dd85e774e9328a78aaff8026068291b4', '417f947c78f9c1096a83e6640f7db935', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062412', datetime.datetime(2024, 6, 10, 22, 59, 19, 460000), 'QRIS', 'Nobu Payroll ****0569', 45000, 'Nobu ePay', '936008180240305016', '60ca924b4b4e9ed329fb39f67b571847', 'BENGKULU', '230313103348000', 'd726ace05efe5567ee0dd0df4c0384a1', 'abd88442a0d89c92a82fbba3b4434ff2', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.521+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.524+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.527+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783616, '7b62a722d5a1c1de4be15bf2d4c6ca64', '3505992aae44d93fdb6064cee325d4e8', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062439', datetime.datetime(2024, 6, 10, 23, 0, 51, 260000), 'QRIS', 'Nobu Payroll ****0630', 25195, 'Nobu ePay', '936005030000090266', 'e916a98a31c4a54c3ad6eba6cf173d38', 'BOGOR', '210615085704000', '8b586993f5b4745a3b44c80034be1063', 'e604e30fd59ab24624b9eaa8f38cb475', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.528+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.533+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.536+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783617, 'd06e1143872baf8af087e2da8169593c', 'edbcf486be30d55abb3593ff3366506b', 'DIGITAL_SAVING', 'ACTIVE', 'IDR', 'QR2024061078062480', datetime.datetime(2024, 6, 10, 23, 2, 47, 680000), 'QRIS', 'Nobu Daily Savings ****4048', 10000, 'Nobu ePay', '936005030000087065', '036038149a76fdb5c6324571fd5eaabb', 'JAKARTA BARAT', '240326202109000', '02de42994290782adc28ab6451a8842d', 'b44accb012932faf3ce44f78f7433c75', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.538+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.542+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.546+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783618, '2eab553383eb7d3f17fc689613752d1c', 'd7413ed892c0ad449732b27e56e42eb8', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062486', datetime.datetime(2024, 6, 10, 23, 3, 27, 67000), 'QRIS', 'Nobu Payroll ****8219', 35000, 'Nobu ePay', '936000140001965488', '8030ffc437356ecdbb755caadb178f4e', 'JAKARTA BARAT', '210518091629000', '19c384df65236f11af340a623fde08c0', '379d3a50dbd2f66b46d764ace6733953', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.547+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.552+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.555+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783619, '296a2d23e9acd2951f93d35ff56aa2f1', '3e9d7b6754c181f86611004a128401da', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062544', datetime.datetime(2024, 6, 10, 23, 6, 25, 817000), 'QRIS', 'Nobu Payroll ****3499', 15000, 'Nobu ePay', '936009120000941848', 'a9fc7d2b6298e0d5de58b44802054226', 'Depok', '130827144048000', 'aaccb817b5150a0919f2019d7aa2bf4e', 'c9f1c13010b850e3d83a3ce1fa218d7a', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.556+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.561+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.569+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783620, '08ffba0dfa8933235f70a468117c362a', '61f93d7791d9be44c715729fb7907de7', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062551', datetime.datetime(2024, 6, 10, 23, 6, 37, 653000), 'QRIS', 'Nobu Payroll ****0103', 41113, 'Nobu ePay', '936000143000637266', 'b84b05c2aac354f269a6a7e52be06ad1', 'JAKARTA SELATAN', '190405125252000', '796ce77ac39dbf9418ddfe3cb4dcac09', 'de0ff3019a66cdd84b7539eba5e40787', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.573+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.583+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.590+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783621, 'dc4826c2783e6c9ad9512d6bd624eab9', 'c2cd28ea23ee4e1b1940efc82b45da38', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062571', datetime.datetime(2024, 6, 10, 23, 7, 52, 650000), 'QRIS', 'Nobu Payroll ****0521', 30000, 'Nobu ePay', '936009120001790548', '802330898352858b5220c9cb741ad454', 'Surabaya', '231010114359000', 'b6ec47413fd62193ba6c6ca9a280df6c', '4fef018d830e86a44e21020471e2a890', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.592+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.602+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.609+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783622, '1b1b635cdf8e42f92ce78026f374c83d', 'a922ac52ae96a0f404e845d4c0a57a1f', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062594', datetime.datetime(2024, 6, 10, 23, 9, 1, 987000), 'QRIS', 'Nobu Payroll ****5873', 32000, 'Nobu ePay', '936009143739239508', '7ddc0106ca1b1e61e2beabf51cd82d05', 'TANGERANG', '231120145202000', '21299b6d99692802f020754147f1039c', 'd68c4cf7f6c6d2932857da88c16ef42d', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.613+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.621+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.629+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783623, '76fa4291ccd7d544dfa8f789ec9c6ec1', '5b9077ab1981b82f8b922c4c2c3c6407', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062597', datetime.datetime(2024, 6, 10, 23, 9, 6, 567000), 'QRIS', 'Nobu Payroll ****6009', 15000, 'Nobu ePay', '936000080131336133', '606287e598cbf63002b922045437ffd1', 'Deli Serdang (K', '230703130133000', '47eb6ab802875f0e45c187eda0efc1e2', 'a7a28247114915222784789a50efb07b', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.633+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.649+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.657+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783624, '26aeab543294d86b149ec7b73ee36c5f', '87ae47f862e18c3e421330e92720943a', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062603', datetime.datetime(2024, 6, 10, 23, 9, 11, 893000), 'QRIS', 'Nobu Payroll ****4871', 50000, 'Nobu ePay', '936005030000090314', '6c61602e991971db0411d5994a52bd25', 'LIMA PULUH KOTA', '231006095839000', '75e782f69d6da77f58a48ccc2fb11ad7', '9ca1ae8383b49ef8d1ba1e81e28251d8', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.662+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.669+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.674+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783625, '7b62a722d5a1c1de4be15bf2d4c6ca64', '3505992aae44d93fdb6064cee325d4e8', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062661', datetime.datetime(2024, 6, 10, 23, 12, 33, 27000), 'QRIS', 'Nobu Payroll ****0630', 29000, 'Nobu ePay', '936008170240207993', '0c454b6b8da07411adeea7213d0f19fa', 'JAKARTA SELATAN', '210615085704000', '8b586993f5b4745a3b44c80034be1063', 'e604e30fd59ab24624b9eaa8f38cb475', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.675+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.680+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.683+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783626, '037dcee319f6554a595aba82b787b018', 'ec307d0ec2c85bf33c41bc2e7eb432bd', 'DIGITAL_SAVING', 'ACTIVE', 'IDR', 'QR2024061078062703', datetime.datetime(2024, 6, 10, 23, 15, 24, 167000), 'QRIS', 'Nobu Daily Savings ****8047', 100000, 'Nobu ePay', '936005030000090314', '1002677e01bb98c2204f3bb5846413ac', 'EMPAT LAWANG', '200323125010000', '53c01b74a9f717152eb46d0bd1bf3e8d', 'cc01dac52fe615cf87e1cf4bd70f0f53', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.684+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.688+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.691+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783627, '2ff8f9fe2e77596522dd9457db39b7d2', 'b8e4df6e239da4a0ea8adeb2a86627b1', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062730', datetime.datetime(2024, 6, 10, 23, 18, 57, 457000), 'QRIS', 'Nobu Payroll ****7145', 16000, 'Nobu ePay', '936009180021533180', '3cc17536da59774f70532baace451407', 'JAKARTA TIMUR', '161116090637000', '56e05049c28af8446dfcb506fc67966d', 'bc167a5f74f7c05181ce7c7ff822b12f', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.693+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.698+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.702+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783628, '8a888efdc165d15a1bbf2b30298027a4', 'b7fbd99cdcf2a89568e666063eb421b5', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062787', datetime.datetime(2024, 6, 10, 23, 23, 18, 510000), 'QRIS', 'Nobu Payroll ****3949', 60000, 'Nobu ePay', '936008170240207200', 'c00a4665594df8a3dbe2ec7c3c99e2ff', 'BOGOR', '190422110610000', '0514953a89aa5601382e239a5d31a800', 'f1bc8fae8550f537fd8514793a948607', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.703+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.708+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.712+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783629, '0d2847f0e248cec9f1d10d0b72b5dacb', 'cd709aa07af83dc452fba5c3e7d64d65', 'SAVING', 'ACTIVE', '360', 'QR2024061078062784', datetime.datetime(2024, 6, 10, 23, 23, 19, 133000), 'QRIS', 'Nobu Savings ****6893', 40000, 'Nobu ePay', '936000080118650797', '0adf2b4b93d45421c01d8a0edcfa0599', 'Balikpapan (Kot', '220718131042000', '0ba2ff4597e05d1d14d1c09602487b5a', '5cc67a3b3ed9d0055d2ac032aeec6534', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.714+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.719+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.723+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783630, '9e8a3096f9aebda7169d2b43545b7338', '1f616393c4bc11c4b677fefb8d89d441', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062785', datetime.datetime(2024, 6, 10, 23, 23, 24, 140000), 'QRIS', 'Nobu Payroll ****6427', 13000, 'Nobu ePay', '936009143011791546', '6ef9966b3fe16cc767470232e84f100d', 'SLEMAN', '230720084112000', 'b7804eeecc312e6023b4379e00be9828', '67a57129d01f9137767d7d551276d0ec', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.728+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.734+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.739+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783631, '7cff56986fa2f2e0b32daef4de13835a', 'c0e13b4bf1bbe55ecf126f3504e4ba06', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062808', datetime.datetime(2024, 6, 10, 23, 27, 17, 393000), 'QRIS', 'Nobu Payroll ****1197', 15000, 'Nobu ePay', '936008980240155847', '49b6c8857d34dbe450273e93a6573509', 'KOTA JAKARTA BA', '211124093959000', '82bb5221c69f4e22029a78d7a9eec069', '080b44f8adaf75c3cef91ede60087435', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.742+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.749+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.753+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783632, 'e23e8f5e3590a1a87aa9dc6411e93b51', 'fdbd5209a38e7ffd1c1b6e32108844dc', 'SAVING', 'ACTIVE', '360', 'QR2024061078062810', datetime.datetime(2024, 6, 10, 23, 27, 54, 810000), 'QRIS', 'Nobu Savings ****6950', 225850, 'Nobu ePay', '936008160000012448', 'c8c5179d8e5c1782a18c3831403e5d68', 'Jakarta Selatan', '230926102550000', 'a80744c786b151f9123a6f3b4fc1d3de', '2b81a4840cc4481fe8459df1148c04aa', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.754+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.760+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.764+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783633, '8e3868ad382d7ece903cff823fef8515', '39e7051b6e2c16258826e036c9daa5a3', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062820', datetime.datetime(2024, 6, 10, 23, 29, 0, 950000), 'QRIS', 'Nobu Payroll ****8240', 310500, 'Nobu ePay', '936008990000003056', '59ea5c975ac9d70a65773c4764095f16', 'JAKARTA PUSAT', '240123085144000', 'bf3d562290a8d36706341fe3882cc208', 'a127a029eafd483192a22e713cafc3ec', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.765+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.770+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.773+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783634, '908d7fe2d7e3241de3216267f7cb80f4', '65d82866a63f8cd9402dd40e49a687b1', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062822', datetime.datetime(2024, 6, 10, 23, 29, 1, 503000), 'QRIS', 'Nobu Payroll ****5242', 151175, 'Nobu ePay', '936009150342734995', '4c94f6138322f7da45cac80895fdedee', 'Kab. Pandeglang', '240520150709000', '77d33a56db859bcfe4a7c494dd78c4e7', '48cfbee02d037768440b88f086cb317d', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.774+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.779+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.782+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783635, 'e47d9d44a1fb3387ade4b3bd1bb27dab', '47f84fd1b927541a6c10cd409875ea1d', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062821', datetime.datetime(2024, 6, 10, 23, 29, 4, 723000), 'QRIS', 'Nobu Payroll ****1641', 15000, 'Nobu ePay', '936009120000969111', 'dd00ea215ee8d30466aed63e5d5a4c8a', 'Cimahi', '210702140418000', '449f355d527ae3215281eacceb984b6a', '798c1ba2c359eba933134143d3de8c56', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.783+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.788+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.791+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783636, '28b2bc06fb9894b17dc7cdeffc162f13', 'b37434e53609b4647ed0a7c6ff1a6ceb', 'SAVING', 'ACTIVE', '360', 'QR2024061078062823', datetime.datetime(2024, 6, 10, 23, 29, 14, 217000), 'QRIS', 'Nobu Savings ****3111', 50000, 'Nobu ePay', '936008170240207219', '8f72149830e26587395519ad66655330', 'BOGOR', '240213101453000', 'c7b1f06061308d6a24da0b3317aef8ee', '6bcf1b9e936c8f6bbf9b421cc5e3a129', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.792+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.798+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.803+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783637, '037dcee319f6554a595aba82b787b018', 'ec307d0ec2c85bf33c41bc2e7eb432bd', 'DIGITAL_SAVING', 'ACTIVE', 'IDR', 'QR2024061078062837', datetime.datetime(2024, 6, 10, 23, 31, 47, 113000), 'QRIS', 'Nobu Daily Savings ****8047', 100000, 'Nobu ePay', '936008170240206436', '93d8f7c2c0acc5f1c5a4f44da20cb175', 'MEDAN', '200323125010000', '53c01b74a9f717152eb46d0bd1bf3e8d', 'cc01dac52fe615cf87e1cf4bd70f0f53', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.804+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.808+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.811+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783638, 'fcb56bee53dd430f0235866b6e8b1c3f', '26fb77c6af0856ca528e2d59a2103786', 'SAVING', 'ACTIVE', '360', 'QR2024061078062903', datetime.datetime(2024, 6, 10, 23, 41, 44, 80000), 'QRIS', 'Nobu Savings ****3537', 26000, 'Nobu ePay', '936000110000266332', 'c90ff77f611559ee2e05b29f917722b6', 'JAKARTA SELATAN', '240309103401000', '94d8a710aa4b35a12d4008337aa0c2fc', '7a9ad3a6a70fbec717ca06c7b158c9d6', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.813+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.816+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.818+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783639, '89584ce40ab2f6965a9377561023740e', '14c5c082d973ebdaec2f86d4aeb0677d', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062923', datetime.datetime(2024, 6, 10, 23, 43, 20, 647000), 'QRIS', 'Nobu Payroll ****0311', 120000, 'Nobu ePay', '936005030000090314', '95b18c0846a7dc4f43711b99b55c9975', 'SEMARANG', '240315165348000', '598265f6697e7688666d46968c140c08', 'ae51221d4768faf02fceffcea9e16b64', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.819+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.822+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.825+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783640, 'c58c9218599449355d31e1aecdf8730f', '9bc3347af51b49b6301ab3ddcac87528', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062924', datetime.datetime(2024, 6, 10, 23, 43, 27, 797000), 'QRIS', 'Nobu Payroll ****2044', 70000, 'Nobu ePay', '936000091503664989', 'c2915f91a89faf18e103ec47bd171687', 'JAKARTA BARAT', '240517165633000', '970a6fffcf930fc855215052c2420254', '1ff9239a38d322b1fc7eab58b30d73d6', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.826+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.830+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.833+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783641, '11c718a06a0fd7f6dd247aa18aa5ab91', '726a1052930b084ea405ce082e1e08de', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078062975', datetime.datetime(2024, 6, 10, 23, 47, 11, 323000), 'QRIS', 'Nobu Payroll ****1161', 28000, 'Nobu ePay', '936000140002154528', '3489a16df64a213ebee4e22c61f8bafd', 'MEDAN', '171212093942000', '02b0bbc0c74418b77253cfbad477072f', '36c00b195648400a4fbd317ce1f8d856', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.834+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.837+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.840+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783642, 'cd2066ee80d8faae21942591d8df26d3', 'd39a55ed60c5b06565b8f59fd7beaccf', 'SAVING', 'ACTIVE', '360', 'QR2024061078062978', datetime.datetime(2024, 6, 10, 23, 47, 27, 840000), 'QRIS', 'Nobu Savings ****8322', 50000, 'Nobu ePay', '936005030000089802', '84d6d1eae3c35f9dbd380999a6ed56ee', 'JAKARTA SELATAN', '231009134905000', '5d3d34996916429243718a541eabad28', 'bc4624420aff85f87cd29aab78c86f7f', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.841+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.844+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.847+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783643, '2e9cf37b16ac633c8d1066b35b3a4983', '16bbbd7563e822bc2e30f9e695f04df4', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078063015', datetime.datetime(2024, 6, 10, 23, 49, 7, 523000), 'QRIS', 'Nobu Payroll ****8010', 42000, 'Nobu ePay', '936000140001538036', '3de12c94edad4c35761ec441a465d0c5', 'PEKANBARU', '240212145552000', '771de9ea44e7593d288f04e6eac40204', 'ded011292379f51d5f150c534bdf5cf5', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.848+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.852+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.854+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783644, 'dd85e774e9328a78aaff8026068291b4', '417f947c78f9c1096a83e6640f7db935', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078063025', datetime.datetime(2024, 6, 10, 23, 49, 35, 777000), 'QRIS', 'Nobu Payroll ****0569', 50103, 'Nobu ePay', '936005030000086228', '2b0171060ce82d71461f2d7d9979f4dc', 'BOGOR', '230313103348000', 'd726ace05efe5567ee0dd0df4c0384a1', 'abd88442a0d89c92a82fbba3b4434ff2', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.856+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.860+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.863+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783645, '7cff56986fa2f2e0b32daef4de13835a', 'c0e13b4bf1bbe55ecf126f3504e4ba06', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078063031', datetime.datetime(2024, 6, 10, 23, 50, 5, 620000), 'QRIS', 'Nobu Payroll ****1197', 10000, 'Nobu ePay', '936008980240155847', '49b6c8857d34dbe450273e93a6573509', 'KOTA JAKARTA BA', '211124093959000', '82bb5221c69f4e22029a78d7a9eec069', '080b44f8adaf75c3cef91ede60087435', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.864+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.868+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.872+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783646, '904f47dce704b37ea698ad6c7b438ef1', '62ee9a78b90a7ca98766a6d02b80f303', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078063040', datetime.datetime(2024, 6, 10, 23, 50, 22, 503000), 'QRIS', 'Nobu Payroll ****2211', 125000, 'Nobu ePay', '936009143521589906', 'fe68a6852bfbdbe9bf29148afe6e6408', 'TANGERANG', '140523152906000', '5f2c488cf5cc250c6eb73c4c7c251162', '4c591f53cfa9986ff0d8d9836ce37db9', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.873+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.876+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.878+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783647, '891ef9d4fa4ecd8eedf5baf5c6bd343f', '1fbbf9d22834e9dec3ab00b4d428e55e', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078063051', datetime.datetime(2024, 6, 10, 23, 50, 46, 153000), 'QRIS', 'Nobu Payroll ****7140', 100000, 'Nobu ePay', '936008170240204502', '36c1e5be42e17ee19d7213fc24a161ed', 'TANGERANG', '210628124918000', '2c8362fe5a10db813c7d1d576ebfbc2e', 'd768066f1cd72ff81aa8e26b57a550e1', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.880+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.883+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.886+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783648, 'c28c0385c0890a9ce2a5b86ccdf74c30', 'e3770dfdc40b803fd32ad1fe378ae082', 'SAVING', 'ACTIVE', '360', 'QR2024061078063056', datetime.datetime(2024, 6, 10, 23, 51, 16, 383000), 'QRIS', 'Nobu Savings ****6451', 41000, 'Nobu ePay', '936008170230121969', '5972d3974c5477d76c51baa689690a5c', 'JAKARTA SELATAN', '240427131313000', 'ea6fe6de5d89b39f6b7051d2f3d2cbde', 'd6caa7c561a6a473f5bde6d62f53990a', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.887+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.890+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.892+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783649, 'b400ed70637b5884fea7915701b0acf9', '9a41e5592c4589ac77d1549cd0b99cca', 'PAYROLL', 'ACTIVE', '360', 'QR2024061078063061', datetime.datetime(2024, 6, 10, 23, 51, 35, 767000), 'QRIS', 'Nobu Payroll ****9911', 82280, 'Nobu ePay', '936000143002029227', '5d083f1dca66cc23f138c3e162aaff59', 'JAKARTA SELATAN', '181015131446000', 'cc2a7ea464b7e98fc33b9f28f8310064', '8ff9e6c56cd9787c4c0fe7505fbf30fa', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.893+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.897+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.899+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783650, '037dcee319f6554a595aba82b787b018', 'ec307d0ec2c85bf33c41bc2e7eb432bd', 'DIGITAL_SAVING', 'ACTIVE', 'IDR', 'QR2024061078063096', datetime.datetime(2024, 6, 10, 23, 54, 8, 323000), 'QRIS', 'Nobu Daily Savings ****8047', 100000, 'Nobu ePay', '936005030000090314', '1002677e01bb98c2204f3bb5846413ac', 'EMPAT LAWANG', '200323125010000', '53c01b74a9f717152eb46d0bd1bf3e8d', 'cc01dac52fe615cf87e1cf4bd70f0f53', 'Pending', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.900+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.903+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.906+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783651, '53e577b75780f91213b05479527e21e4', '5b1a79d2434c824216aadaf5cffbe42c', 'SAVING', 'ACTIVE', '360', 'QR2024061078063107', datetime.datetime(2024, 6, 10, 23, 54, 55, 257000), 'QRIS', 'Nobu Savings ****0018', 64539, 'Nobu ePay', '936004908000029001', '2d10f33aa332107d0b85eeca2f9c9ae9', 'SIDOARJO', '231106100549000', '47c676dc07a57fd22c0afe039d270131', 'b21a155abdd128823af265ff043c396a', 'Success', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.907+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.910+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.913+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783652, '53e577b75780f91213b05479527e21e4', '5b1a79d2434c824216aadaf5cffbe42c', 'SAVING', 'ACTIVE', '360', 'QR2024061078063177', datetime.datetime(2024, 6, 10, 23, 59, 26, 707000), 'QRIS', 'Nobu Savings ****0018', 64539, 'Nobu ePay', '936004908000029001', '2d10f33aa332107d0b85eeca2f9c9ae9', 'SIDOARJO', '231106100549000', '47c676dc07a57fd22c0afe039d270131', 'b21a155abdd128823af265ff043c396a', 'Failed', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.915+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.918+0000] {base.py:84} INFO - Using connection ID 'postgres_conn' for task execution.
+[2024-06-11T07:56:06.920+0000] {sql.py:470} INFO - Running statement: 
+    INSERT INTO raw_data.cybertrack_superapps_v_customer_qris (
+        "Id",
+        "AccountID",
+        "AccountName",
+        "AccountType",
+        "AccountStatus",
+        "AccountCurrency",
+        "TransactionID",
+        "TransactionDatetime",
+        "TransactionType",
+        "TransactionSOFType",
+        "TransactionAmount",
+        "IssuerName",
+        "MPANID",
+        "MerchantName",
+        "MerchantLongitude",
+        "AccountCIFNo",
+        "AccountPhoneNo",
+        "AccountEmail",
+        "TransactionStatus",
+        "timegetdata"
+    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    , parameters: [783653, '53e577b75780f91213b05479527e21e4', '5b1a79d2434c824216aadaf5cffbe42c', 'SAVING', 'ACTIVE', '360', 'QR2024061078063191', datetime.datetime(2024, 6, 10, 23, 59, 58, 620000), 'QRIS', 'Nobu Savings ****0018', 64539, 'Nobu ePay', '936004908000029001', '2d10f33aa332107d0b85eeca2f9c9ae9', 'SIDOARJO', '231106100549000', '47c676dc07a57fd22c0afe039d270131', 'b21a155abdd128823af265ff043c396a', 'Failed', '2024-06-11 14:56:05']
+[2024-06-11T07:56:06.921+0000] {sql.py:479} INFO - Rows affected: 1
+[2024-06-11T07:56:06.922+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-11T07:56:06.922+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-11T07:56:06.926+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_ingest_cybertrack_superapps_v_customer_qris, task_id=load_to_postgresql, run_id=manual__2024-06-11T07:56:04.686531+00:00, execution_date=20240611T075604, start_date=20240611T075605, end_date=20240611T075606
+[2024-06-11T07:56:06.960+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-11T07:56:06.970+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-11T07:56:06.970+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,20 @@
+[2024-06-11T04:11:06.192+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-11T04:11:06.258+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mssql_to_postgresql_02.extract_from_mssql scheduled__2024-06-10T00:00:00+00:00 [queued]>
+[2024-06-11T04:11:06.264+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mssql_to_postgresql_02.extract_from_mssql scheduled__2024-06-10T00:00:00+00:00 [queued]>
+[2024-06-11T04:11:06.264+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-11T04:11:06.272+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_from_mssql> on 2024-06-10 00:00:00+00:00
+[2024-06-11T04:11:06.276+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mssql_to_postgresql_02', 'extract_from_mssql', 'scheduled__2024-06-10T00:00:00+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/dag_testconnection.py', '--cfg-path', '/tmp/tmpirjeg7hm']
+[2024-06-11T04:11:06.279+0000] {standard_task_runner.py:91} INFO - Job 25: Subtask extract_from_mssql
+[2024-06-11T04:11:06.278+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=283) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-06-11T04:11:06.279+0000] {standard_task_runner.py:63} INFO - Started process 284 to run task
+[2024-06-11T04:11:06.307+0000] {task_command.py:426} INFO - Running <TaskInstance: mssql_to_postgresql_02.extract_from_mssql scheduled__2024-06-10T00:00:00+00:00 [running]> on host 2e5c63130483
+[2024-06-11T04:11:06.353+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='mssql_to_postgresql_02' AIRFLOW_CTX_TASK_ID='extract_from_mssql' AIRFLOW_CTX_EXECUTION_DATE='2024-06-10T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-06-10T00:00:00+00:00'
+[2024-06-11T04:11:06.354+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-11T04:11:06.379+0000] {base.py:84} INFO - Using connection ID 'sql_server_conn' for task execution.
+[2024-06-11T04:11:06.393+0000] {sql.py:470} INFO - Running statement: SELECT * from DummyData, parameters: None
+[2024-06-11T04:11:06.413+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-11T04:11:06.414+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-11T04:11:06.419+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=mssql_to_postgresql_02, task_id=extract_from_mssql, run_id=scheduled__2024-06-10T00:00:00+00:00, execution_date=20240610T000000, start_date=20240611T041106, end_date=20240611T041106
+[2024-06-11T04:11:06.464+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-11T04:11:06.476+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-11T04:11:06.477+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

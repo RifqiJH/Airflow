@@ -1,0 +1,564 @@
+[2024-06-11T08:06:16.565+0000] {processor.py:161} INFO - Started process (PID=5935) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:06:16.566+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:06:16.566+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:06:16.566+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:06:16.610+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:06:16.684+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:06:16.684+0000] {override.py:1829} INFO - Created Permission View: can delete on DAG:dag_ingest_cybertrack_nobubiz_v_transaction
+[2024-06-11T08:06:16.691+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:06:16.690+0000] {override.py:1829} INFO - Created Permission View: can edit on DAG:dag_ingest_cybertrack_nobubiz_v_transaction
+[2024-06-11T08:06:16.694+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:06:16.694+0000] {override.py:1829} INFO - Created Permission View: can read on DAG:dag_ingest_cybertrack_nobubiz_v_transaction
+[2024-06-11T08:06:16.694+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:06:16.694+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:06:16.707+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:06:16.706+0000] {dag.py:3118} INFO - Creating ORM DAG for dag_ingest_cybertrack_nobubiz_v_transaction
+[2024-06-11T08:06:16.721+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:06:16.721+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-09 17:00:00+00:00, run_after=2024-06-10 17:00:00+00:00
+[2024-06-11T08:06:16.731+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.170 seconds
+[2024-06-11T08:06:47.097+0000] {processor.py:161} INFO - Started process (PID=5961) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:06:47.098+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:06:47.099+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:06:47.099+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:06:47.126+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:06:47.145+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:06:47.145+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:06:47.157+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:06:47.157+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-09 17:00:00+00:00, run_after=2024-06-10 17:00:00+00:00
+[2024-06-11T08:06:47.167+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.077 seconds
+[2024-06-11T08:07:17.579+0000] {processor.py:161} INFO - Started process (PID=5987) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:07:17.579+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:07:17.580+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:07:17.580+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:07:17.602+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:07:17.620+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:07:17.619+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:07:17.633+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:07:17.633+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-09 17:00:00+00:00, run_after=2024-06-10 17:00:00+00:00
+[2024-06-11T08:07:17.641+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.068 seconds
+[2024-06-11T08:07:48.083+0000] {processor.py:161} INFO - Started process (PID=6013) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:07:48.085+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:07:48.086+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:07:48.086+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:07:48.126+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:07:48.155+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:07:48.154+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:07:48.170+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:07:48.170+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-09 17:00:00+00:00, run_after=2024-06-10 17:00:00+00:00
+[2024-06-11T08:07:48.179+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.103 seconds
+[2024-06-11T08:08:18.510+0000] {processor.py:161} INFO - Started process (PID=6043) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:08:18.512+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:08:18.513+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:08:18.513+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:08:18.546+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:08:18.564+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:08:18.564+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:08:18.576+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:08:18.576+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-09 17:00:00+00:00, run_after=2024-06-10 17:00:00+00:00
+[2024-06-11T08:08:18.584+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.080 seconds
+[2024-06-11T08:08:49.020+0000] {processor.py:161} INFO - Started process (PID=6073) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:08:49.021+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:08:49.023+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:08:49.022+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:08:49.055+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:08:49.070+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:08:49.070+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:08:49.081+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:08:49.081+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-09 17:00:00+00:00, run_after=2024-06-10 17:00:00+00:00
+[2024-06-11T08:08:49.088+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.079 seconds
+[2024-06-11T08:09:19.435+0000] {processor.py:161} INFO - Started process (PID=6109) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:09:19.436+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:09:19.437+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:09:19.437+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:09:19.468+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:09:19.485+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:09:19.485+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:09:19.506+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:09:19.506+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:09:19.514+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.087 seconds
+[2024-06-11T08:09:50.116+0000] {processor.py:161} INFO - Started process (PID=6135) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:09:50.119+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:09:50.120+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:09:50.119+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:09:50.160+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:09:50.201+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:09:50.201+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:09:50.217+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:09:50.217+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:09:50.226+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.119 seconds
+[2024-06-11T08:10:20.685+0000] {processor.py:161} INFO - Started process (PID=6161) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:10:20.687+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:10:20.688+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:10:20.687+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:10:20.720+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:10:20.737+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:10:20.736+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:10:20.748+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:10:20.747+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:10:20.754+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.078 seconds
+[2024-06-11T08:10:51.295+0000] {processor.py:161} INFO - Started process (PID=6187) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:10:51.297+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:10:51.298+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:10:51.298+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:10:51.336+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:10:51.356+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:10:51.356+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:10:51.370+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:10:51.370+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:10:51.379+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.094 seconds
+[2024-06-11T08:11:21.888+0000] {processor.py:161} INFO - Started process (PID=6213) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:11:21.890+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:11:21.891+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:11:21.890+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:11:21.924+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:11:21.937+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:11:21.937+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:11:21.947+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:11:21.947+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:11:21.954+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.074 seconds
+[2024-06-11T08:11:52.394+0000] {processor.py:161} INFO - Started process (PID=6239) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:11:52.396+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:11:52.397+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:11:52.397+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:11:52.432+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:11:52.448+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:11:52.447+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:11:52.458+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:11:52.458+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:11:52.466+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.081 seconds
+[2024-06-11T08:12:22.980+0000] {processor.py:161} INFO - Started process (PID=6265) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:12:22.982+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:12:22.983+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:12:22.983+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:12:23.016+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:12:23.032+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:12:23.032+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:12:23.043+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:12:23.043+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:12:23.050+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.077 seconds
+[2024-06-11T08:12:53.494+0000] {processor.py:161} INFO - Started process (PID=6291) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:12:53.496+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:12:53.497+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:12:53.497+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:12:53.529+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:12:53.544+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:12:53.544+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:12:53.555+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:12:53.555+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:12:53.562+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.075 seconds
+[2024-06-11T08:13:24.049+0000] {processor.py:161} INFO - Started process (PID=6317) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:13:24.050+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:13:24.051+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:13:24.050+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:13:24.081+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:13:24.095+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:13:24.095+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:13:24.105+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:13:24.105+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:13:24.111+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.073 seconds
+[2024-06-11T08:13:54.566+0000] {processor.py:161} INFO - Started process (PID=6343) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:13:54.569+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:13:54.572+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:13:54.571+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:13:54.615+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:13:54.633+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:13:54.633+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:13:54.645+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:13:54.645+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:13:54.653+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.096 seconds
+[2024-06-11T08:14:25.050+0000] {processor.py:161} INFO - Started process (PID=6369) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:14:25.052+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:14:25.053+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:14:25.053+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:14:25.098+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:14:25.128+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:14:25.128+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:14:25.173+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:14:25.173+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:14:25.185+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.145 seconds
+[2024-06-11T08:14:55.541+0000] {processor.py:161} INFO - Started process (PID=6395) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:14:55.542+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:14:55.543+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:14:55.543+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:14:55.586+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:14:55.603+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:14:55.603+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:14:55.616+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:14:55.615+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:14:55.623+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.090 seconds
+[2024-06-11T08:15:26.157+0000] {processor.py:161} INFO - Started process (PID=6421) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:15:26.160+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:15:26.161+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:15:26.160+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:15:26.193+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:15:26.208+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:15:26.207+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:15:26.218+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:15:26.218+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:15:26.226+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.077 seconds
+[2024-06-11T08:15:56.795+0000] {processor.py:161} INFO - Started process (PID=6447) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:15:56.796+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:15:56.797+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:15:56.797+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:15:56.829+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:15:56.844+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:15:56.844+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:15:56.854+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:15:56.854+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:15:56.861+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.074 seconds
+[2024-06-11T08:16:27.249+0000] {processor.py:161} INFO - Started process (PID=6473) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:16:27.250+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:16:27.250+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:16:27.250+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:16:27.283+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:16:27.298+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:16:27.298+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:16:27.310+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:16:27.310+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:16:27.317+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.075 seconds
+[2024-06-11T08:16:57.841+0000] {processor.py:161} INFO - Started process (PID=6499) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:16:57.842+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:16:57.843+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:16:57.843+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:16:57.878+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:16:57.892+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:16:57.892+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:16:57.903+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:16:57.903+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:16:57.911+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.078 seconds
+[2024-06-11T08:17:28.400+0000] {processor.py:161} INFO - Started process (PID=6525) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:17:28.401+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:17:28.402+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:17:28.402+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:17:28.434+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:17:28.448+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:17:28.448+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:17:28.460+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:17:28.460+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:17:28.467+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.075 seconds
+[2024-06-11T08:17:58.900+0000] {processor.py:161} INFO - Started process (PID=6551) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:17:58.901+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:17:58.903+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:17:58.902+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:17:58.937+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:17:58.953+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:17:58.953+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:17:58.963+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:17:58.963+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:17:58.970+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.079 seconds
+[2024-06-11T08:18:29.517+0000] {processor.py:161} INFO - Started process (PID=6577) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:18:29.518+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:18:29.519+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:18:29.519+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:18:29.551+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:18:29.565+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:18:29.565+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:18:29.576+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:18:29.576+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:18:29.582+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.073 seconds
+[2024-06-11T08:19:00.003+0000] {processor.py:161} INFO - Started process (PID=6603) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:19:00.004+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:19:00.006+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:19:00.005+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:19:00.039+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:19:00.055+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:19:00.055+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:19:00.065+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:19:00.065+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:19:00.072+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.077 seconds
+[2024-06-11T08:19:30.635+0000] {processor.py:161} INFO - Started process (PID=6629) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:19:30.637+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:19:30.638+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:19:30.637+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:19:30.669+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:19:30.685+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:19:30.685+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:19:30.694+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:19:30.694+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:19:30.701+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.074 seconds
+[2024-06-11T08:20:01.307+0000] {processor.py:161} INFO - Started process (PID=6655) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:20:01.311+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:20:01.315+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:20:01.314+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:20:01.357+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:20:01.388+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:20:01.388+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:20:01.404+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:20:01.404+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:20:01.414+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.117 seconds
+[2024-06-11T08:20:31.773+0000] {processor.py:161} INFO - Started process (PID=6681) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:20:31.776+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:20:31.778+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:20:31.777+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:20:31.815+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:20:31.847+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:20:31.847+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:20:31.871+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:20:31.870+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:20:31.884+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.123 seconds
+[2024-06-11T08:21:02.345+0000] {processor.py:161} INFO - Started process (PID=6707) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:21:02.347+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:21:02.349+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:21:02.348+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:21:02.390+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:21:02.418+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:21:02.418+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:21:02.432+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:21:02.432+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:21:02.441+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.106 seconds
+[2024-06-11T08:21:32.868+0000] {processor.py:161} INFO - Started process (PID=6733) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:21:32.870+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:21:32.871+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:21:32.871+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:21:32.911+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:21:32.932+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:21:32.932+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:21:32.946+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:21:32.946+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:21:32.955+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.102 seconds
+[2024-06-11T08:22:03.382+0000] {processor.py:161} INFO - Started process (PID=6759) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:22:03.384+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:22:03.386+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:22:03.385+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:22:03.426+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:22:03.448+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:22:03.448+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:22:03.460+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:22:03.460+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:22:03.469+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.097 seconds
+[2024-06-11T08:22:33.848+0000] {processor.py:161} INFO - Started process (PID=6785) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:22:33.850+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:22:33.852+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:22:33.851+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:22:33.887+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:22:33.906+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:22:33.906+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:22:33.920+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:22:33.920+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:22:33.928+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.089 seconds
+[2024-06-11T08:23:04.375+0000] {processor.py:161} INFO - Started process (PID=6811) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:23:04.377+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:23:04.378+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:23:04.378+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:23:04.414+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:23:04.427+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:23:04.427+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:23:04.437+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:23:04.437+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:23:04.444+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.078 seconds
+[2024-06-11T08:23:34.853+0000] {processor.py:161} INFO - Started process (PID=6837) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:23:34.855+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:23:34.857+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:23:34.856+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:23:34.891+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:23:34.907+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:23:34.907+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:23:34.917+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:23:34.917+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:23:34.925+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.079 seconds
+[2024-06-11T08:24:05.304+0000] {processor.py:161} INFO - Started process (PID=6863) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:24:05.305+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:24:05.306+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:24:05.306+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:24:05.339+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:24:05.354+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:24:05.354+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:24:05.365+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:24:05.365+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:24:05.371+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.076 seconds
+[2024-06-11T08:24:35.848+0000] {processor.py:161} INFO - Started process (PID=6889) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:24:35.851+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:24:35.853+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:24:35.852+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:24:35.897+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:24:35.917+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:24:35.917+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:24:35.931+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:24:35.931+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:24:35.939+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.105 seconds
+[2024-06-11T08:25:06.373+0000] {processor.py:161} INFO - Started process (PID=6915) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:25:06.374+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:25:06.375+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:25:06.375+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:25:06.395+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:25:06.407+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:25:06.407+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:25:06.417+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:25:06.417+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:25:06.424+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.055 seconds
+[2024-06-11T08:25:36.766+0000] {processor.py:161} INFO - Started process (PID=6941) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:25:36.768+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:25:36.769+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:25:36.769+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:25:36.803+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:25:36.832+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:25:36.832+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:25:36.849+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:25:36.848+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:25:36.856+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.098 seconds
+[2024-06-11T08:26:07.318+0000] {processor.py:161} INFO - Started process (PID=6967) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:26:07.320+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:26:07.321+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:26:07.321+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:26:07.370+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:26:07.392+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:26:07.392+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:26:07.408+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:26:07.407+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:26:07.419+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.113 seconds
+[2024-06-11T08:26:37.975+0000] {processor.py:161} INFO - Started process (PID=6998) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:26:37.976+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:26:37.977+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:26:37.977+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:26:38.016+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:26:38.033+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:26:38.033+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:26:38.045+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:26:38.045+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:26:38.052+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.085 seconds
+[2024-06-11T08:27:08.440+0000] {processor.py:161} INFO - Started process (PID=7029) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:27:08.441+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:27:08.443+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:27:08.442+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:27:08.476+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:27:08.492+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:27:08.492+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:27:08.502+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:27:08.502+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:27:08.509+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.077 seconds
+[2024-06-11T08:27:39.031+0000] {processor.py:161} INFO - Started process (PID=7060) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:27:39.036+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:27:39.043+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:27:39.041+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:27:39.129+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:27:39.154+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:27:39.154+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:27:39.170+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:27:39.170+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:27:39.179+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.171 seconds
+[2024-06-11T08:30:39.760+0000] {processor.py:161} INFO - Started process (PID=7073) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:30:39.761+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:30:39.762+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:30:39.761+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:30:39.787+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:30:39.800+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:30:39.799+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:30:39.811+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:30:39.811+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:30:39.819+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.062 seconds
+[2024-06-11T08:31:10.297+0000] {processor.py:161} INFO - Started process (PID=7104) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:31:10.299+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:31:10.300+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:10.299+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:31:10.325+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:31:10.349+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:10.348+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:31:10.380+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:10.379+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:31:10.391+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.097 seconds
+[2024-06-11T08:31:40.961+0000] {processor.py:161} INFO - Started process (PID=7135) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:31:40.963+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:31:40.965+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:40.964+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:31:41.001+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:31:41.022+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:41.022+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:31:41.046+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:31:41.046+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:31:41.056+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.106 seconds
+[2024-06-11T08:32:11.395+0000] {processor.py:161} INFO - Started process (PID=7170) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:32:11.397+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:32:11.398+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:11.397+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:32:11.444+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:32:11.465+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:11.465+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:32:11.479+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:11.479+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:32:11.490+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.101 seconds
+[2024-06-11T08:32:41.975+0000] {processor.py:161} INFO - Started process (PID=7206) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:32:41.978+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:32:41.979+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:41.979+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:32:42.022+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:32:42.046+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:42.046+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:32:42.062+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:32:42.062+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:32:42.081+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.118 seconds
+[2024-06-11T08:33:12.508+0000] {processor.py:161} INFO - Started process (PID=7244) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:33:12.509+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:33:12.509+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:12.509+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:33:12.559+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:33:12.589+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:12.589+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:33:12.608+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:12.608+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:33:12.618+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.115 seconds
+[2024-06-11T08:33:42.986+0000] {processor.py:161} INFO - Started process (PID=7278) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:33:42.989+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:33:42.997+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:42.990+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:33:43.057+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:33:43.080+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:43.079+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:33:43.110+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:33:43.110+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:33:43.121+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.142 seconds
+[2024-06-11T08:34:13.574+0000] {processor.py:161} INFO - Started process (PID=7309) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:34:13.576+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:34:13.577+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:13.576+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:34:13.600+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:34:13.616+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:13.616+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:34:13.630+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:13.630+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:34:13.639+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.069 seconds
+[2024-06-11T08:34:44.081+0000] {processor.py:161} INFO - Started process (PID=7340) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:34:44.082+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:34:44.083+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:44.083+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:34:44.108+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:34:44.123+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:44.123+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:34:44.134+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:34:44.133+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:34:44.141+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.066 seconds
+[2024-06-11T08:35:14.534+0000] {processor.py:161} INFO - Started process (PID=7371) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:35:14.536+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:35:14.537+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:14.537+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:35:14.586+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:35:14.611+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:14.611+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:35:14.628+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:14.628+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:35:14.637+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.116 seconds
+[2024-06-11T08:35:45.115+0000] {processor.py:161} INFO - Started process (PID=7402) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:35:45.116+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:35:45.117+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:45.116+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:35:45.142+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:35:45.156+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:45.156+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:35:45.167+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:35:45.167+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:35:45.177+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.070 seconds
+[2024-06-11T08:36:15.594+0000] {processor.py:161} INFO - Started process (PID=7433) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:36:15.596+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:36:15.598+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:15.597+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:36:15.661+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:36:15.696+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:15.696+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:36:15.714+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:15.714+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:36:15.739+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.151 seconds
+[2024-06-11T08:36:46.358+0000] {processor.py:161} INFO - Started process (PID=7463) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:36:46.364+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:36:46.368+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:46.366+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:36:46.460+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:36:46.496+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:46.496+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:36:46.521+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:36:46.521+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:36:46.536+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.203 seconds
+[2024-06-11T08:37:17.176+0000] {processor.py:161} INFO - Started process (PID=7500) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:37:17.177+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:37:17.178+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:17.178+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:37:17.204+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:37:17.242+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:17.241+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:37:17.273+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:17.273+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:37:17.283+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.114 seconds
+[2024-06-11T08:37:47.616+0000] {processor.py:161} INFO - Started process (PID=7537) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:37:47.617+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:37:47.618+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:47.617+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:37:47.646+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:37:47.661+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:47.661+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:37:47.673+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:37:47.673+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:37:47.681+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.072 seconds
+[2024-06-11T08:38:18.173+0000] {processor.py:161} INFO - Started process (PID=7568) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:38:18.174+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:38:18.175+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:18.175+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:38:18.203+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:38:18.220+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:18.219+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:38:18.232+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:18.231+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:38:18.240+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.073 seconds
+[2024-06-11T08:38:48.780+0000] {processor.py:161} INFO - Started process (PID=7599) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:38:48.781+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:38:48.782+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:48.782+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:38:48.808+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:38:48.825+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:48.825+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:38:48.838+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:38:48.837+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:38:48.846+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.072 seconds
+[2024-06-11T08:39:19.282+0000] {processor.py:161} INFO - Started process (PID=7630) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:39:19.284+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:39:19.284+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:19.284+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:39:19.311+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:39:19.325+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:19.325+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:39:19.336+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:19.335+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:39:19.343+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.067 seconds
+[2024-06-11T08:39:49.743+0000] {processor.py:161} INFO - Started process (PID=7661) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:39:49.744+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:39:49.745+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:49.745+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:39:49.770+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:39:49.784+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:49.783+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:39:49.794+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:39:49.794+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:39:49.801+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.064 seconds
+[2024-06-11T08:40:20.176+0000] {processor.py:161} INFO - Started process (PID=7692) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:40:20.176+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:40:20.177+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:20.177+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:40:20.204+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:40:20.237+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:20.237+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:40:20.251+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:20.251+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:40:20.262+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.089 seconds
+[2024-06-11T08:40:50.709+0000] {processor.py:161} INFO - Started process (PID=7723) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:40:50.710+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:40:50.711+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:50.711+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:40:50.740+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:40:50.760+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:50.760+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:40:50.774+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:40:50.774+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:40:50.783+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.079 seconds
+[2024-06-11T08:41:21.184+0000] {processor.py:161} INFO - Started process (PID=7754) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:41:21.186+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:41:21.187+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:21.186+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:41:21.215+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:41:21.231+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:21.231+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:41:21.243+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:21.243+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:41:21.251+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.074 seconds
+[2024-06-11T08:41:51.646+0000] {processor.py:161} INFO - Started process (PID=7785) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:41:51.647+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:41:51.648+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:51.648+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:41:51.675+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:41:51.692+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:51.692+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:41:51.703+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:41:51.703+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:41:51.710+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.071 seconds
+[2024-06-11T08:42:22.123+0000] {processor.py:161} INFO - Started process (PID=7816) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:42:22.125+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:42:22.126+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:22.125+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:42:22.155+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:42:22.170+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:22.169+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:42:22.180+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:22.180+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:42:22.188+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.072 seconds
+[2024-06-11T08:42:52.584+0000] {processor.py:161} INFO - Started process (PID=7847) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:42:52.585+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:42:52.586+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:52.586+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:42:52.612+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:42:52.630+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:52.630+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:42:52.642+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:42:52.641+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:42:52.651+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.073 seconds
+[2024-06-11T08:43:23.084+0000] {processor.py:161} INFO - Started process (PID=7878) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:43:23.086+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:43:23.087+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:23.086+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:43:23.114+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:43:23.131+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:23.131+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:43:23.148+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:23.148+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:43:23.156+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.078 seconds
+[2024-06-11T08:43:53.589+0000] {processor.py:161} INFO - Started process (PID=7909) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:43:53.590+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:43:53.590+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:53.590+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:43:53.612+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:43:53.631+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:53.631+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:43:53.655+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:43:53.655+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:43:53.667+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.084 seconds
+[2024-06-11T08:44:24.222+0000] {processor.py:161} INFO - Started process (PID=7940) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:44:24.223+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:44:24.224+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:24.223+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:44:24.250+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:44:24.268+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:24.268+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:44:24.284+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:24.284+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:44:24.292+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.077 seconds
+[2024-06-11T08:44:54.798+0000] {processor.py:161} INFO - Started process (PID=7971) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:44:54.799+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:44:54.800+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:54.800+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:44:54.824+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:44:54.839+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:54.839+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:44:54.851+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:44:54.851+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:44:54.860+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.067 seconds
+[2024-06-11T08:45:25.323+0000] {processor.py:161} INFO - Started process (PID=8002) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:45:25.325+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:45:25.326+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:25.326+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:45:25.354+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:45:25.369+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:25.369+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:45:25.383+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:25.383+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:45:25.392+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.075 seconds
+[2024-06-11T08:45:55.844+0000] {processor.py:161} INFO - Started process (PID=8033) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:45:55.845+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:45:55.846+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:55.845+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:45:55.864+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:45:55.879+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:55.878+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:45:55.892+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:45:55.892+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:45:55.901+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.061 seconds
+[2024-06-11T08:46:26.377+0000] {processor.py:161} INFO - Started process (PID=8064) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:46:26.378+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:46:26.380+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:26.379+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:46:26.406+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:46:26.425+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:26.425+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:46:26.438+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:26.438+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:46:26.447+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.077 seconds
+[2024-06-11T08:46:56.913+0000] {processor.py:161} INFO - Started process (PID=8094) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:46:56.914+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:46:56.915+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:56.915+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:46:56.944+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:46:56.959+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:56.959+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:46:56.970+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:46:56.970+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:46:56.978+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.072 seconds
+[2024-06-11T08:47:27.409+0000] {processor.py:161} INFO - Started process (PID=8125) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:47:27.410+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:47:27.411+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:27.411+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:47:27.455+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:47:27.476+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:27.476+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:47:27.490+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:27.490+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:47:27.498+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.098 seconds
+[2024-06-11T08:47:58.004+0000] {processor.py:161} INFO - Started process (PID=8156) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:47:58.006+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:47:58.007+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:58.007+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:47:58.038+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:47:58.054+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:58.054+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:47:58.067+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:47:58.067+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:47:58.078+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.082 seconds
+[2024-06-11T08:48:28.585+0000] {processor.py:161} INFO - Started process (PID=8187) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:48:28.586+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:48:28.587+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:28.586+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:48:28.611+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:48:28.627+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:28.627+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:48:28.638+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:28.638+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:48:28.647+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.068 seconds
+[2024-06-11T08:48:59.083+0000] {processor.py:161} INFO - Started process (PID=8218) to work on /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:48:59.084+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/dag_nobubiz.py for tasks to queue
+[2024-06-11T08:48:59.085+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:59.085+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:48:59.104+0000] {processor.py:840} INFO - DAG(s) 'dag_ingest_cybertrack_nobubiz_v_transaction' retrieved from /opt/airflow/dags/dag_nobubiz.py
+[2024-06-11T08:48:59.117+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:59.117+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-06-11T08:48:59.128+0000] {logging_mixin.py:188} INFO - [2024-06-11T08:48:59.128+0000] {dag.py:3954} INFO - Setting next_dagrun for dag_ingest_cybertrack_nobubiz_v_transaction to 2024-06-10 17:00:00+00:00, run_after=2024-06-11 17:00:00+00:00
+[2024-06-11T08:48:59.135+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/dag_nobubiz.py took 0.057 seconds

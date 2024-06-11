@@ -1,0 +1,20 @@
+[2024-06-11T07:50:50.624+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-06-11T07:50:50.641+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_ingest_cybertrack_superapps_v_customer_qris.extract_from_mssql manual__2024-06-11T07:50:49.907124+00:00 [queued]>
+[2024-06-11T07:50:50.645+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_ingest_cybertrack_superapps_v_customer_qris.extract_from_mssql manual__2024-06-11T07:50:49.907124+00:00 [queued]>
+[2024-06-11T07:50:50.645+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-06-11T07:50:50.651+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_from_mssql> on 2024-06-11 07:50:49.907124+00:00
+[2024-06-11T07:50:50.655+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=5421) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-06-11T07:50:50.655+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'dag_ingest_cybertrack_superapps_v_customer_qris', 'extract_from_mssql', 'manual__2024-06-11T07:50:49.907124+00:00', '--job-id', '102', '--raw', '--subdir', 'DAGS_FOLDER/dag_qris.py', '--cfg-path', '/tmp/tmplt2paaep']
+[2024-06-11T07:50:50.656+0000] {standard_task_runner.py:63} INFO - Started process 5422 to run task
+[2024-06-11T07:50:50.656+0000] {standard_task_runner.py:91} INFO - Job 102: Subtask extract_from_mssql
+[2024-06-11T07:50:50.678+0000] {task_command.py:426} INFO - Running <TaskInstance: dag_ingest_cybertrack_superapps_v_customer_qris.extract_from_mssql manual__2024-06-11T07:50:49.907124+00:00 [running]> on host 2e5c63130483
+[2024-06-11T07:50:50.733+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_ingest_cybertrack_superapps_v_customer_qris' AIRFLOW_CTX_TASK_ID='extract_from_mssql' AIRFLOW_CTX_EXECUTION_DATE='2024-06-11T07:50:49.907124+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-11T07:50:49.907124+00:00'
+[2024-06-11T07:50:50.734+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-06-11T07:50:50.747+0000] {base.py:84} INFO - Using connection ID 'sql_server_conn' for task execution.
+[2024-06-11T07:50:50.767+0000] {sql.py:470} INFO - Running statement: select * from raw_data.cybertrack_superapps_v_customer_qris;, parameters: None
+[2024-06-11T07:50:50.783+0000] {python.py:237} INFO - Done. Returned value was: None
+[2024-06-11T07:50:50.783+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-06-11T07:50:50.788+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=dag_ingest_cybertrack_superapps_v_customer_qris, task_id=extract_from_mssql, run_id=manual__2024-06-11T07:50:49.907124+00:00, execution_date=20240611T075049, start_date=20240611T075050, end_date=20240611T075050
+[2024-06-11T07:50:50.798+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-06-11T07:50:50.810+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-06-11T07:50:50.811+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
